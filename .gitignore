@@ -1,0 +1,3 @@
+#exclude all these directories from commit
+node_modules/*
+vendor/*

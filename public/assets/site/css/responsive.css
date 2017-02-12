@@ -1,0 +1,334 @@
+/*
+ * *******************
+ * *     LAP TOP     *
+ * *******************
+*/
+
+@media (max-width:1200px){
+.theme-layout.boxed{width:90%}
+.container{width:970px}
+.timetable {padding:25px 20px 20px}
+.timetable .classic-title {margin-bottom:10px}
+.timetable .classic-title h2 {font-size:20px;line-height:20px}
+.timetable .classic-title h2 span {font-size:15px}
+.timetable p {line-height:20px}
+.timetable li i {max-width:none}
+.timetable .icon-btn {margin-top:30px}
+.doctor-description .coloured-btn {font-size:11px;margin-right: 5px;padding: 10px 15px}
+.member-img {border: 4px solid #ffffff;height: 80px;margin-right: 20px;width: 80px}
+.doctor-intro {padding-top:5px}
+.doctor-intro strong {font-size: 14px;margin-bottom: 5px}
+.doctor-intro strong span {font-size:12px}
+.doctor-intro i {font-size:10px;letter-spacing:0.2px}
+.support-ways {padding: 0 100px}
+.opening-shortcode {padding:0 15px}
+.opening-shortcode .opening .timing {padding:10px 12px}
+.appointment-form {padding:40px 30px}
+.creative-box-hover {padding:0;width:96%}
+.creative-box-hover h5 {margin:20px 0 0}
+.simple-services {margin-top:0}
+.simple-service {padding:35px}
+.big-tab-btn {padding:20px 15px}
+.big-tab-content-slide {padding:20px}
+.doc-time > img{width:100%}
+.doc-detail{margin:0;width:100%}
+.doc-detail > ul{text-align:center}
+.cash-popup{width:100%;}
+.track3{left:0}
+.bottom-footer p {padding: 35px 0;}
+.bottom-footer img {height: 50px;}
+.bottom-footer p.copyright {display: inline-block; margin: 20px 0 30px; width: 100%;}
+.hidden-md,.hidden-lg{display: inherit;visibility: visible;}
+.hidden-sm,.hidden-xs{display: none !important;visibility: hidden;}
+}
+
+/*
+ * *****************
+ * *    TABLETS    *
+ * *****************
+ */
+
+@media (max-width:992px){
+.container{width:600px}
+.creative-slider .appointment-form {border-radius: 0;float: left;left: 0;margin: 0;position: relative;width: 100%}
+.m12.column {float: left;margin-bottom: 30px;width: 100%}
+.m12.column:last-child {margin:0}
+.doctors-intro.overlap {margin:0}
+.parallax-title > p br {float:left}
+.support-ways {padding:0;text-align:center}
+.support-ways .row > div {display: inline-block;float: none;margin: 0 -2px 20px !important}
+.way {text-align:left}
+.about-departments{margin-bottom:20px}
+.creative-slider.contain-form{padding:0}
+.newsletter .container{width:100%}
+.newsletter .widget-title {display:unset;float:left;width:100%}
+.newsletter form {display: unset;float: left;width: 100%}
+.newsletter form input {margin-bottom: 10px;width: 100%;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    -o-box-sizing:border-box;
+    box-sizing:border-box;
+}
+.newsletter form button{margin:0}
+.newsletter {padding:0 50px}
+.creative-departments .coloured-btn {display: inline-block;margin: 0 0 20px; position: relative;
+    -webkit-transform:translate(0);
+    -moz-transform:translate(0);
+    -ms-transform:translate(0);
+    -o-transform:translate(0);
+    transform:translate(0);
+}
+.appointment-form.overlap{margin:0}
+.mockup.overlap{margin:0}
+.creative-departments ul{text-align:center}
+.creative-departments ul li {display: inline-block;float: none;margin: 0 -3px;width: 50% !important}
+.creative-boxes {float:left;text-align: center;width:100%}
+.sponsors-carousel.overlap{margin:0}
+
+.big-tabs-nav-inner {float:left;width:100%}
+.big-tabs-nav {float:left;width:100%}
+.big-tabs-nav > img {display:none}
+.big-tabs-nav-center {float: left;position: relative;width:100%}
+.big-tabs-nav-inner .big-tab-btn {float:left;width:50%}
+.btn-text > strong {font-size: 13px;line-height:15px}
+.btn-text {padding-left:10px}
+.big-tab-btn i {font-size:30px}
+.big-tab-content{width:100%;margin:0}
+.list-view .tip-img {float:left;margin-bottom:20px;width:100%}
+.list-view .tip-desc {float:left;padding:0 20px 20px;width:100%}
+.sponsors > li {padding: 0 5px;width: 33.334% !important}
+.bottom-footer p{float:left;width:100%;text-align:center;margin-bottom:20px}
+.bottom-footer ul{width:100%;text-align:center}
+.bottom-footer ul li{float:none;display:inline-block}
+.layer7:before{display:none}
+header{display:none}
+.projects-list > li{width:50%!important}
+.history-text,
+.history-table{display:unset;float:left;width:100%}
+.medical-services.overlap{margin:0;padding-top:40px}
+.pagetop h1{padding:0}
+.pagetop ul{float: left;max-width: none;position: relative;text-align: center;width: 100%;
+    -webkit-transform:translate(0);
+    -moz-transform:translate(0);
+    -ms-transform:translate(0);
+    -o-transform:translate(0);
+    transform:translate(0);
+}
+.pagetop .container > span{padding:0}
+.post-share{float:left;margin-bottom:20px;position:relative;width:100%}
+.post-share a {float:left;width:50px}
+.single-description{padding:0}
+.single-description:before{display:none}
+.fc-day-number {padding:5px!important}
+.fc-content{padding:1px}
+.fc-toolbar{padding:30px}
+.fc-view-container, .fc-toolbar{width:1000px}
+.fc-ltr{overflow:scroll}
+.cart-table{overflow:scroll}
+.cart-table > table{width:1000px}
+.cart-product > span{background:#e3e3e3;left:0;margin:0;top:0}
+.infobox-title{float:left;margin:0 0 30px;width:100%}
+.contact-infobox .facny-btn-set{width:100%}
+.contact-infobox .facny-btn-set a,
+.contact-infobox .facny-btn-set:hover a,
+.contact-infobox .facny-btn-set:hover a:hover{border:0 none;width:100%}
+.billing-form{padding:50px}
+.contact-boxes{margin-top:30px}
+.contact-box {padding:70px 20px}
+.contact-box > span{height:50px;line-height:50px;width:50px}
+.contact-box > strong{letter-spacing:0;margin:10px 0}
+.contact-box > p {font-size:12px}
+br{display:none}
+.appointment-form-img{margin:0;padding:0 15px;text-align:center}
+.appointment-form-img > img{width:auto;max-width:100%}
+.appointment-form-img > .appointment-form{float:left;position:relative;top:0;width:100%;
+    -webkit-transform:translate(0);
+    -moz-transform:translate(0);
+    -ms-transform:translate(0);
+    -o-transform:translate(0);
+    transform:translate(0);
+}
+.welcome{padding:0 30px}
+.event-detail-img.with-counter{padding:0}
+.timer{float:left;position:relative;text-align:center;width:100%;margin-top:20px}
+.timer span{float:left;width:25%;padding:0}
+.timer span:before{display:none}
+.event-detail-img > span {right:0;top:0;
+    -webkit-border-radius: 0 0 0 23px;
+    -moz-border-radius: 0 0 0 23px;
+    -ms-border-radius: 0 0 0 23px;
+    -o-border-radius: 0 0 0 23px;
+    border-radius: 0 0 0 23px;
+}
+.blank-box{height:1px!important}
+.health-ins > img{display: unset;float: left;width:100%}
+.health-ins-desc {display: unset;float: left;padding: 30px 0 0;width:100%}
+.free-consultation {margin: 0;padding: 30px;width:100%}
+.cons-info {display: unset;float: left;padding: 0 0 20px;text-align: center;width:100%}
+.cons-btn {display: unset;float: left;text-align: center;width:100%}
+.cons-info span {display:none}
+.insurance-add{padding:30px}
+.ins-add-text > strong{font-size:19px;line-height:20px}
+.benifit{padding:50px 30px}
+.insurance-add{padding:30px}
+.ins-add-text > strong{font-size:19px;line-height:20px}
+.benifit {padding:50px 30px}
+.ins-add-text{display: unset;float:left;padding:0;text-align:center;width:100%}
+.insurance-add > span {display: unset;float: left;margin-bottom: 10px;text-align: center;width:100%}
+.ins-add-text > i {width:100%}
+.registration-page{padding:0}
+.theme-form{padding:60px 25px;width:100%}
+.input-group{float: left;margin-bottom: 20px;width:100%}
+.refer-text{padding:0}
+.service-description > p{padding:0}
+.service-title{left:0}
+.service-icon {float: left;margin-bottom: 20px;width:100%}
+.service-icon::before, .service-icon:after{width:100%}
+.member-introduction{padding:20px}
+.member-wrapper{padding:30px}
+.staff-img{display:unset;float:left;height:auto;width:100%}
+.staff-img img{width:100%}
+.member-detail{display: unset;float:left;padding:40px 0 0;width:100%}
+.staff-tabs-selectors{padding:0}
+.staff-tab-content{padding:30px}
+.staff-tab-content .appointment-tab{padding:50px 30px}
+.responsive-header{display:block}
+.consultaion-popup{width:100%}
+.consult-contact {background:rgba(255, 255, 255, 0.6);display: unset;float: left;padding: 30px;width: 100%}
+.consultaion-popup .appointment-form{display:unset;float:left;width:100%}
+.appointment-popup{width:100%;padding:50px 30px}
+.gift-popup{width:100%;padding:30px}
+.send-gift .mockup{display:unset;float:left;margin:0;width:100%}
+.send-gift .mockup img{margin:0;width:100%}
+.gift-popup-text {display:unset;float:left;padding-top:30px;width:100%}
+.gift-popup-text > h3{font-size:24px;margin:5px 0}
+.gift-popup-text > span{font-size:15px}
+.gift-popup-text > p{padding:0}
+.facny-btn-set {margin:30px 0 0;width:100%}
+.facny-btn-set > a, .facny-btn-set:hover > a:hover, 
+.facny-btn-set:hover > a{border:0 none;padding:20px 10px;width:100%}
+.event-registration{width:100%}
+.event-popup-title{width:100%}
+.event-info {margin-top: 30px;text-align: center;width:100%}
+.event-cell.half {width:100%}
+.event-popup-title > h3 {font-size:28px}
+.event-popup-title > h3 span {font-size: 17px;margin: 2px 0 0}
+.timetable-tab-content{padding:50px}
+.doctors-timetable .tabs{
+    background-image:url('../images/600x600.png');
+    display:unset;
+    text-align:center; float:left;height:176px;padding:0 20px;position:relative;width:100%!important;z-index:1;white-space:normal;}
+.doctors-timetable .tabs li.tab{display: inline-table;flex-grow: unset;-webkit-box-flex: unset;width:auto;float:none}
+    .doctors-timetable .tabs li.tab {
+        height: auto;
+        width: 30%;
+    }
+    .doctors-timetable .tabs li.tab:nth-child(7n),.doctors-timetable .tabs li.tab:nth-child(7n-1),
+    .doctors-timetable .tabs li.tab:nth-child(7n-2),.doctors-timetable .tabs li.tab:nth-child(7n-3) {
+        width: 22%;
+    }
+    .tabs .padding-box {display:none;}
+#jSplash h1{font-size:30px;line-height:34px;}
+#jSplash p{font-size:20px;line-height:30px}
+#jpreLoader{width:90%;}
+.close-all-popup{right:27px;top:10px;z-index:100000;}
+.layer17:before{display:none}
+.layer16 br{display:table}
+.cash-popup{width:100%;padding:30px}
+    .btn-previous-week{max-width: 50%}
+    .btn-next-week{max-width: 49%}
+    .hidden-sm{display: none;}
+}
+
+/*
+ * ****************
+ * *    MOBILE    *
+ * ****************
+ */
+
+@media (max-width:600px){
+.container{width:100%}
+.block .container{padding:0 15px}
+.doctors-intro{background:#FFF}
+.doctors-img {width:100%}
+.doctor-detail {float: left;left: 0;margin: 0;padding: 20px 10px;position: relative;width: 100%;}
+.doctors-intro:hover .doctor-detail{
+    -webkit-transform:translate(0);
+    -moz-transform:translate(0);
+    -ms-transform:translate(0);
+    -o-transform:translate(0);
+    transform:translate(0);
+}
+.doctors-img:before {display:none}
+.doctors-intro:hover .doctors-img img {
+    -webkit-transform:translate(0);
+    -moz-transform:translate(0);
+    -ms-transform:translate(0);
+    -o-transform:translate(0);
+    transform:translate(0);
+}
+.member-img {display: inline-block;float: none;margin:0}
+.staff-member {text-align:center;height:160px}
+.doctor-intro {float:left;margin-top:10px;width:100%}
+.doctor-intro strong{width:100%}
+.doctor-intro strong span{display:inline-block}
+.links-box-inner {padding: 20px 0 0;width: 100%}
+.links-box-overlay {background:none;float:left;position:relative;width:100%}
+.creative-slider .appointment-form {padding:30px 20px}
+.departments {padding:20px!important}
+.departments > span {float:left;left:auto;margin-bottom:20px;position:relative;right:auto;text-align:center;width:100%}
+.departments > span img {max-width:100%}
+.about-departments h6 {font-size:20px}
+.newsletter {padding:0}
+.creative-departments ul li{width:100%!important;margin:0}
+.sponsors > li {padding: 0 5px;width:50% !important}
+.big-tabs-nav-inner .big-tab-btn{width:100%}
+.projects-list > li{width:100%!important}
+.history-text{padding:30px}
+.history-table{padding:30px}
+.mockup.overlap2{margin:0}
+.information > h4{font-size:30px}
+.information strong{font-size:22px}
+.post-title{font-size:20px}
+.social-links{border:0 none;display:unset;float:left;width:100%}
+.social-links a{float:left;width:33.334%}
+.admin > img{display:unset;width:100%}
+.admin-info {display:unset;float:left;padding:30px;width:100%}
+.comment{padding:40px 20px 30px}
+.comment > img{margin-right:10px;width:75px}
+.comment-date {background:#ffffff;color:#bfbfbf;padding:5px 10px;right:0;top:0}
+.comments-section ul ul{padding:0}
+.single-description blockquote{padding:30px}
+.tagcloud > a{font-size:12px;margin-right:30px;padding:10px 20px}
+.coupon-box{padding:30px}
+.coupon > input{width:100%}
+.coupon > button{float:left;margin:10px 0 0;width:100%}
+.cart-totals{margin-top:40px;overflow:scroll;padding:0}
+.billing-form{padding:30px}
+.specialist-img, 
+.specialist-detail{display:unset;float:left;padding:0;width:100%}
+.specialist-img img {width:100%}
+.specialist-detail{padding-top:20px}
+.simple-text-box,
+.simple-text-box.style2{padding:40px 30px}
+.gallery-collection img{width:50px}
+.hover-inner{padding:10px 20px}
+.timetable-tab-content{padding:20px}
+    .doctors-timetable .tabs{height:280px;}
+    .doctors-timetable .tabs li.tab, .doctors-timetable .tabs li.tab:nth-child(7n),.doctors-timetable .tabs li.tab:nth-child(7n-1),
+    .doctors-timetable .tabs li.tab:nth-child(7n-2),.doctors-timetable .tabs li.tab:nth-child(7n-3) {
+        height: 70px;
+        margin: 0 -2px;
+        width: 50%;
+    }
+    .doctors-timetable .tabs li a, .doctors-timetable .tabs li a:hover, .doctors-timetable .tabs li a.active:hover
+     {
+        height: 70px;
+        line-height: 25px !important;
+        padding: 10px;
+    }
+    .doctors-timetable .tabs li.tab:nth-child(7n) {
+        width: 100%;
+    }
+}
