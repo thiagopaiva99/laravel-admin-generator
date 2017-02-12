@@ -250,42 +250,17 @@ class CalendarController extends AppBaseController {
             $weekStart = Carbon::createFromFormat('Y-m-d', $start);
             $weekEnd = Carbon::createFromFormat('Y-m-d', $end);
 
-            // return TimeSlot::where('local_id', $local)
-            //                 ->whereDate('slot_time_start', '>=', "'$weekStart'")
-            //                 ->get();
-
             while ($weekStart->lte($weekEnd)) {
                 $format = $weekStart->format('Y-m-d');
 
-                $str_plans = "";
-                $i = 1;
+                $weekDays[] = [
+                    "day" => $format,
+                    "timeSlots" => DB::select("select * from fn2_available_appointments_slots_for_date(cast('$weekStart' as date), $local, true, 0) where slot_type = ".$request->get("tipo"))
+                ];
 
-                foreach($plans as $plan){
-                    if($i == count($plans)){
-                        $str_plans .= $plan->health_plan_id;
-                    }else{
-                        $str_plans .= $plan->health_plan_id.", ";
-                    }
-
-                    $i++;
-                }
-
-                foreach ($plans as $plan){
-                    $weekDays[] = [
-                        "day" => $format,
-                        "timeSlots" => DB::select("select * from fn2_available_appointments_slots_for_date(cast('$weekStart' as date), $local, false, $plan->health_plan_id) where slot_type = ".$request->get("tipo"))
-                    ];
-
-                    $weekDays[] = [
-                        "day" => $format,
-                        "timeSlots" => DB::select("select * from fn2_available_appointments_slots_for_date(cast('$weekStart' as date), $local, true, $plan->health_plan_id) where slot_type = ".$request->get("tipo"))
-                    ];
-                }
                 $weekStart= $weekStart->addDay();
             }
         }
-
-        return $weekDays;
 
         if(!empty($weekDays)) {
 
@@ -425,36 +400,14 @@ class CalendarController extends AppBaseController {
                 $weekStart = Carbon::createFromFormat('Y-m-d', $start);
                 $weekEnd = Carbon::createFromFormat('Y-m-d', $end);
 
-                $plans = \DB::select('select health_plan_id from health_plan_local where local_id = '.$local);
-                $plans[] = \DB::select('select id as health_plan_id from health_plans where id = 0')[0];
-
                 while ($weekStart->lte($weekEnd)) {
                     $format = $weekStart->format('Y-m-d');
 
-                    $str_plans = "";
-                    $i = 1;
+                    $weekDays[] = [
+                        "day" => $format,
+                        "timeSlots" => DB::select("select * from fn2_available_appointments_slots_for_date(cast('$weekStart' as date), $local, true, 0) where slot_type = ".$request->get("tipo"))
+                    ];
 
-                    foreach($plans as $plan){
-                        if($i == count($plans)){
-                            $str_plans .= $plan->health_plan_id;
-                        }else{
-                            $str_plans .= $plan->health_plan_id.", ";
-                        }
-
-                        $i++;
-                    }
-
-                    foreach ($plans as $plan){
-                        $weekDays[] = [
-                            "day" => $format,
-                            "timeSlots" => DB::select("select * from fn2_available_appointments_slots_for_date(cast('$weekStart' as date), $local, false, $plan->health_plan_id) where slot_type = ".$request->get("tipo"))
-                        ];
-
-                        $weekDays[] = [
-                            "day" => $format,
-                            "timeSlots" => DB::select("select * from fn2_available_appointments_slots_for_date(cast('$weekStart' as date), $local, true, $plan->health_plan_id) where slot_type = ".$request->get("tipo"))
-                        ];
-                    }
                     $weekStart= $weekStart->addDay();
                 }
             }

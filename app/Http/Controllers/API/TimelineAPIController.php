@@ -130,7 +130,7 @@ SELECT
   result.user_id,
   (CASE WHEN result.image_src IS NOT NULL AND result.image_src <> '' THEN result.image_src ELSE '".url('/')."/assets/site/images/img_medicos.jpg' END) AS image_url,
   COALESCE(result.subtitle, '') AS subtitle,
-  'R$ ' || result.amount AS amount_str,
+  'R$ ' || result.amount || ',00' AS amount_str,
   CAST(result.distance || ' Km' AS VARCHAR(20)) AS distance_str,
   (result.next_appointment).*,
   (result.next_appointment).time_header AS header_title,

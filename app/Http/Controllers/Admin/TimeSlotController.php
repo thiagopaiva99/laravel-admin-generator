@@ -207,7 +207,7 @@ class TimeSlotController extends InfyOmBaseController
             $tsd = new TimeSlotDetail;
 
             $tsd->time_slot_id   = $timeSlot->id;
-            $tsd->health_plan_id = null;
+            $tsd->health_plan_id = 0;
             $tsd->private        = true;
             $tsd->slot_count     = $timeSlot->queue_type == 2 ? '1' : $input['slot_count'];
 
@@ -247,36 +247,92 @@ class TimeSlotController extends InfyOmBaseController
             $input["day_of_week"] = null;
         }
 
-        $timeSlot = new TimeSlot;
+        if($input['queue'] == 2) {
+            $time_in_minutes = Local::select('appointment_duration_in_minutes as minutes')->where('id', $input['local_id'])->first();
 
-        $timeSlot->local_id         = (int)$input['local_id'];
-        $timeSlot->user_id          = (int)$input['user_id'];
-        $timeSlot->slot_type        = (int)$input['slot_type'];
-        $timeSlot->day_of_week      = (int)$input['day_of_week'];
-        $timeSlot->slot_time_start  = $input['slot_time_start'];
-        $timeSlot->slot_time_end    = $input['slot_time_end'];
-        $timeSlot->slot_date        = $input['slot_date'];
-        $timeSlot->queue_type       = (int)$input['queue'];
+            $start = date("H", strtotime($input['slot_time_start']));
+            $end   = date("H", strtotime($input['slot_time_end']));
 
-        $timeSlot->save();
+            $start_minutes = date("i", strtotime($input['slot_time_start']));
+            $end_minutes = date("i", strtotime($input['slot_time_end']));
 
-        if(isset($timeSlot) && isset($timeSlot->id) && $timeSlot->id > 0){
-            $tsd = new TimeSlotDetail;
+            $times = ceil((($end - $start) * 60) / $time_in_minutes->minutes);
 
-            $tsd->time_slot_id   = $timeSlot->id;
-            $tsd->health_plan_id = null;
-            $tsd->private        = true;
-            $tsd->slot_count     = $timeSlot->queue_type == 2 ? '1' : $input['slot_count'];
+            $time_start = Carbon::createFromTime($start, $start_minutes, 0, 'America/Sao_Paulo');
+            $time_medium = Carbon::createFromTime($start, $start_minutes, 0, 'America/Sao_Paulo');
+            $time_end = Carbon::createFromTime($end, $end_minutes, 0, 'America/Sao_Paulo');
 
-            $tsd->save();
+            for ($i = 0; $i < $times; $i++) {
+                $time_medium->addMinutes($time_in_minutes->minutes);
 
-            if (isset($tsd) && $tsd->id > 0) {
-                return $timeSlot;
-            } else {
-                return "conflito de agendamentos";
+                if ($i != 0) {
+                    $time_start->addMinutes($time_in_minutes->minutes);
+                }
+
+                $timeSlot = new TimeSlot;
+
+                $timeSlot->local_id         = (int)$input['local_id'];
+                $timeSlot->user_id          = (int)$input['user_id'];
+                $timeSlot->slot_type        = (int)$input['slot_type'];
+                $timeSlot->day_of_week      = (int)$input['day_of_week'];
+                $timeSlot->slot_time_start  = $time_start;
+                $timeSlot->slot_time_end    = $time_medium;
+                $timeSlot->slot_date        = $input['slot_date'];
+                $timeSlot->queue_type       = (int)$input['queue'];
+
+                $timeSlot->save();
+
+                if(isset($timeSlot) && isset($timeSlot->id) && $timeSlot->id > 0){
+                    $tsd = new TimeSlotDetail;
+
+                    $tsd->time_slot_id   = $timeSlot->id;
+                    $tsd->health_plan_id = 0;
+                    $tsd->private        = true;
+                    $tsd->slot_count     = 1;
+
+                    $tsd->save();
+
+                    if (isset($tsd) && $tsd->id > 0) {
+                        return $timeSlot;
+                    } else {
+                        return "conflito de agendamentos";
+                    }
+                }else{
+                    return $timeSlot;
+                }
             }
         }else{
-            return $timeSlot;
+            $timeSlot = new TimeSlot;
+
+            $timeSlot->local_id         = (int)$input['local_id'];
+            $timeSlot->user_id          = (int)$input['user_id'];
+            $timeSlot->slot_type        = (int)$input['slot_type'];
+            $timeSlot->day_of_week      = (int)$input['day_of_week'];
+            $timeSlot->slot_time_start  = $input['slot_time_start'];
+            $timeSlot->slot_time_end    = $input['slot_time_end'];
+            $timeSlot->slot_date        = $input['slot_date'];
+            $timeSlot->queue_type       = (int)$input['queue'];
+
+            $timeSlot->save();
+
+            if(isset($timeSlot) && isset($timeSlot->id) && $timeSlot->id > 0){
+                $tsd = new TimeSlotDetail;
+
+                $tsd->time_slot_id   = $timeSlot->id;
+                $tsd->health_plan_id = 0;
+                $tsd->private        = true;
+                $tsd->slot_count     = $timeSlot->queue_type == 2 ? '1' : $input['slot_count'];
+
+                $tsd->save();
+
+                if (isset($tsd) && $tsd->id > 0) {
+                    return $timeSlot;
+                } else {
+                    return "conflito de agendamentos";
+                }
+            }else{
+                return $timeSlot;
+            }
         }
     }
     

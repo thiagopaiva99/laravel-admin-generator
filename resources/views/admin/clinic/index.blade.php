@@ -199,7 +199,7 @@
     </div>
 
     <div id="eventContent" title="Event Details" style="display:none; position: absolute; z-index: 100; width: 200px; background: #fff; border: 1px solid rgba(0, 0, 0, 0.5);">
-        <header style="width: 100%; background: #00A65A; padding: 5px; color: white;">Lista de horários <button class="btn btn-default btn-xs pull-right" onclick="close_popup();"><i class="fa fa-remove"></i></button> </header>
+        <header style="width: 100%; background: #361121; padding: 5px; color: white;">Lista de horários <button class="btn btn-default btn-xs pull-right" onclick="close_popup();"><i class="fa fa-remove"></i></button> </header>
         <span style="margin-top: 10px; display: block;">
             <center>
                 <div class="btn-group">
@@ -211,15 +211,10 @@
                 <input type="hidden" name="time_slot_id" value="">
                 <input type="hidden" name="close_slot_start" value="">
                 <input type="hidden" name="close_slot_end" value="">
-            </center>
-        </span>
-        <div>
-            <center>
-                <br>
-                <i class="fa fa-spinner fa-spin"></i> Carregando...
+
                 <br><br>
             </center>
-        </div>
+        </span>
     </div>
 @endsection
 
@@ -287,7 +282,7 @@
                             local : $("#local").val(),
                             doctor : $("#local option:selected").attr("id-user")
                         },
-                        color: '#68c368',   // a non-ajax option
+                        color: '#571C36',   // a non-ajax option
                         textColor: 'white', // a non-ajax option
                         className: 'especifico',
                         timeout: 25000,

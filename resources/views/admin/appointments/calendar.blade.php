@@ -66,7 +66,7 @@
                     {
                         url : '/admin/calendar/clinic-appointments',
                         type : 'GET',
-                        color: '#68c368',
+                        color: '#571C36',
                         textColor: 'white',
                         data: {
                             local: $("select[name=local]").val()

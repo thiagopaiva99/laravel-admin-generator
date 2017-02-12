@@ -239,15 +239,10 @@
                 <input type="hidden" name="time_slot_id" value="">
                 <input type="hidden" name="close_slot_start" value="">
                 <input type="hidden" name="close_slot_end" value="">
-            </center>
-        </span>
-        <div>
-            <center>
-                <br>
-                <i class="fa fa-spinner fa-spin"></i> Carregando...
+
                 <br><br>
             </center>
-        </div>
+        </span>
     </div>
 @endsection
 
@@ -295,7 +290,7 @@
                     {
                         url : '/admin/calendar/feed-calendar',
                         type : 'GET',
-                        color: '#68c368',
+                        color: '#571C36',
                         textColor: 'white',
                         data: {
                             local: $("select[name=local]").val()
@@ -338,7 +333,7 @@
                             tipo : 2,
                             local : $("#local").val()
                         },
-                        color: '#68c368',   // a non-ajax option
+                        color: '#571C36',   // a non-ajax option
                         textColor: 'white', // a non-ajax option
                         className: 'especifico',
                         timeout: 25000,

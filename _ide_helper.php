@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.2.45 on 2017-02-08.
+ * Generated for Laravel 5.2.45 on 2017-02-12.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -1630,6 +1630,17 @@ namespace {
         /**
          * Determine if the current user is authenticated.
          *
+         * @return \App\Models\User 
+         * @throws \Illuminate\Auth\AuthenticationException
+         * @static 
+         */
+        public static function authenticate(){
+            return \Illuminate\Auth\SessionGuard::authenticate();
+        }
+        
+        /**
+         * Determine if the current user is authenticated.
+         *
          * @return bool 
          * @static 
          */
@@ -1645,17 +1656,6 @@ namespace {
          */
         public static function guest(){
             return \Illuminate\Auth\SessionGuard::guest();
-        }
-        
-        /**
-         * Determine if the current user is authenticated.
-         *
-         * @return \App\Models\User 
-         * @throws \Illuminate\Auth\AuthenticationException
-         * @static 
-         */
-        public static function authenticate(){
-            return \Illuminate\Auth\SessionGuard::authenticate();
         }
         
     }
@@ -2519,6 +2519,47 @@ namespace {
     }
 
 
+    class Crypt extends \Illuminate\Support\Facades\Crypt{
+        
+        /**
+         * Determine if the given key and cipher combination is valid.
+         *
+         * @param string $key
+         * @param string $cipher
+         * @return bool 
+         * @static 
+         */
+        public static function supported($key, $cipher){
+            return \Illuminate\Encryption\Encrypter::supported($key, $cipher);
+        }
+        
+        /**
+         * Encrypt the given value.
+         *
+         * @param string $value
+         * @return string 
+         * @throws \Illuminate\Contracts\Encryption\EncryptException
+         * @static 
+         */
+        public static function encrypt($value){
+            return \Illuminate\Encryption\Encrypter::encrypt($value);
+        }
+        
+        /**
+         * Decrypt the given value.
+         *
+         * @param string $payload
+         * @return string 
+         * @throws \Illuminate\Contracts\Encryption\DecryptException
+         * @static 
+         */
+        public static function decrypt($payload){
+            return \Illuminate\Encryption\Encrypter::decrypt($payload);
+        }
+        
+    }
+
+
     class DB extends \Illuminate\Support\Facades\DB{
         
         /**
@@ -2629,13 +2670,12 @@ namespace {
         }
         
         /**
-         * Get a schema builder instance for the connection.
+         * 
          *
-         * @return \Illuminate\Database\Schema\MySqlBuilder 
          * @static 
          */
         public static function getSchemaBuilder(){
-            return \Illuminate\Database\MySqlConnection::getSchemaBuilder();
+            return \Phaza\LaravelPostgis\PostgisConnection::getSchemaBuilder();
         }
         
         /**
@@ -2646,7 +2686,7 @@ namespace {
          */
         public static function useDefaultQueryGrammar(){
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::useDefaultQueryGrammar();
+            \Phaza\LaravelPostgis\PostgisConnection::useDefaultQueryGrammar();
         }
         
         /**
@@ -2657,7 +2697,7 @@ namespace {
          */
         public static function useDefaultSchemaGrammar(){
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::useDefaultSchemaGrammar();
+            \Phaza\LaravelPostgis\PostgisConnection::useDefaultSchemaGrammar();
         }
         
         /**
@@ -2668,7 +2708,7 @@ namespace {
          */
         public static function useDefaultPostProcessor(){
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::useDefaultPostProcessor();
+            \Phaza\LaravelPostgis\PostgisConnection::useDefaultPostProcessor();
         }
         
         /**
@@ -2680,7 +2720,7 @@ namespace {
          */
         public static function table($table){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::table($table);
+            return \Phaza\LaravelPostgis\PostgisConnection::table($table);
         }
         
         /**
@@ -2691,7 +2731,7 @@ namespace {
          */
         public static function query(){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::query();
+            return \Phaza\LaravelPostgis\PostgisConnection::query();
         }
         
         /**
@@ -2703,7 +2743,7 @@ namespace {
          */
         public static function raw($value){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::raw($value);
+            return \Phaza\LaravelPostgis\PostgisConnection::raw($value);
         }
         
         /**
@@ -2716,7 +2756,7 @@ namespace {
          */
         public static function selectOne($query, $bindings = array()){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::selectOne($query, $bindings);
+            return \Phaza\LaravelPostgis\PostgisConnection::selectOne($query, $bindings);
         }
         
         /**
@@ -2729,7 +2769,7 @@ namespace {
          */
         public static function selectFromWriteConnection($query, $bindings = array()){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::selectFromWriteConnection($query, $bindings);
+            return \Phaza\LaravelPostgis\PostgisConnection::selectFromWriteConnection($query, $bindings);
         }
         
         /**
@@ -2743,7 +2783,7 @@ namespace {
          */
         public static function select($query, $bindings = array(), $useReadPdo = true){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::select($query, $bindings, $useReadPdo);
+            return \Phaza\LaravelPostgis\PostgisConnection::select($query, $bindings, $useReadPdo);
         }
         
         /**
@@ -2757,7 +2797,7 @@ namespace {
          */
         public static function cursor($query, $bindings = array(), $useReadPdo = true){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::cursor($query, $bindings, $useReadPdo);
+            return \Phaza\LaravelPostgis\PostgisConnection::cursor($query, $bindings, $useReadPdo);
         }
         
         /**
@@ -2770,7 +2810,7 @@ namespace {
          */
         public static function insert($query, $bindings = array()){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::insert($query, $bindings);
+            return \Phaza\LaravelPostgis\PostgisConnection::insert($query, $bindings);
         }
         
         /**
@@ -2783,7 +2823,7 @@ namespace {
          */
         public static function update($query, $bindings = array()){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::update($query, $bindings);
+            return \Phaza\LaravelPostgis\PostgisConnection::update($query, $bindings);
         }
         
         /**
@@ -2796,7 +2836,7 @@ namespace {
          */
         public static function delete($query, $bindings = array()){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::delete($query, $bindings);
+            return \Phaza\LaravelPostgis\PostgisConnection::delete($query, $bindings);
         }
         
         /**
@@ -2809,7 +2849,7 @@ namespace {
          */
         public static function statement($query, $bindings = array()){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::statement($query, $bindings);
+            return \Phaza\LaravelPostgis\PostgisConnection::statement($query, $bindings);
         }
         
         /**
@@ -2822,7 +2862,7 @@ namespace {
          */
         public static function affectingStatement($query, $bindings = array()){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::affectingStatement($query, $bindings);
+            return \Phaza\LaravelPostgis\PostgisConnection::affectingStatement($query, $bindings);
         }
         
         /**
@@ -2834,7 +2874,7 @@ namespace {
          */
         public static function unprepared($query){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::unprepared($query);
+            return \Phaza\LaravelPostgis\PostgisConnection::unprepared($query);
         }
         
         /**
@@ -2846,7 +2886,7 @@ namespace {
          */
         public static function prepareBindings($bindings){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::prepareBindings($bindings);
+            return \Phaza\LaravelPostgis\PostgisConnection::prepareBindings($bindings);
         }
         
         /**
@@ -2859,7 +2899,7 @@ namespace {
          */
         public static function transaction($callback){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::transaction($callback);
+            return \Phaza\LaravelPostgis\PostgisConnection::transaction($callback);
         }
         
         /**
@@ -2871,7 +2911,7 @@ namespace {
          */
         public static function beginTransaction(){
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::beginTransaction();
+            \Phaza\LaravelPostgis\PostgisConnection::beginTransaction();
         }
         
         /**
@@ -2882,7 +2922,7 @@ namespace {
          */
         public static function commit(){
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::commit();
+            \Phaza\LaravelPostgis\PostgisConnection::commit();
         }
         
         /**
@@ -2893,7 +2933,7 @@ namespace {
          */
         public static function rollBack(){
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::rollBack();
+            \Phaza\LaravelPostgis\PostgisConnection::rollBack();
         }
         
         /**
@@ -2904,7 +2944,7 @@ namespace {
          */
         public static function transactionLevel(){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::transactionLevel();
+            return \Phaza\LaravelPostgis\PostgisConnection::transactionLevel();
         }
         
         /**
@@ -2916,7 +2956,7 @@ namespace {
          */
         public static function pretend($callback){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::pretend($callback);
+            return \Phaza\LaravelPostgis\PostgisConnection::pretend($callback);
         }
         
         /**
@@ -2930,7 +2970,7 @@ namespace {
          */
         public static function logQuery($query, $bindings, $time = null){
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::logQuery($query, $bindings, $time);
+            \Phaza\LaravelPostgis\PostgisConnection::logQuery($query, $bindings, $time);
         }
         
         /**
@@ -2942,7 +2982,7 @@ namespace {
          */
         public static function listen($callback){
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::listen($callback);
+            \Phaza\LaravelPostgis\PostgisConnection::listen($callback);
         }
         
         /**
@@ -2953,7 +2993,7 @@ namespace {
          */
         public static function isDoctrineAvailable(){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::isDoctrineAvailable();
+            return \Phaza\LaravelPostgis\PostgisConnection::isDoctrineAvailable();
         }
         
         /**
@@ -2966,7 +3006,7 @@ namespace {
          */
         public static function getDoctrineColumn($table, $column){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getDoctrineColumn($table, $column);
+            return \Phaza\LaravelPostgis\PostgisConnection::getDoctrineColumn($table, $column);
         }
         
         /**
@@ -2977,7 +3017,7 @@ namespace {
          */
         public static function getDoctrineSchemaManager(){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getDoctrineSchemaManager();
+            return \Phaza\LaravelPostgis\PostgisConnection::getDoctrineSchemaManager();
         }
         
         /**
@@ -2988,7 +3028,7 @@ namespace {
          */
         public static function getDoctrineConnection(){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getDoctrineConnection();
+            return \Phaza\LaravelPostgis\PostgisConnection::getDoctrineConnection();
         }
         
         /**
@@ -2999,7 +3039,7 @@ namespace {
          */
         public static function getPdo(){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getPdo();
+            return \Phaza\LaravelPostgis\PostgisConnection::getPdo();
         }
         
         /**
@@ -3010,7 +3050,7 @@ namespace {
          */
         public static function getReadPdo(){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getReadPdo();
+            return \Phaza\LaravelPostgis\PostgisConnection::getReadPdo();
         }
         
         /**
@@ -3023,7 +3063,7 @@ namespace {
          */
         public static function setPdo($pdo){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::setPdo($pdo);
+            return \Phaza\LaravelPostgis\PostgisConnection::setPdo($pdo);
         }
         
         /**
@@ -3035,7 +3075,7 @@ namespace {
          */
         public static function setReadPdo($pdo){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::setReadPdo($pdo);
+            return \Phaza\LaravelPostgis\PostgisConnection::setReadPdo($pdo);
         }
         
         /**
@@ -3047,7 +3087,7 @@ namespace {
          */
         public static function setReconnector($reconnector){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::setReconnector($reconnector);
+            return \Phaza\LaravelPostgis\PostgisConnection::setReconnector($reconnector);
         }
         
         /**
@@ -3058,7 +3098,7 @@ namespace {
          */
         public static function getName(){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getName();
+            return \Phaza\LaravelPostgis\PostgisConnection::getName();
         }
         
         /**
@@ -3070,7 +3110,7 @@ namespace {
          */
         public static function getConfig($option){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getConfig($option);
+            return \Phaza\LaravelPostgis\PostgisConnection::getConfig($option);
         }
         
         /**
@@ -3081,7 +3121,7 @@ namespace {
          */
         public static function getDriverName(){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getDriverName();
+            return \Phaza\LaravelPostgis\PostgisConnection::getDriverName();
         }
         
         /**
@@ -3092,7 +3132,7 @@ namespace {
          */
         public static function getQueryGrammar(){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getQueryGrammar();
+            return \Phaza\LaravelPostgis\PostgisConnection::getQueryGrammar();
         }
         
         /**
@@ -3104,7 +3144,7 @@ namespace {
          */
         public static function setQueryGrammar($grammar){
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::setQueryGrammar($grammar);
+            \Phaza\LaravelPostgis\PostgisConnection::setQueryGrammar($grammar);
         }
         
         /**
@@ -3115,7 +3155,7 @@ namespace {
          */
         public static function getSchemaGrammar(){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getSchemaGrammar();
+            return \Phaza\LaravelPostgis\PostgisConnection::getSchemaGrammar();
         }
         
         /**
@@ -3127,7 +3167,7 @@ namespace {
          */
         public static function setSchemaGrammar($grammar){
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::setSchemaGrammar($grammar);
+            \Phaza\LaravelPostgis\PostgisConnection::setSchemaGrammar($grammar);
         }
         
         /**
@@ -3138,7 +3178,7 @@ namespace {
          */
         public static function getPostProcessor(){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getPostProcessor();
+            return \Phaza\LaravelPostgis\PostgisConnection::getPostProcessor();
         }
         
         /**
@@ -3150,7 +3190,7 @@ namespace {
          */
         public static function setPostProcessor($processor){
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::setPostProcessor($processor);
+            \Phaza\LaravelPostgis\PostgisConnection::setPostProcessor($processor);
         }
         
         /**
@@ -3161,7 +3201,7 @@ namespace {
          */
         public static function getEventDispatcher(){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getEventDispatcher();
+            return \Phaza\LaravelPostgis\PostgisConnection::getEventDispatcher();
         }
         
         /**
@@ -3173,7 +3213,7 @@ namespace {
          */
         public static function setEventDispatcher($events){
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::setEventDispatcher($events);
+            \Phaza\LaravelPostgis\PostgisConnection::setEventDispatcher($events);
         }
         
         /**
@@ -3184,7 +3224,7 @@ namespace {
          */
         public static function pretending(){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::pretending();
+            return \Phaza\LaravelPostgis\PostgisConnection::pretending();
         }
         
         /**
@@ -3195,7 +3235,7 @@ namespace {
          */
         public static function getFetchMode(){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getFetchMode();
+            return \Phaza\LaravelPostgis\PostgisConnection::getFetchMode();
         }
         
         /**
@@ -3206,7 +3246,7 @@ namespace {
          */
         public static function getFetchArgument(){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getFetchArgument();
+            return \Phaza\LaravelPostgis\PostgisConnection::getFetchArgument();
         }
         
         /**
@@ -3217,7 +3257,7 @@ namespace {
          */
         public static function getFetchConstructorArgument(){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getFetchConstructorArgument();
+            return \Phaza\LaravelPostgis\PostgisConnection::getFetchConstructorArgument();
         }
         
         /**
@@ -3231,7 +3271,7 @@ namespace {
          */
         public static function setFetchMode($fetchMode, $fetchArgument = null, $fetchConstructorArgument = array()){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::setFetchMode($fetchMode, $fetchArgument, $fetchConstructorArgument);
+            return \Phaza\LaravelPostgis\PostgisConnection::setFetchMode($fetchMode, $fetchArgument, $fetchConstructorArgument);
         }
         
         /**
@@ -3242,7 +3282,7 @@ namespace {
          */
         public static function getQueryLog(){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getQueryLog();
+            return \Phaza\LaravelPostgis\PostgisConnection::getQueryLog();
         }
         
         /**
@@ -3253,7 +3293,7 @@ namespace {
          */
         public static function flushQueryLog(){
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::flushQueryLog();
+            \Phaza\LaravelPostgis\PostgisConnection::flushQueryLog();
         }
         
         /**
@@ -3264,7 +3304,7 @@ namespace {
          */
         public static function enableQueryLog(){
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::enableQueryLog();
+            \Phaza\LaravelPostgis\PostgisConnection::enableQueryLog();
         }
         
         /**
@@ -3275,7 +3315,7 @@ namespace {
          */
         public static function disableQueryLog(){
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::disableQueryLog();
+            \Phaza\LaravelPostgis\PostgisConnection::disableQueryLog();
         }
         
         /**
@@ -3286,7 +3326,7 @@ namespace {
          */
         public static function logging(){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::logging();
+            return \Phaza\LaravelPostgis\PostgisConnection::logging();
         }
         
         /**
@@ -3297,7 +3337,7 @@ namespace {
          */
         public static function getDatabaseName(){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getDatabaseName();
+            return \Phaza\LaravelPostgis\PostgisConnection::getDatabaseName();
         }
         
         /**
@@ -3309,7 +3349,7 @@ namespace {
          */
         public static function setDatabaseName($database){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::setDatabaseName($database);
+            return \Phaza\LaravelPostgis\PostgisConnection::setDatabaseName($database);
         }
         
         /**
@@ -3320,7 +3360,7 @@ namespace {
          */
         public static function getTablePrefix(){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::getTablePrefix();
+            return \Phaza\LaravelPostgis\PostgisConnection::getTablePrefix();
         }
         
         /**
@@ -3332,7 +3372,7 @@ namespace {
          */
         public static function setTablePrefix($prefix){
             //Method inherited from \Illuminate\Database\Connection            
-            \Illuminate\Database\MySqlConnection::setTablePrefix($prefix);
+            \Phaza\LaravelPostgis\PostgisConnection::setTablePrefix($prefix);
         }
         
         /**
@@ -3344,7 +3384,7 @@ namespace {
          */
         public static function withTablePrefix($grammar){
             //Method inherited from \Illuminate\Database\Connection            
-            return \Illuminate\Database\MySqlConnection::withTablePrefix($grammar);
+            return \Phaza\LaravelPostgis\PostgisConnection::withTablePrefix($grammar);
         }
         
     }
@@ -6659,6 +6699,125 @@ namespace {
             return \Illuminate\Queue\QueueManager::isDownForMaintenance();
         }
         
+        /**
+         * Push a new job onto the queue.
+         *
+         * @param string $job
+         * @param mixed $data
+         * @param string $queue
+         * @return mixed 
+         * @throws \Exception|\Throwable
+         * @static 
+         */
+        public static function push($job, $data = '', $queue = null){
+            return \Illuminate\Queue\SyncQueue::push($job, $data, $queue);
+        }
+        
+        /**
+         * Push a raw payload onto the queue.
+         *
+         * @param string $payload
+         * @param string $queue
+         * @param array $options
+         * @return mixed 
+         * @static 
+         */
+        public static function pushRaw($payload, $queue = null, $options = array()){
+            return \Illuminate\Queue\SyncQueue::pushRaw($payload, $queue, $options);
+        }
+        
+        /**
+         * Push a new job onto the queue after a delay.
+         *
+         * @param \DateTime|int $delay
+         * @param string $job
+         * @param mixed $data
+         * @param string $queue
+         * @return mixed 
+         * @static 
+         */
+        public static function later($delay, $job, $data = '', $queue = null){
+            return \Illuminate\Queue\SyncQueue::later($delay, $job, $data, $queue);
+        }
+        
+        /**
+         * Pop the next job off of the queue.
+         *
+         * @param string $queue
+         * @return \Illuminate\Contracts\Queue\Job|null 
+         * @static 
+         */
+        public static function pop($queue = null){
+            return \Illuminate\Queue\SyncQueue::pop($queue);
+        }
+        
+        /**
+         * Push a new job onto the queue.
+         *
+         * @param string $queue
+         * @param string $job
+         * @param mixed $data
+         * @return mixed 
+         * @static 
+         */
+        public static function pushOn($queue, $job, $data = ''){
+            //Method inherited from \Illuminate\Queue\Queue            
+            return \Illuminate\Queue\SyncQueue::pushOn($queue, $job, $data);
+        }
+        
+        /**
+         * Push a new job onto the queue after a delay.
+         *
+         * @param string $queue
+         * @param \DateTime|int $delay
+         * @param string $job
+         * @param mixed $data
+         * @return mixed 
+         * @static 
+         */
+        public static function laterOn($queue, $delay, $job, $data = ''){
+            //Method inherited from \Illuminate\Queue\Queue            
+            return \Illuminate\Queue\SyncQueue::laterOn($queue, $delay, $job, $data);
+        }
+        
+        /**
+         * Push an array of jobs onto the queue.
+         *
+         * @param array $jobs
+         * @param mixed $data
+         * @param string $queue
+         * @return mixed 
+         * @static 
+         */
+        public static function bulk($jobs, $data = '', $queue = null){
+            //Method inherited from \Illuminate\Queue\Queue            
+            return \Illuminate\Queue\SyncQueue::bulk($jobs, $data, $queue);
+        }
+        
+        /**
+         * Set the IoC container instance.
+         *
+         * @param \Illuminate\Container\Container $container
+         * @return void 
+         * @static 
+         */
+        public static function setContainer($container){
+            //Method inherited from \Illuminate\Queue\Queue            
+            \Illuminate\Queue\SyncQueue::setContainer($container);
+        }
+        
+        /**
+         * Set the encrypter implementation.
+         *
+         * @param \Illuminate\Contracts\Encryption\Encrypter $encrypter
+         * @return void 
+         * @static 
+         */
+        public static function setEncrypter($encrypter){
+            //Method inherited from \Illuminate\Queue\Queue            
+            \Illuminate\Queue\SyncQueue::setEncrypter($encrypter);
+        }
+        
     }
 
 
@@ -7391,7 +7550,7 @@ namespace {
          * @param array $cookies The COOKIE parameters
          * @param array $files The FILES parameters
          * @param array $server The SERVER parameters
-         * @return \Request The duplicated request
+         * @return static 
          * @static 
          */
         public static function duplicate($query = null, $request = null, $attributes = null, $cookies = null, $files = null, $server = null){
@@ -7561,7 +7720,7 @@ namespace {
         /**
          * Creates a new request with values from PHP's super globals.
          *
-         * @return \Request A new request
+         * @return static 
          * @static 
          */
         public static function createFromGlobals(){
@@ -7582,7 +7741,7 @@ namespace {
          * @param array $files The request files ($_FILES)
          * @param array $server The server parameters ($_SERVER)
          * @param string $content The raw body data
-         * @return \Request A Request instance
+         * @return static 
          * @static 
          */
         public static function create($uri, $method = 'GET', $parameters = array(), $cookies = array(), $files = array(), $server = array(), $content = null){
@@ -7675,6 +7834,7 @@ namespace {
          *  * Request::HEADER_CLIENT_HOST:  defaults to X-Forwarded-Host  (see getHost())
          *  * Request::HEADER_CLIENT_PORT:  defaults to X-Forwarded-Port  (see getPort())
          *  * Request::HEADER_CLIENT_PROTO: defaults to X-Forwarded-Proto (see getScheme() and isSecure())
+         *  * Request::HEADER_FORWARDED:    defaults to Forwarded         (see RFC 7239)
          * 
          * Setting an empty value allows to disable the trusted header for the given key.
          *
@@ -7746,22 +7906,31 @@ namespace {
         }
         
         /**
-         * Gets a "parameter" value from any bag.
+         * Gets a "parameter" value.
          * 
-         * This method is mainly useful for libraries that want to provide some flexibility. If you don't need the
-         * flexibility in controllers, it is better to explicitly get request parameters from the appropriate
-         * public property instead (attributes, query, request).
+         * This method is mainly useful for libraries that want to provide some flexibility.
          * 
-         * Order of precedence: PATH (routing placeholders or custom attributes), GET, BODY
+         * Order of precedence: GET, PATH, POST
+         * 
+         * Avoid using this method in controllers:
+         * 
+         *  * slow
+         *  * prefer to get from a "named" source
+         * 
+         * It is better to explicitly get request parameters from the appropriate
+         * public property instead (query, attributes, request).
+         * 
+         * Note: Finding deep items is deprecated since version 2.8, to be removed in 3.0.
          *
          * @param string $key the key
          * @param mixed $default the default value if the parameter key does not exist
+         * @param bool $deep is parameter deep in multidimensional array
          * @return mixed 
          * @static 
          */
-        public static function get($key, $default = null){
+        public static function get($key, $default = null, $deep = false){
             //Method inherited from \Symfony\Component\HttpFoundation\Request            
-            return \Illuminate\Http\Request::get($key, $default);
+            return \Illuminate\Http\Request::get($key, $default, $deep);
         }
         
         /**
@@ -8207,7 +8376,7 @@ namespace {
          * Here is the process to determine the format:
          * 
          *  * format defined by the user (with setRequestFormat())
-         *  * _format request attribute
+         *  * _format request parameter
          *  * $default
          *
          * @param string $default The default format
@@ -8300,12 +8469,26 @@ namespace {
         /**
          * Checks whether the method is safe or not.
          *
+         * @see https://tools.ietf.org/html/rfc7231#section-4.2.1
+         * @param bool $andCacheable Adds the additional condition that the method should be cacheable. True by default.
          * @return bool 
          * @static 
          */
         public static function isMethodSafe(){
             //Method inherited from \Symfony\Component\HttpFoundation\Request            
             return \Illuminate\Http\Request::isMethodSafe();
+        }
+        
+        /**
+         * Checks whether the method is cacheable or not.
+         *
+         * @see https://tools.ietf.org/html/rfc7231#section-4.2.3
+         * @return bool 
+         * @static 
+         */
+        public static function isMethodCacheable(){
+            //Method inherited from \Symfony\Component\HttpFoundation\Request            
+            return \Illuminate\Http\Request::isMethodCacheable();
         }
         
         /**
@@ -8405,7 +8588,7 @@ namespace {
          * It works if your JavaScript library sets an X-Requested-With HTTP header.
          * It is known to work with common JavaScript frameworks:
          *
-         * @link http://en.wikipedia.org/wiki/List_of_Ajax_frameworks#JavaScript
+         * @see http://en.wikipedia.org/wiki/List_of_Ajax_frameworks#JavaScript
          * @return bool true if the request is an XMLHttpRequest, false otherwise
          * @static 
          */
@@ -9251,18 +9434,8 @@ namespace {
          * @static 
          */
         public static function hasTable($table){
-            return \Illuminate\Database\Schema\MySqlBuilder::hasTable($table);
-        }
-        
-        /**
-         * Get the column listing for a given table.
-         *
-         * @param string $table
-         * @return array 
-         * @static 
-         */
-        public static function getColumnListing($table){
-            return \Illuminate\Database\Schema\MySqlBuilder::getColumnListing($table);
+            //Method inherited from \Illuminate\Database\Schema\PostgresBuilder            
+            return \Phaza\LaravelPostgis\Schema\Builder::hasTable($table);
         }
         
         /**
@@ -9275,7 +9448,7 @@ namespace {
          */
         public static function hasColumn($table, $column){
             //Method inherited from \Illuminate\Database\Schema\Builder            
-            return \Illuminate\Database\Schema\MySqlBuilder::hasColumn($table, $column);
+            return \Phaza\LaravelPostgis\Schema\Builder::hasColumn($table, $column);
         }
         
         /**
@@ -9288,7 +9461,7 @@ namespace {
          */
         public static function hasColumns($table, $columns){
             //Method inherited from \Illuminate\Database\Schema\Builder            
-            return \Illuminate\Database\Schema\MySqlBuilder::hasColumns($table, $columns);
+            return \Phaza\LaravelPostgis\Schema\Builder::hasColumns($table, $columns);
         }
         
         /**
@@ -9301,7 +9474,19 @@ namespace {
          */
         public static function getColumnType($table, $column){
             //Method inherited from \Illuminate\Database\Schema\Builder            
-            return \Illuminate\Database\Schema\MySqlBuilder::getColumnType($table, $column);
+            return \Phaza\LaravelPostgis\Schema\Builder::getColumnType($table, $column);
+        }
+        
+        /**
+         * Get the column listing for a given table.
+         *
+         * @param string $table
+         * @return array 
+         * @static 
+         */
+        public static function getColumnListing($table){
+            //Method inherited from \Illuminate\Database\Schema\Builder            
+            return \Phaza\LaravelPostgis\Schema\Builder::getColumnListing($table);
         }
         
         /**
@@ -9314,7 +9499,7 @@ namespace {
          */
         public static function table($table, $callback){
             //Method inherited from \Illuminate\Database\Schema\Builder            
-            return \Illuminate\Database\Schema\MySqlBuilder::table($table, $callback);
+            return \Phaza\LaravelPostgis\Schema\Builder::table($table, $callback);
         }
         
         /**
@@ -9327,7 +9512,7 @@ namespace {
          */
         public static function create($table, $callback){
             //Method inherited from \Illuminate\Database\Schema\Builder            
-            return \Illuminate\Database\Schema\MySqlBuilder::create($table, $callback);
+            return \Phaza\LaravelPostgis\Schema\Builder::create($table, $callback);
         }
         
         /**
@@ -9339,7 +9524,7 @@ namespace {
          */
         public static function drop($table){
             //Method inherited from \Illuminate\Database\Schema\Builder            
-            return \Illuminate\Database\Schema\MySqlBuilder::drop($table);
+            return \Phaza\LaravelPostgis\Schema\Builder::drop($table);
         }
         
         /**
@@ -9351,7 +9536,7 @@ namespace {
          */
         public static function dropIfExists($table){
             //Method inherited from \Illuminate\Database\Schema\Builder            
-            return \Illuminate\Database\Schema\MySqlBuilder::dropIfExists($table);
+            return \Phaza\LaravelPostgis\Schema\Builder::dropIfExists($table);
         }
         
         /**
@@ -9364,7 +9549,7 @@ namespace {
          */
         public static function rename($from, $to){
             //Method inherited from \Illuminate\Database\Schema\Builder            
-            return \Illuminate\Database\Schema\MySqlBuilder::rename($from, $to);
+            return \Phaza\LaravelPostgis\Schema\Builder::rename($from, $to);
         }
         
         /**
@@ -9375,7 +9560,7 @@ namespace {
          */
         public static function enableForeignKeyConstraints(){
             //Method inherited from \Illuminate\Database\Schema\Builder            
-            return \Illuminate\Database\Schema\MySqlBuilder::enableForeignKeyConstraints();
+            return \Phaza\LaravelPostgis\Schema\Builder::enableForeignKeyConstraints();
         }
         
         /**
@@ -9386,7 +9571,7 @@ namespace {
          */
         public static function disableForeignKeyConstraints(){
             //Method inherited from \Illuminate\Database\Schema\Builder            
-            return \Illuminate\Database\Schema\MySqlBuilder::disableForeignKeyConstraints();
+            return \Phaza\LaravelPostgis\Schema\Builder::disableForeignKeyConstraints();
         }
         
         /**
@@ -9397,7 +9582,7 @@ namespace {
          */
         public static function getConnection(){
             //Method inherited from \Illuminate\Database\Schema\Builder            
-            return \Illuminate\Database\Schema\MySqlBuilder::getConnection();
+            return \Phaza\LaravelPostgis\Schema\Builder::getConnection();
         }
         
         /**
@@ -9409,7 +9594,7 @@ namespace {
          */
         public static function setConnection($connection){
             //Method inherited from \Illuminate\Database\Schema\Builder            
-            return \Illuminate\Database\Schema\MySqlBuilder::setConnection($connection);
+            return \Phaza\LaravelPostgis\Schema\Builder::setConnection($connection);
         }
         
         /**
@@ -9421,7 +9606,7 @@ namespace {
          */
         public static function blueprintResolver($resolver){
             //Method inherited from \Illuminate\Database\Schema\Builder            
-            \Illuminate\Database\Schema\MySqlBuilder::blueprintResolver($resolver);
+            \Phaza\LaravelPostgis\Schema\Builder::blueprintResolver($resolver);
         }
         
     }
@@ -12917,7 +13102,7 @@ namespace {
          * @param array $cookies The COOKIE parameters
          * @param array $files The FILES parameters
          * @param array $server The SERVER parameters
-         * @return \Request The duplicated request
+         * @return static 
          * @static 
          */
         public static function duplicate($query = null, $request = null, $attributes = null, $cookies = null, $files = null, $server = null){
@@ -13087,7 +13272,7 @@ namespace {
         /**
          * Creates a new request with values from PHP's super globals.
          *
-         * @return \Request A new request
+         * @return static 
          * @static 
          */
         public static function createFromGlobals(){
@@ -13108,7 +13293,7 @@ namespace {
          * @param array $files The request files ($_FILES)
          * @param array $server The server parameters ($_SERVER)
          * @param string $content The raw body data
-         * @return \Request A Request instance
+         * @return static 
          * @static 
          */
         public static function create($uri, $method = 'GET', $parameters = array(), $cookies = array(), $files = array(), $server = array(), $content = null){
@@ -13201,6 +13386,7 @@ namespace {
          *  * Request::HEADER_CLIENT_HOST:  defaults to X-Forwarded-Host  (see getHost())
          *  * Request::HEADER_CLIENT_PORT:  defaults to X-Forwarded-Port  (see getPort())
          *  * Request::HEADER_CLIENT_PROTO: defaults to X-Forwarded-Proto (see getScheme() and isSecure())
+         *  * Request::HEADER_FORWARDED:    defaults to Forwarded         (see RFC 7239)
          * 
          * Setting an empty value allows to disable the trusted header for the given key.
          *
@@ -13272,22 +13458,31 @@ namespace {
         }
         
         /**
-         * Gets a "parameter" value from any bag.
+         * Gets a "parameter" value.
          * 
-         * This method is mainly useful for libraries that want to provide some flexibility. If you don't need the
-         * flexibility in controllers, it is better to explicitly get request parameters from the appropriate
-         * public property instead (attributes, query, request).
+         * This method is mainly useful for libraries that want to provide some flexibility.
          * 
-         * Order of precedence: PATH (routing placeholders or custom attributes), GET, BODY
+         * Order of precedence: GET, PATH, POST
+         * 
+         * Avoid using this method in controllers:
+         * 
+         *  * slow
+         *  * prefer to get from a "named" source
+         * 
+         * It is better to explicitly get request parameters from the appropriate
+         * public property instead (query, attributes, request).
+         * 
+         * Note: Finding deep items is deprecated since version 2.8, to be removed in 3.0.
          *
          * @param string $key the key
          * @param mixed $default the default value if the parameter key does not exist
+         * @param bool $deep is parameter deep in multidimensional array
          * @return mixed 
          * @static 
          */
-        public static function get($key, $default = null){
+        public static function get($key, $default = null, $deep = false){
             //Method inherited from \Symfony\Component\HttpFoundation\Request            
-            return \Illuminate\Http\Request::get($key, $default);
+            return \Illuminate\Http\Request::get($key, $default, $deep);
         }
         
         /**
@@ -13733,7 +13928,7 @@ namespace {
          * Here is the process to determine the format:
          * 
          *  * format defined by the user (with setRequestFormat())
-         *  * _format request attribute
+         *  * _format request parameter
          *  * $default
          *
          * @param string $default The default format
@@ -13826,12 +14021,26 @@ namespace {
         /**
          * Checks whether the method is safe or not.
          *
+         * @see https://tools.ietf.org/html/rfc7231#section-4.2.1
+         * @param bool $andCacheable Adds the additional condition that the method should be cacheable. True by default.
          * @return bool 
          * @static 
          */
         public static function isMethodSafe(){
             //Method inherited from \Symfony\Component\HttpFoundation\Request            
             return \Illuminate\Http\Request::isMethodSafe();
+        }
+        
+        /**
+         * Checks whether the method is cacheable or not.
+         *
+         * @see https://tools.ietf.org/html/rfc7231#section-4.2.3
+         * @return bool 
+         * @static 
+         */
+        public static function isMethodCacheable(){
+            //Method inherited from \Symfony\Component\HttpFoundation\Request            
+            return \Illuminate\Http\Request::isMethodCacheable();
         }
         
         /**
@@ -13931,7 +14140,7 @@ namespace {
          * It works if your JavaScript library sets an X-Requested-With HTTP header.
          * It is known to work with common JavaScript frameworks:
          *
-         * @link http://en.wikipedia.org/wiki/List_of_Ajax_frameworks#JavaScript
+         * @see http://en.wikipedia.org/wiki/List_of_Ajax_frameworks#JavaScript
          * @return bool true if the request is an XMLHttpRequest, false otherwise
          * @static 
          */
