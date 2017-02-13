@@ -1,3 +1,5 @@
 #exclude all these directories from commit
 node_modules/*
 vendor/*
+_ide_helper.php
+.idea/*

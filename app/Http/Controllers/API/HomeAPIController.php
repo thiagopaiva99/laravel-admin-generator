@@ -22,7 +22,7 @@ use App\Models\Exam;
 class HomeAPIController extends AppBaseController {
     public function showHome(HomeAPIRequest $request, $response = true, $home = false) {
 
-        $plans = HealthPlan::whereNull("health_plan_id")->with("healthPlans")->orderBy("name");
+        $plans = HealthPlan::where('id', '>', 0)->whereNull("health_plan_id")->with("healthPlans")->orderBy("name");
 
         $specializations = $response ? Specialization::orderBy("name")->get() : Specialization::orderBy("name")->pluck('name', 'id');
         $healthPlans = $home ? HealthPlan::orderBy("name")->pluck('name', 'id') : $plans->get();

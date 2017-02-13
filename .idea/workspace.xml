@@ -5,27 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c7ac426-c9ba-42e3-b688-da531505327b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/4e8ea3db-3c28-440a-8d22-ac31934dff2f/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/4e8ea3db-3c28-440a-8d22-ac31934dff2f/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/4e8ea3db-3c28-440a-8d22-ac31934dff2f/_metadata_/metadata.keystream" afterPath="$PROJECT_DIR$/.idea/dataSources/4e8ea3db-3c28-440a-8d22-ac31934dff2f/_metadata_/metadata.keystream" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/4e8ea3db-3c28-440a-8d22-ac31934dff2f/_metadata_/metadata.keystream.len" afterPath="$PROJECT_DIR$/.idea/dataSources/4e8ea3db-3c28-440a-8d22-ac31934dff2f/_metadata_/metadata.keystream.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/4e8ea3db-3c28-440a-8d22-ac31934dff2f/_metadata_/metadata.len" afterPath="$PROJECT_DIR$/.idea/dataSources/4e8ea3db-3c28-440a-8d22-ac31934dff2f/_metadata_/metadata.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/4e8ea3db-3c28-440a-8d22-ac31934dff2f/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/4e8ea3db-3c28-440a-8d22-ac31934dff2f/_metadata_/metadata.values.at" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/4e8ea3db-3c28-440a-8d22-ac31934dff2f/_metadata_/metadata_i" afterPath="$PROJECT_DIR$/.idea/dataSources/4e8ea3db-3c28-440a-8d22-ac31934dff2f/_metadata_/metadata_i" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/4e8ea3db-3c28-440a-8d22-ac31934dff2f/_metadata_/metadata_i.len" afterPath="$PROJECT_DIR$/.idea/dataSources/4e8ea3db-3c28-440a-8d22-ac31934dff2f/_metadata_/metadata_i.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/4e8ea3db-3c28-440a-8d22-ac31934dff2f/_src_/database/embelezzo_db/schema/public.zip" afterPath="$PROJECT_DIR$/.idea/dataSources/4e8ea3db-3c28-440a-8d22-ac31934dff2f/_src_/database/embelezzo_db/schema/public.zip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/4e8ea3db-3c28-440a-8d22-ac31934dff2f.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/4e8ea3db-3c28-440a-8d22-ac31934dff2f.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_ide_helper.php" afterPath="$PROJECT_DIR$/_ide_helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/API/HomeAPIController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/HomeAPIController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/API/TimelineAPIController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/TimelineAPIController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CalendarController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CalendarController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/TimeSlotController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TimeSlotController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/appointments/calendar.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/appointments/calendar.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/calendar/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/calendar/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/clinic/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/clinic/index.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -61,14 +46,76 @@
       <file leaf-file-name="TimeSlotController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/TimeSlotController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="265" column="68" lean-forward="false" selection-start-line="265" selection-start-column="68" selection-end-line="265" selection-end-column="68" />
+            <state relative-caret-position="1044">
+              <caret line="182" column="0" lean-forward="false" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
               <folding>
                 <element signature="e#1169#1881#0#PHP" expanded="false" />
                 <element signature="e#1984#4631#0#PHP" expanded="false" />
                 <element signature="e#4734#5671#0#PHP" expanded="false" />
-                <marker date="1486912719437" expanded="true" signature="25265:25336" ph="select * fro... time_slot_details" />
-                <marker date="1486912719437" expanded="true" signature="26246:26360" ph="select * fro... time_slot_details" />
+                <marker date="1486999192533" expanded="true" signature="789:26949" ph="{...}" />
+                <marker date="1486999192533" expanded="true" signature="12332:15649" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="12549:12753" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="13120:13169" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="13229:13521" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="13275:13469" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="13595:15353" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="13673:15343" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="14405:15268" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="14563:15250" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="15082:15151" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="15159:15228" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="15276:15329" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="15400:15514" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="15520:15643" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="15659:15765" ph=" Display the specified TimeSlot. ..." />
+                <marker date="1486999192533" expanded="true" signature="15768:16130" ph="//..." />
+                <marker date="1486999192533" expanded="true" signature="16139:16263" ph=" Show the form for editing the specified TimeSlot. ..." />
+                <marker date="1486999192533" expanded="true" signature="16295:17859" ph="{...}" />
+                <marker date="1486999192533" expanded="true" signature="16403:16525" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="16659:17057" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="16887:17039" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="17063:17145" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="17319:17605" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="17672:17693" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="17714:17737" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="17758:17771" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="17792:17811" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="17832:17851" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="17868:18042" ph=" Update the specified TimeSlot in storage. ..." />
+                <marker date="1486999192533" expanded="true" signature="18108:22224" ph="{...}" />
+                <marker date="1486999192533" expanded="true" signature="18278:22217" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="18356:18673" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="19108:19165" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="19225:19537" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="19275:19477" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="20160:22036" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="20207:20263" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="20326:20975" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="20454:20957" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="20981:21420" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="21492:21845" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="21637:21728" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="21734:21827" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="21853:22022" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="22042:22207" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="22233:22351" ph=" Remove the specified TimeSlot from storage. ..." />
+                <marker date="1486999192533" expanded="true" signature="22386:22935" ph="{...}" />
+                <marker date="1486999192533" expanded="true" signature="22494:22616" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="22786:22853" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="22859:22928" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="22990:23343" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="23118:23240" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="23383:23408" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="24361:26042" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="24582:26032" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="24629:26018" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="25396:25922" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="25451:25900" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="25928:26000" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="26084:26127" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="26435:26851" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="26477:26841" ph="..." />
+                <marker date="1486999192533" expanded="true" signature="26857:26904" ph="..." />
               </folding>
             </state>
           </provider>
@@ -77,7 +124,7 @@
       <file leaf-file-name="Local.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Models/Local.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6210">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -87,18 +134,8 @@
       <file leaf-file-name="TimelineAPIController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/TimelineAPIController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="132" column="34" lean-forward="false" selection-start-line="132" selection-start-column="34" selection-end-line="132" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4e8ea3db-3c28-440a-8d22-ac31934dff2f/console.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="31" lean-forward="false" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
+            <state relative-caret-position="522">
+              <caret line="101" column="40" lean-forward="true" selection-start-line="101" selection-start-column="40" selection-end-line="101" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -121,7 +158,10 @@
         <option value="$PROJECT_DIR$/resources/views/admin/calendar/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/appointments/calendar.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/TimeSlotController.php" />
+        <option value="$PROJECT_DIR$/../docsaude/app/Http/Controllers/API/TimelineAPIController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/API/HomeAPIController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/API/TimelineAPIController.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -143,10 +183,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1366" />
-    <option name="y" value="10" />
-    <option name="width" value="1366" />
-    <option name="height" value="768" />
+    <option name="x" value="58" />
+    <option name="y" value="18" />
+    <option name="width" value="1862" />
+    <option name="height" value="1062" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -163,8 +203,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -435,6 +473,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -461,27 +501,26 @@
       <workItem from="1486861122459" duration="137000" />
       <workItem from="1486910695299" duration="2069000" />
       <workItem from="1486934769287" duration="772000" />
+      <workItem from="1486999306392" duration="1824000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3436000" />
+    <option name="totallyTimeSpent" value="5260000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1366" y="10" width="1366" height="768" extended-state="6" />
+    <frame x="58" y="18" width="1862" height="1062" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1749634" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1745435" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16544656" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16541353" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -491,9 +530,11 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="0" y="392" width="1366" height="376" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -513,23 +554,170 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/TimeSlotController.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4770">
+          <caret line="265" column="0" lean-forward="true" selection-start-line="265" selection-start-column="0" selection-end-line="265" selection-end-column="0" />
+          <folding>
+            <element signature="e#1169#1881#0#PHP" expanded="false" />
+            <element signature="e#1984#4631#0#PHP" expanded="false" />
+            <element signature="e#4734#5671#0#PHP" expanded="false" />
+            <marker date="1486999192533" expanded="true" signature="789:26949" ph="{...}" />
+            <marker date="1486999192533" expanded="true" signature="12332:15649" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="12549:12753" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="13120:13169" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="13229:13521" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="13275:13469" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="13595:15353" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="13673:15343" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="14405:15268" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="14563:15250" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="15082:15151" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="15159:15228" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="15276:15329" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="15400:15514" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="15520:15643" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="15659:15765" ph=" Display the specified TimeSlot. ..." />
+            <marker date="1486999192533" expanded="true" signature="15768:16130" ph="//..." />
+            <marker date="1486999192533" expanded="true" signature="16139:16263" ph=" Show the form for editing the specified TimeSlot. ..." />
+            <marker date="1486999192533" expanded="true" signature="16295:17859" ph="{...}" />
+            <marker date="1486999192533" expanded="true" signature="16403:16525" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="16659:17057" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="16887:17039" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="17063:17145" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="17319:17605" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="17672:17693" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="17714:17737" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="17758:17771" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="17792:17811" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="17832:17851" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="17868:18042" ph=" Update the specified TimeSlot in storage. ..." />
+            <marker date="1486999192533" expanded="true" signature="18108:22224" ph="{...}" />
+            <marker date="1486999192533" expanded="true" signature="18278:22217" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="18356:18673" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="19108:19165" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="19225:19537" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="19275:19477" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="20160:22036" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="20207:20263" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="20326:20975" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="20454:20957" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="20981:21420" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="21492:21845" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="21637:21728" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="21734:21827" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="21853:22022" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="22042:22207" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="22233:22351" ph=" Remove the specified TimeSlot from storage. ..." />
+            <marker date="1486999192533" expanded="true" signature="22386:22935" ph="{...}" />
+            <marker date="1486999192533" expanded="true" signature="22494:22616" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="22786:22853" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="22859:22928" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="22990:23343" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="23118:23240" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="23383:23408" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="24361:26042" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="24582:26032" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="24629:26018" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="25396:25922" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="25451:25900" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="25928:26000" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="26084:26127" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="26435:26851" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="26477:26841" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="26857:26904" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/TimeSlotController.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#1169#1881#0#PHP" expanded="false" />
             <element signature="e#1984#4631#0#PHP" expanded="false" />
             <element signature="e#4734#5671#0#PHP" expanded="false" />
-            <marker date="1486912719437" expanded="true" signature="25265:25336" ph="select * fro... time_slot_details" />
-            <marker date="1486912719437" expanded="true" signature="26246:26360" ph="select * fro... time_slot_details" />
+            <marker date="1486999192533" expanded="true" signature="789:26949" ph="{...}" />
+            <marker date="1486999192533" expanded="true" signature="12332:15649" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="12549:12753" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="13120:13169" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="13229:13521" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="13275:13469" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="13595:15353" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="13673:15343" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="14405:15268" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="14563:15250" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="15082:15151" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="15159:15228" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="15276:15329" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="15400:15514" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="15520:15643" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="15659:15765" ph=" Display the specified TimeSlot. ..." />
+            <marker date="1486999192533" expanded="true" signature="15768:16130" ph="//..." />
+            <marker date="1486999192533" expanded="true" signature="16139:16263" ph=" Show the form for editing the specified TimeSlot. ..." />
+            <marker date="1486999192533" expanded="true" signature="16295:17859" ph="{...}" />
+            <marker date="1486999192533" expanded="true" signature="16403:16525" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="16659:17057" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="16887:17039" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="17063:17145" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="17319:17605" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="17672:17693" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="17714:17737" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="17758:17771" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="17792:17811" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="17832:17851" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="17868:18042" ph=" Update the specified TimeSlot in storage. ..." />
+            <marker date="1486999192533" expanded="true" signature="18108:22224" ph="{...}" />
+            <marker date="1486999192533" expanded="true" signature="18278:22217" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="18356:18673" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="19108:19165" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="19225:19537" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="19275:19477" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="20160:22036" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="20207:20263" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="20326:20975" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="20454:20957" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="20981:21420" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="21492:21845" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="21637:21728" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="21734:21827" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="21853:22022" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="22042:22207" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="22233:22351" ph=" Remove the specified TimeSlot from storage. ..." />
+            <marker date="1486999192533" expanded="true" signature="22386:22935" ph="{...}" />
+            <marker date="1486999192533" expanded="true" signature="22494:22616" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="22786:22853" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="22859:22928" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="22990:23343" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="23118:23240" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="23383:23408" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="24361:26042" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="24582:26032" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="24629:26018" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="25396:25922" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="25451:25900" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="25928:26000" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="26084:26127" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="26435:26851" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="26477:26841" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="26857:26904" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4e8ea3db-3c28-440a-8d22-ac31934dff2f/console.sql">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4e8ea3db-3c28-440a-8d22-ac31934dff2f/console.sql" />
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CalendarController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="31" lean-forward="false" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
-          <folding />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#1378#4317#0#PHP" expanded="false" />
+            <element signature="e#4323#6457#0#PHP" expanded="false" />
+            <element signature="e#6463#8029#0#PHP" expanded="false" />
+            <element signature="e#8035#10396#0#PHP" expanded="false" />
+            <element signature="e#10402#10756#0#PHP" expanded="false" />
+            <element signature="e#10762#12292#0#PHP" expanded="false" />
+            <element signature="e#12298#13602#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -545,30 +733,6 @@
             <element signature="e#10402#10756#0#PHP" expanded="false" />
             <element signature="e#10762#12292#0#PHP" expanded="false" />
             <element signature="e#12298#13602#0#PHP" expanded="false" />
-            <marker date="1486911415825" expanded="true" signature="8882:9001" ph="select * fro... fn2_available_appointments_slots_for_date" />
-            <marker date="1486911415825" expanded="true" signature="11449:11734" ph="select id, c... closed_dates" />
-            <marker date="1486911415825" expanded="true" signature="12917:13191" ph="select id, c... closed_dates" />
-            <marker date="1486911415825" expanded="true" signature="14511:14630" ph="select * fro... fn2_available_appointments_slots_for_date" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/CalendarController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#1378#4317#0#PHP" expanded="false" />
-            <element signature="e#4323#6457#0#PHP" expanded="false" />
-            <element signature="e#6463#8029#0#PHP" expanded="false" />
-            <element signature="e#8035#10396#0#PHP" expanded="false" />
-            <element signature="e#10402#10756#0#PHP" expanded="false" />
-            <element signature="e#10762#12292#0#PHP" expanded="false" />
-            <element signature="e#12298#13602#0#PHP" expanded="false" />
-            <marker date="1486911415825" expanded="true" signature="8882:9001" ph="select * fro... fn2_available_appointments_slots_for_date" />
-            <marker date="1486911415825" expanded="true" signature="11449:11734" ph="select id, c... closed_dates" />
-            <marker date="1486911415825" expanded="true" signature="12917:13191" ph="select id, c... closed_dates" />
-            <marker date="1486911415825" expanded="true" signature="14511:14630" ph="select * fro... fn2_available_appointments_slots_for_date" />
           </folding>
         </state>
       </provider>
@@ -588,14 +752,7 @@
       </provider>
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4e8ea3db-3c28-440a-8d22-ac31934dff2f/console_1.sql" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4e8ea3db-3c28-440a-8d22-ac31934dff2f/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="31" lean-forward="false" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/4e8ea3db-3c28-440a-8d22-ac31934dff2f/console.sql" />
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -636,40 +793,122 @@
             <element signature="e#10402#10756#0#PHP" expanded="false" />
             <element signature="e#10762#12292#0#PHP" expanded="false" />
             <element signature="e#12298#13602#0#PHP" expanded="false" />
-            <marker date="1486911415825" expanded="true" signature="8882:9001" ph="select * fro... fn2_available_appointments_slots_for_date" />
-            <marker date="1486911415825" expanded="true" signature="11449:11734" ph="select id, c... closed_dates" />
-            <marker date="1486911415825" expanded="true" signature="12917:13191" ph="select id, c... closed_dates" />
-            <marker date="1486911415825" expanded="true" signature="14511:14630" ph="select * fro... fn2_available_appointments_slots_for_date" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/TimeSlotController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="265" column="68" lean-forward="false" selection-start-line="265" selection-start-column="68" selection-end-line="265" selection-end-column="68" />
+        <state relative-caret-position="1044">
+          <caret line="182" column="0" lean-forward="false" selection-start-line="182" selection-start-column="0" selection-end-line="182" selection-end-column="0" />
           <folding>
             <element signature="e#1169#1881#0#PHP" expanded="false" />
             <element signature="e#1984#4631#0#PHP" expanded="false" />
             <element signature="e#4734#5671#0#PHP" expanded="false" />
-            <marker date="1486912719437" expanded="true" signature="25265:25336" ph="select * fro... time_slot_details" />
-            <marker date="1486912719437" expanded="true" signature="26246:26360" ph="select * fro... time_slot_details" />
+            <marker date="1486999192533" expanded="true" signature="789:26949" ph="{...}" />
+            <marker date="1486999192533" expanded="true" signature="12332:15649" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="12549:12753" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="13120:13169" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="13229:13521" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="13275:13469" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="13595:15353" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="13673:15343" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="14405:15268" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="14563:15250" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="15082:15151" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="15159:15228" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="15276:15329" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="15400:15514" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="15520:15643" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="15659:15765" ph=" Display the specified TimeSlot. ..." />
+            <marker date="1486999192533" expanded="true" signature="15768:16130" ph="//..." />
+            <marker date="1486999192533" expanded="true" signature="16139:16263" ph=" Show the form for editing the specified TimeSlot. ..." />
+            <marker date="1486999192533" expanded="true" signature="16295:17859" ph="{...}" />
+            <marker date="1486999192533" expanded="true" signature="16403:16525" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="16659:17057" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="16887:17039" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="17063:17145" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="17319:17605" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="17672:17693" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="17714:17737" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="17758:17771" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="17792:17811" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="17832:17851" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="17868:18042" ph=" Update the specified TimeSlot in storage. ..." />
+            <marker date="1486999192533" expanded="true" signature="18108:22224" ph="{...}" />
+            <marker date="1486999192533" expanded="true" signature="18278:22217" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="18356:18673" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="19108:19165" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="19225:19537" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="19275:19477" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="20160:22036" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="20207:20263" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="20326:20975" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="20454:20957" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="20981:21420" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="21492:21845" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="21637:21728" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="21734:21827" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="21853:22022" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="22042:22207" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="22233:22351" ph=" Remove the specified TimeSlot from storage. ..." />
+            <marker date="1486999192533" expanded="true" signature="22386:22935" ph="{...}" />
+            <marker date="1486999192533" expanded="true" signature="22494:22616" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="22786:22853" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="22859:22928" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="22990:23343" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="23118:23240" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="23383:23408" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="24361:26042" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="24582:26032" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="24629:26018" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="25396:25922" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="25451:25900" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="25928:26000" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="26084:26127" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="26435:26851" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="26477:26841" ph="..." />
+            <marker date="1486999192533" expanded="true" signature="26857:26904" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Local.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6210">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/HomeAPIController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="24" column="50" lean-forward="false" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../docsaude/app/Http/Controllers/API/TimelineAPIController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="846">
+          <caret line="161" column="17" lean-forward="false" selection-start-line="34" selection-start-column="8" selection-end-line="161" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/TimelineAPIController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="132" column="34" lean-forward="false" selection-start-line="132" selection-start-column="34" selection-end-line="132" selection-end-column="34" />
+        <state relative-caret-position="522">
+          <caret line="101" column="40" lean-forward="true" selection-start-line="101" selection-start-column="40" selection-end-line="101" selection-end-column="40" />
           <folding />
         </state>
       </provider>
