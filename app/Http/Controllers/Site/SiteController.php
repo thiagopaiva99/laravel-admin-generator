@@ -103,6 +103,11 @@ class SiteController extends Controller
 
     }
 
+    public function returnViewContatoNull()
+    {
+        return $this->returnViewContato( null );
+    }
+
     public function contact(){
 
         if((Auth::check() && Auth::user()->user_type == 3) || Auth::guest()){

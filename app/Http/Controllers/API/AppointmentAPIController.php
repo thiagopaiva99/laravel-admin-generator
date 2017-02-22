@@ -55,8 +55,8 @@ class AppointmentAPIController extends AppBaseController {
             $timeSlotId = $request->get("time_slot_id");
             $timeEpoch = $request->get("time_epoch");
 
-            $appointmentStart = Carbon::createFromTimestamp($timeEpoch, 'America/Sao_Paulo')->setTimezone('UTC');
-            $appointmentEnd = Carbon::createFromTimestamp($timeEpoch, 'America/Sao_Paulo')->addMinutes($local->appointment_duration_in_minutes)->setTimezone('UTC');
+            $appointmentStart = Carbon::createFromTimestamp($timeEpoch, 'America/Sao_Paulo');
+            $appointmentEnd = Carbon::createFromTimestamp($timeEpoch, 'America/Sao_Paulo')->addMinutes($local->appointment_duration_in_minutes);
 
             $appointment = new Appointment;
             $appointment->time_slot_id = $timeSlotId;

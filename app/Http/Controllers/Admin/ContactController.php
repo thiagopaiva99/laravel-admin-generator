@@ -32,7 +32,7 @@ class ContactController extends Controller
             Mail::send('email.contact-app', ['mensagem' => $mensagem], function ($m) /*use ($user)*/ {
 
                 $m->from('user@anonymous.com.br', 'embelezzô')->sender('user@anonymous.com.br', 'Embelezzô');
-                $m->to('contato@embelezzo.com', 'embelezzô')->subject('Embelezzô - Contato');
+                $m->to('robertaborgesp@gmail.com', 'embelezzô')->subject('Embelezzô - Contato');
 
             });
         }else{
@@ -53,7 +53,7 @@ class ContactController extends Controller
             Mail::send('email.contact-app', ['mensagem' => $mensagem], function ($m) use ($user) {
 
                 $m->from($user->email, $user->name)->sender($user->email, $user->name);
-                $m->to('contato@embelezzô.com', 'Embelezzô')->subject('Embelezzô- Contato');
+                $m->to('robertaborgesp@gmail.com', 'Embelezzô')->subject('Embelezzô- Contato');
 
             });
         }
