@@ -57,10 +57,10 @@ return [
 
         's3' => [
             'driver' => 's3',
-            'key' => env('S3_key'),
-            'secret' => env('S3_SECRET'),
-            'region' => env('S3_REGION'),
-            'bucket' => env('S3_BUCKET'),
+            'key' => 'AKIAIW2S3YN4GSK3C65Q',
+            'secret' => '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',
+            'region' => 'sa-east-1',
+            'bucket' => 'embelezzo',
             'scheme' => 'http',
             'credentials' => false
         ],

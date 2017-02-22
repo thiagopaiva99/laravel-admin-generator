@@ -28,7 +28,7 @@
     <!-- CSS da App -->
     <link rel="stylesheet" href="{{ elixir('css/all.css') }}">
 
-    <link rel="shortcut icon" type="image/png" href="{{ url("assets/site/images/favicon.png") }}"/>
+    <link rel="shortcut icon" type="image/png" href="{{ url("assets/site/images/favicon.ico") }}"/>
 
     @yield('styles')
 </head>

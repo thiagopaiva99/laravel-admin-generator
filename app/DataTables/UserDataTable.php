@@ -37,12 +37,6 @@ class UserDataTable extends DataTable
                     }
                     return "";
                 })
-                ->editColumn("facebook_id", function($user) {
-                    if (isset($user->facebook_id) && $user->facebook_id != "") {
-                        return '<a href="https://www.facebook.com/'.$user->facebook_id.'" class="btn btn-default btn-xs btn-social btn-facebook" target="_blank"><i class="fa fa-facebook"></i> Ver perfil</a>';
-                    }
-                    return "";
-                })
                 ->editColumn("phone", function($user) {
                     if(isset($user->phone)) {
                         $phone = $user->phone;
@@ -63,12 +57,6 @@ class UserDataTable extends DataTable
                 ->editColumn("email", function($user) {
                     if (isset($user->email)) {
                         return '<a href="mailto:'.$user->email.'" class="btn btn-default btn-xs btn-social" target="_top"><i class="fa fa-envelope"></i> '.$user->email.'</a>';
-                    }
-                    return "";
-                })
-                ->editColumn("facebook_id", function($user) {
-                    if (isset($user->facebook_id) && $user->facebook_id != "") {
-                        return '<a href="https://www.facebook.com/'.$user->facebook_id.'" class="btn btn-default btn-xs btn-social btn-facebook" target="_blank"><i class="fa fa-facebook"></i> Ver perfil</a>';
                     }
                     return "";
                 })
@@ -143,7 +131,6 @@ class UserDataTable extends DataTable
         return [
             'name'          => ['name' => 'name', 'data' => 'name', "title" => "Nome"],
             'email'         => ['name' => 'email', 'data' => 'email', "title" => "E-mail"],
-            'facebook_id'   => ['name' => 'facebook_id', 'data' => 'facebook_id', "title" => "Facebook"],
             'phone'         => ['name' => 'phone', 'data' => 'phone', "title" => "Telefone"],
             'address'       => ['name' => 'address', 'data' => 'address', "title" => "Endereço"],
             'user_type'     => ['name' => 'user_type', 'data' => 'user_type', "title" => "Tipo"]

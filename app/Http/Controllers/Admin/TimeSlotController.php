@@ -247,92 +247,36 @@ class TimeSlotController extends InfyOmBaseController
             $input["day_of_week"] = null;
         }
 
-        if($input['queue'] == 2) {
-            $time_in_minutes = Local::select('appointment_duration_in_minutes as minutes')->where('id', $input['local_id'])->first();
+        $timeSlot = new TimeSlot;
 
-            $start = date("H", strtotime($input['slot_time_start']));
-            $end   = date("H", strtotime($input['slot_time_end']));
+        $timeSlot->local_id         = (int)$input['local_id'];
+        $timeSlot->user_id          = (int)$input['user_id'];
+        $timeSlot->slot_type        = (int)$input['slot_type'];
+        $timeSlot->day_of_week      = (int)$input['day_of_week'];
+        $timeSlot->slot_time_start  = $input['slot_time_start'];
+        $timeSlot->slot_time_end    = $input['slot_time_end'];
+        $timeSlot->slot_date        = $input['slot_date'];
+        $timeSlot->queue_type       = 1;
 
-            $start_minutes = date("i", strtotime($input['slot_time_start']));
-            $end_minutes = date("i", strtotime($input['slot_time_end']));
+        $timeSlot->save();
 
-            $times = ceil((($end - $start) * 60) / $time_in_minutes->minutes);
+        if(isset($timeSlot) && isset($timeSlot->id) && $timeSlot->id > 0){
+            $tsd = new TimeSlotDetail;
 
-            $time_start = Carbon::createFromTime($start, $start_minutes, 0, 'America/Sao_Paulo');
-            $time_medium = Carbon::createFromTime($start, $start_minutes, 0, 'America/Sao_Paulo');
-            $time_end = Carbon::createFromTime($end, $end_minutes, 0, 'America/Sao_Paulo');
+            $tsd->time_slot_id   = $timeSlot->id;
+            $tsd->health_plan_id = null;
+            $tsd->private        = true;
+            $tsd->slot_count     = $input['slot_count'];
 
-            for ($i = 0; $i < $times; $i++) {
-                $time_medium->addMinutes($time_in_minutes->minutes);
+            $tsd->save();
 
-                if ($i != 0) {
-                    $time_start->addMinutes($time_in_minutes->minutes);
-                }
-
-                $timeSlot = new TimeSlot;
-
-                $timeSlot->local_id         = (int)$input['local_id'];
-                $timeSlot->user_id          = (int)$input['user_id'];
-                $timeSlot->slot_type        = (int)$input['slot_type'];
-                $timeSlot->day_of_week      = (int)$input['day_of_week'];
-                $timeSlot->slot_time_start  = $time_start;
-                $timeSlot->slot_time_end    = $time_medium;
-                $timeSlot->slot_date        = $input['slot_date'];
-                $timeSlot->queue_type       = (int)$input['queue'];
-
-                $timeSlot->save();
-
-                if(isset($timeSlot) && isset($timeSlot->id) && $timeSlot->id > 0){
-                    $tsd = new TimeSlotDetail;
-
-                    $tsd->time_slot_id   = $timeSlot->id;
-                    $tsd->health_plan_id = 0;
-                    $tsd->private        = true;
-                    $tsd->slot_count     = 1;
-
-                    $tsd->save();
-
-                    if (isset($tsd) && $tsd->id > 0) {
-                        return $timeSlot;
-                    } else {
-                        return "conflito de agendamentos";
-                    }
-                }else{
-                    return $timeSlot;
-                }
+            if (isset($tsd) && $tsd->id > 0) {
+                return $timeSlot;
+            } else {
+                return "conflito de agendamentos";
             }
         }else{
-            $timeSlot = new TimeSlot;
-
-            $timeSlot->local_id         = (int)$input['local_id'];
-            $timeSlot->user_id          = (int)$input['user_id'];
-            $timeSlot->slot_type        = (int)$input['slot_type'];
-            $timeSlot->day_of_week      = (int)$input['day_of_week'];
-            $timeSlot->slot_time_start  = $input['slot_time_start'];
-            $timeSlot->slot_time_end    = $input['slot_time_end'];
-            $timeSlot->slot_date        = $input['slot_date'];
-            $timeSlot->queue_type       = (int)$input['queue'];
-
-            $timeSlot->save();
-
-            if(isset($timeSlot) && isset($timeSlot->id) && $timeSlot->id > 0){
-                $tsd = new TimeSlotDetail;
-
-                $tsd->time_slot_id   = $timeSlot->id;
-                $tsd->health_plan_id = 0;
-                $tsd->private        = true;
-                $tsd->slot_count     = $timeSlot->queue_type == 2 ? '1' : $input['slot_count'];
-
-                $tsd->save();
-
-                if (isset($tsd) && $tsd->id > 0) {
-                    return $timeSlot;
-                } else {
-                    return "conflito de agendamentos";
-                }
-            }else{
-                return $timeSlot;
-            }
+            return $timeSlot;
         }
     }
     
@@ -501,21 +445,10 @@ class TimeSlotController extends InfyOmBaseController
     {
         $timeSlot = TimeSlot::find($id);
 
-        $details = TimeSlotDetail::where('time_slot_id', $id)->get();
+        $details  = TimeSlotDetail::where('time_slot_id', $id)->get();
 
         if(isset($timeSlot) && $timeSlot != null){
             $input = $request->all();
-
-            $time_slot_detail = array(
-                'health_plan_id' => ($request->get('private') == "true") ? "null" : $request->get('plans_selected'),
-                'private' => ($request->get('private') == null) ? "false" : "true",
-                'slot_count' => $request->get('private') == "true" ? '1' : $request->get('slot_count')
-            );
-
-            unset($input['medics_select']);  $input['medics_select']   = null;
-            unset($input['private']);        $input['private']         = null;
-            unset($input['slot_count']);     $input['slot_count']      = null;
-            unset($input['plans_selected']); $input['plans_selected']  = null;
 
 //            $input["user_id"] = \Auth::id();
 
@@ -535,55 +468,18 @@ class TimeSlotController extends InfyOmBaseController
             $timeSlot->slot_time_start  = $input['slot_time_start'];
             $timeSlot->slot_time_end    = $input['slot_time_end'];
             $timeSlot->slot_date        = $input['slot_date'];
-            $timeSlot->queue_type       = $input['queue'];
+            $timeSlot->queue_type       = 1;
 
             $timeSlot->save();
 
             if(isset($timeSlot) && isset($timeSlot->id) && $timeSlot->id > 0){
 
-                foreach($details as $detail){
-                    $detail->delete();
-                }
-
-                if($time_slot_detail['private'] == "false"){
-                    $plans = explode(',', $time_slot_detail['health_plan_id']);
-
-                    foreach ($plans as $plan){
-                        $tsd = new TimeSlotDetail;
-
-                        (isset($input['private']) || $input['private'] != null ? $input['private'] = "true" : $input['private'] = "false");
-
-                        $tsd->time_slot_id   = $timeSlot->id;
-                        $tsd->health_plan_id = $plan;
-                        $tsd->private        = false;
-                        $tsd->slot_count     = $time_slot_detail['slot_count'];
-
-                        $tsd->save();
-                    }
+                if(Auth::user()->user_type == User::UserTypeClinic){
+                    return redirect(route('admin.clinic.index'));
                 }else{
-                    $tsd = new TimeSlotDetail;
-
-                    (isset($input['private']) || $input['private'] != null ? $input['private'] = "true" : $input['private'] = "false");
-
-                    $tsd->time_slot_id   = $timeSlot->id;
-                    $tsd->health_plan_id = null;
-                    $tsd->private        = true;
-                    $tsd->slot_count     = 1;
-
-                    $tsd->save();
+                    return redirect(route('admin.calendar.index'));
                 }
 
-                if (isset($tsd) && isset($tsd->id) && $tsd->id > 0) {
-                    Flash::success('Horário atualizado com sucesso!');
-
-                    if(Auth::user()->user_type == User::UserTypeClinic){
-                        return redirect(route('admin.clinic.index'));
-                    }else{
-                        return redirect(route('admin.calendar.index'));
-                    }
-                } else {
-                    return redirect(route('admin.timeSlots.create'))->withErrors(["Conflito" => "Há um conflito de agendamentos."])->withInput($input);
-                }
             }else{
                 return redirect(route('admin.timeSlots.create'))->withErrors(["Conflito" => "Não foi possivel salvar seu horário"])->withInput($input);
             }

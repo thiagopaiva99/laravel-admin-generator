@@ -24,7 +24,7 @@
     {{--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.3/css/skins/_all-skins.min.css">--}}
     <link rel="stylesheet" href="{{ asset('assets/site/css/bootstrap2-toggle.css') }}">
 
-    <link rel="shortcut icon" type="image/png" href="{{ url("assets/site/images/favicon.png") }}"/>
+    <link rel="shortcut icon" type="image/png" href="{{ url("assets/site/images/favicon.ico") }}"/>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -46,7 +46,7 @@
 <body class="hold-transition login-page" style="background: #FAFAFA;">
 <div class="login-box">
     <div class="login-logo">
-        <a href="{{ url('/home') }}"><img src="{{ asset('assets/site/images/logo_header.png') }}" alt="LOGO DO EMBELEZZÔ"></a><br>
+        <a href="{{ url('/home') }}"><img src="{{ asset('assets/site/images/login_logo.png') }}"  style="max-width: 80% !important;" alt="LOGO DO EMBELEZZÔ"></a><br>
     </div>
 
     <!-- /.login-logo -->

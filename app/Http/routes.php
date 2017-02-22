@@ -17,13 +17,9 @@
  *  ********************************************************
  */
 
-Route::get('/', function(){
-    if( Auth::check() ){
-        return redirect('/admin');
-    }else{
-        return redirect('/login');
-    }
-});
+Route::get('/', function(){ return Auth::check() ? redirect('/admin') : redirect('/login');});
+Route::get('/home', function(){ return Auth::check() ? redirect('/admin') : redirect('/login');});
+
 /* Route::get('/home', 'Site\SiteController@homepage'); */
 Route::get('contato-app/{user_id}', 'Site\SiteController@returnViewContato');
 Route::post('contato-app', 'Admin\ContactController@sendMail');

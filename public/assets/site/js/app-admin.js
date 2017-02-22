@@ -336,7 +336,7 @@ $(function(){
         var day_of_week         = $("select[name=day_of_week]").val();
         var slot_time_start     = $("input[name=slot_time_start]").val();
         var slot_time_end       = $("input[name=slot_time_end]").val();
-        var queue_type          = $("input:radio[name=queue]:checked").val();
+        // var queue_type          = $("input:radio[name=queue]:checked").val();
         //var _private            = $("#private").prop('checked');
         //var plans               = $("select[name=medics_select]").val();
         var slot_count          = $("input[name=slot_count]").val();
@@ -355,7 +355,7 @@ $(function(){
                 day_of_week     : day_of_week,
                 slot_time_start : slot_time_start,
                 slot_time_end   : slot_time_end,
-                queue           : queue_type,
+                // queue           : queue_type,
                 //private         : _private,
                 //medics_select   : plans,
                 slot_count      : slot_count,

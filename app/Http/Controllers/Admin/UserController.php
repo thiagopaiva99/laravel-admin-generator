@@ -301,7 +301,7 @@ class UserController extends InfyOmBaseController
             $request['password'] = bcrypt($request['password']);
         }
 
-        if(isset($request['clinics'])){
+        if(isset($request['clinics']) && $request['clinics'] != ""){
             $clinicUser = new ClinicUser;
 
             $clinicUser->clinic_id = $request['clinics'];

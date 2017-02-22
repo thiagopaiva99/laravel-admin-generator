@@ -153,27 +153,15 @@
                     </div>
 
                     <!-- Slot Time Start Field -->
-                    <div class="form-group col-sm-2">
+                    <div class="form-group col-sm-4">
                         {!! Form::label('slot_time_start', 'Início:') !!}
                         {!! Form::time('slot_time_start', (isset($timeSlot) && isset($timeSlot->slot_time_start)) ? $timeSlot->slot_time_start->format('H:i') : (isset($start) && $start != null ? $start->format('H:i') : null), ['class' => 'form-control', 'required' => 'true', 'max' => '59']) !!}
                     </div>
 
                     <!-- Slot Time End Field -->
-                    <div class="form-group col-sm-2">
+                    <div class="form-group col-sm-4">
                         {!! Form::label('slot_time_end', 'Final:') !!}
                         {!! Form::time('slot_time_end', (isset($timeSlot) && isset($timeSlot->slot_time_end) )? $timeSlot->slot_time_end->format('H:i') : (isset($end) && $end !== null ? $end->format('H:i') : null), ['class' => 'form-control', 'required' => 'true']) !!}
-                    </div>
-
-                    <div class="form-group col-sm-4">
-                        {!! Form::label('', 'Fila:') !!}<br>
-                        <div class="btn-group" data-toggle="buttons">
-                            <label class="btn btn-default {{ isset($timeSlot) && $timeSlot->queue_type == 1 ? "active" : 'active' }}" style="width: 129px;">
-                                <input type="radio" id="" name="queue" value="1" checked> Ordem de Chegada
-                            </label>
-                            <label class="btn btn-default {{ isset($timeSlot) && $timeSlot->queue_type == 2 ? "active" : '' }}" style="width: 129px;">
-                                <input type="radio" id="" name="queue" value="2" required> Hora Marcada
-                            </label>
-                        </div>
                     </div>
 
                     <!-- <div class="form-group col-sm-2">
@@ -227,7 +215,7 @@
 
 
     <div id="eventContent" title="Event Details" style="display:none; position: absolute; z-index: 100; width: 200px; background: #fff; border: 1px solid rgba(0, 0, 0, 0.5);">
-        <header style="width: 100%; background: #00A65A; padding: 5px; color: white;">Lista de horários <button class="btn btn-default btn-xs pull-right" onclick="close_popup();"><i class="fa fa-remove"></i></button> </header>
+        <header style="width: 100%; background: #00A65A; padding: 5px; color: white;">Horário <button class="btn btn-default btn-xs pull-right" onclick="close_popup();"><i class="fa fa-remove"></i></button> </header>
         <span style="margin-top: 10px; display: block;">
             <center>
                 <div class="btn-group">

@@ -255,7 +255,7 @@ class CalendarController extends AppBaseController {
 
                 $weekDays[] = [
                     "day" => $format,
-                    "timeSlots" => DB::select("select * from fn2_available_appointments_slots_for_date(cast('$weekStart' as date), $local, true, 0) where slot_type = ".$request->get("tipo"))
+                    "timeSlots" => DB::select("select * from fn2_available_appointments_slots_for_date(cast('$weekStart' as date), $local, true, -1) where slot_type = ".$request->get("tipo"))
                 ];
 
                 $weekStart= $weekStart->addDay();
