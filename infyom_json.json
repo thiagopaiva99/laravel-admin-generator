@@ -1,0 +1,17 @@
+[{
+"fieldInput":"id:increments",
+"htmlType": "",
+"validations": "",
+"searchable": false},{
+    "fieldInput": "Qui:double",
+    "htmlType": "date",
+    "validations": "unique",
+    "searchable": "false"
+},
+{
+    "fieldInput": "Nulla:float",
+    "htmlType": "text",
+    "validations": "unique:email",
+    "searchable": "false"
+}
+]

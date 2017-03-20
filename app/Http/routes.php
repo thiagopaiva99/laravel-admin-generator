@@ -129,7 +129,12 @@ Route::group(["prefix" => "admin", 'namespace' => 'Admin'],function() {
         Route::get('close-plan', 'TimeSlotController@closePlan');
         Route::get('delete-time-slot', 'TimeSlotController@deleteTimeSlot');
         Route::get('closed-date-destroy/{id}/', 'ClosedDateController@destroyClosedDate');
+        Route::get('get-menus', 'MenuController@getMenus');
     });
+
+    Route::resource('options', 'OptionsController');
+    Route::resource('pages', 'PagesController');
+    Route::resource('menus', 'MenuController');
 });
 
 /*
@@ -191,3 +196,26 @@ Route::post('contato', 'Site\SiteController@emailAndContact');*/
 // Recover password
 
 Route::auth();
+
+
+//Route::resource('options', 'OptionsController');
+//
+//
+//
+//Route::get('admin/options', ['as'=> 'admin.options.index', 'uses' => 'Admin\OptionsController@index']);
+//Route::post('admin/options', ['as'=> 'admin.options.store', 'uses' => 'Admin\OptionsController@store']);
+//Route::get('admin/options/create', ['as'=> 'admin.options.create', 'uses' => 'Admin\OptionsController@create']);
+//Route::put('admin/options/{options}', ['as'=> 'admin.options.update', 'uses' => 'Admin\OptionsController@update']);
+//Route::patch('admin/options/{options}', ['as'=> 'admin.options.update', 'uses' => 'Admin\OptionsController@update']);
+//Route::delete('admin/options/{options}', ['as'=> 'admin.options.destroy', 'uses' => 'Admin\OptionsController@destroy']);
+//Route::get('admin/options/{options}', ['as'=> 'admin.options.show', 'uses' => 'Admin\OptionsController@show']);
+//Route::get('admin/options/{options}/edit', ['as'=> 'admin.options.edit', 'uses' => 'Admin\OptionsController@edit']);
+
+//Route::get('admin/menus', ['as'=> 'admin.menus.index', 'uses' => 'Admin\MenuController@index']);
+//Route::post('admin/menus', ['as'=> 'admin.menus.store', 'uses' => 'Admin\MenuController@store']);
+//Route::get('admin/menus/create', ['as'=> 'admin.menus.create', 'uses' => 'Admin\MenuController@create']);
+//Route::put('admin/menus/{menus}', ['as'=> 'admin.menus.update', 'uses' => 'Admin\MenuController@update']);
+//Route::patch('admin/menus/{menus}', ['as'=> 'admin.menus.update', 'uses' => 'Admin\MenuController@update']);
+//Route::delete('admin/menus/{menus}', ['as'=> 'admin.menus.destroy', 'uses' => 'Admin\MenuController@destroy']);
+//Route::get('admin/menus/{menus}', ['as'=> 'admin.menus.show', 'uses' => 'Admin\MenuController@show']);
+//Route::get('admin/menus/{menus}/edit', ['as'=> 'admin.menus.edit', 'uses' => 'Admin\MenuController@edit']);

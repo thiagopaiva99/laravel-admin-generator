@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Embelezzô | Painel Administrativo</title>
+    <title>{{ getenv("SITE_TITLE") }} - {{ getenv("TITLE") }}</title>
 
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
@@ -33,70 +33,93 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <style>
-        .btn-danger, .btn-success{
-            background: #571c36 !important;
-            border-color: #571c36 !important;
-        }
-
-
-    </style>
+    @include("layouts.styles")
+    @include("auth.styles")
 
 </head>
 <body class="hold-transition login-page" style="background: #FAFAFA;">
-<div class="login-box">
-    <div class="login-logo">
-        <a href="{{ url('/home') }}"><img src="{{ asset('assets/site/images/login_logo.png') }}"  style="max-width: 80% !important;" alt="LOGO DO EMBELEZZÔ"></a><br>
-    </div>
+{{--<div class="login-box">--}}
+    {{--<div class="login-logo">--}}
+        {{--<a href="{{ url('/home') }}"><img src="{{ asset('assets/site/images/login_logo.png') }}"  style="max-width: 80% !important;" alt="LOGO DO EMBELEZZÔ"></a><br>--}}
+    {{--</div>--}}
 
-    <!-- /.login-logo -->
-    <div class="login-box-body">
-        <p class="login-box-msg">Faça o login para acessar o painel!</p>
+    {{--<!-- /.login-logo -->--}}
+    {{--<div class="login-box-body">--}}
+        {{--<p class="login-box-msg">Faça o login para acessar o painel!</p>--}}
 
-        <form method="post" action="{{ url('/login') }}">
-            {!! csrf_field() !!}
+        {{--<form method="post" action="{{ url('/login') }}">--}}
+            {{--{!! csrf_field() !!}--}}
 
-            <div class="form-group has-feedback {{ $errors->has('email') ? ' has-error' : '' }}">
-                <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Email">
-                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-                @if ($errors->has('email'))
-                    <span class="help-block">
-                    <strong>{{ $errors->first('email') }}</strong>
-                </span>
-                @endif
-            </div>
+            {{--<div class="form-group has-feedback {{ $errors->has('email') ? ' has-error' : '' }}">--}}
+                {{--<input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Email">--}}
+                {{--<span class="glyphicon glyphicon-envelope form-control-feedback"></span>--}}
+                {{--@if ($errors->has('email'))--}}
+                    {{--<span class="help-block">--}}
+                    {{--<strong>{{ $errors->first('email') }}</strong>--}}
+                {{--</span>--}}
+                {{--@endif--}}
+            {{--</div>--}}
 
-            <div class="form-group has-feedback{{ $errors->has('password') ? ' has-error' : '' }}">
-                <input type="password" class="form-control" placeholder="Senha" name="password">
-                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                @if ($errors->has('password'))
-                    <span class="help-block">
-                    <strong>{{ $errors->first('password') }}</strong>
-                </span>
-                @endif
+            {{--<div class="form-group has-feedback{{ $errors->has('password') ? ' has-error' : '' }}">--}}
+                {{--<input type="password" class="form-control" placeholder="Senha" name="password">--}}
+                {{--<span class="glyphicon glyphicon-lock form-control-feedback"></span>--}}
+                {{--@if ($errors->has('password'))--}}
+                    {{--<span class="help-block">--}}
+                    {{--<strong>{{ $errors->first('password') }}</strong>--}}
+                {{--</span>--}}
+                {{--@endif--}}
 
-            </div>
-            <div class="row">
-                <div class="col-xs-8">
-                    <div class="">
-                        Manter-se conectado?
-                        <input type="checkbox" name="remember" data-toggle="toggle" data-size="normal" data-on="Sim" data-off="Não" data-onstyle="danger" data-height="30" data-width="100">
-                    </div>
-                </div>
-                <!-- /.col -->
-                <br>
-                    <button type="submit" class="btn btn-success"><i class="fa fa-sign-in"></i> Fazer login</button>
-                <!-- /.col -->
-            </div>
-        </form>
+            {{--</div>--}}
+            {{--<div class="row">--}}
+                {{--<div class="col-xs-8">--}}
+                    {{--<div class="">--}}
+                        {{--Manter-se conectado?--}}
+                        {{--<input type="checkbox" name="remember" data-toggle="toggle" data-size="normal" data-on="Sim" data-off="Não" data-onstyle="danger" data-height="30" data-width="100">--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<!-- /.col -->--}}
+                {{--<br>--}}
+                    {{--<button type="submit" class="btn btn-success"><i class="fa fa-sign-in"></i> Fazer login</button>--}}
+                {{--<!-- /.col -->--}}
+            {{--</div>--}}
+        {{--</form>--}}
 
-        <hr>
+        {{--<hr>--}}
 
-        <a href="{{ url('/password/reset') }}" style="color: #571c36">Esqueci minha senha</a><br>
-    </div>
-    <!-- /.login-box-body -->
-</div>
+        {{--<a href="{{ url('/password/reset') }}" style="color: #571c36">Esqueci minha senha</a><br>--}}
+    {{--</div>--}}
+    {{--<!-- /.login-box-body -->--}}
+{{--</div>--}}
 <!-- /.login-box -->
+
+<form action="{{ url('/login') }}" method="post">
+    {!! csrf_field() !!}
+
+    {{--{{ dump($errors) }}--}}
+
+    <div class="login">
+        <div class="login-screen">
+            <div class="app-title">
+                <h1>{{ getenv("TITLE") }}</h1>
+            </div>
+
+            <div class="login-form">
+                <div class="control-group">
+                    <input type="text" class="login-field" name="email" value="" placeholder="username" id="login-name">
+                    <label class="login-field-icon fui-user" for="login-name"></label>
+                </div>
+
+                <div class="control-group">
+                    <input type="password" name="password" class="login-field" value="" placeholder="password" id="login-pass">
+                    <label class="login-field-icon fui-lock" for="login-pass"></label>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-large btn-block">LOGIN</button>
+                <a class="login-link" href="#">Esqueceu sua senha?</a>
+            </div>
+        </div>
+    </div>
+</form>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>

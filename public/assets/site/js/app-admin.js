@@ -17,7 +17,7 @@ $(function(){
     $("#form_new_profile")     .validator();
 
     //selects personalizados
-    $('.select-clinics-select').selectpicker()
+    $('.select-clinics-select').selectpicker();
 
     //fazendo os flashes sumirem apos um tempo
     $(".alert").delay(4000).slideUp(500);

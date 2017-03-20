@@ -12,6 +12,7 @@ class VerifyCsrfToken extends BaseVerifier
      * @var array
      */
     protected $except = [
-        'contato', 'contato-app', 'consultas/*', 'admin/users/preferred_users', 'admin/closedDates/inserir', 'admin/closedDates/deletar', 'admin/time-slots/inserir'
+        'contato', 'contato-app', 'consultas/*', 'admin/users/preferred_users', 'admin/closedDates/inserir', 'admin/closedDates/deletar', 'admin/time-slots/inserir',
+        'admin/pages/*', 'admin/pages'
     ];
 }

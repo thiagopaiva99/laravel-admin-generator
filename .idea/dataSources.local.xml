@@ -10,5 +10,14 @@
       <user-name>postgres</user-name>
       <resolve-scope>embelezzo_db:postgres,public</resolve-scope>
     </data-source>
+    <data-source name="Produto" uuid="b91276db-1741-44e3-a5ac-b6592586e105">
+      <database-info product="PostgreSQL" version="9.5.5" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <resolve-scope>product:postgres,public</resolve-scope>
+    </data-source>
   </component>
 </project>

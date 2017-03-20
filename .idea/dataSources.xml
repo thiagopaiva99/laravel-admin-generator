@@ -7,5 +7,11 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://52.67.102.53:5432/embelezzo_db</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="Produto" uuid="b91276db-1741-44e3-a5ac-b6592586e105">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/product</jdbc-url>
+    </data-source>
   </component>
 </project>

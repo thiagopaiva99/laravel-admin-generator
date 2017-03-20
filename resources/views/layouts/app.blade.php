@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Painel Administrativo - Embelezzô</title>
+    <title>{{ getenv("SITE_TITLE") }} - {{ getenv("TITLE") }}</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 
 
@@ -31,6 +31,8 @@
     <link rel="shortcut icon" type="image/png" href="{{ url("assets/site/images/favicon.ico") }}"/>
 
     @yield('styles')
+
+    @include("layouts.styles")
 </head>
 
 <body class="skin-red sidebar-mini">
@@ -40,7 +42,7 @@
         <header class="main-header">
             <!-- Logo -->
             <a href="#" class="logo" style="background: #361121;">
-                <b>Embelezzô</b>
+                <b>{{ getenv("TITLE") }}</b>
             </a>
 
             <!-- Header Navbar -->
@@ -197,5 +199,7 @@
     <!-- Custom Scripts -->
 
     @yield('scripts')
+
+    @include("layouts.scripts")
 </body>
 </html>
