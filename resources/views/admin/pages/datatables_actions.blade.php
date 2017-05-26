@@ -1,15 +1,9 @@
 {!! Form::open(['route' => ['admin.pages.destroy', $id], 'method' => 'delete']) !!}
-<div class='btn-group'>
-    <a href="{{ route('admin.pages.show', $id) }}" class='btn btn-default btn-xs'>
-        <i class="glyphicon glyphicon-eye-open"></i>
-    </a>
-    <a href="{{ route('admin.pages.edit', $id) }}" class='btn btn-default btn-xs'>
-        <i class="glyphicon glyphicon-edit"></i>
-    </a>
-    {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', [
+<div class='btn-group text-center'>
+    {!! Form::button('<i class="fa fa-trash"></i>', [
         'type' => 'submit',
         'class' => 'btn btn-danger btn-xs',
-        'onclick' => "return confirm('Are you sure?')"
+        'onclick' => "return confirmation('pages', $id);"
     ]) !!}
 </div>
 {!! Form::close() !!}

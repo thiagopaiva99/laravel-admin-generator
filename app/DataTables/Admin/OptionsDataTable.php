@@ -2,12 +2,16 @@
 
 namespace App\DataTables\Admin;
 
+use App\DataTables\DataTable as DataTable;
 use App\Models\Admin\Options;
-use Form;
-use Yajra\Datatables\Services\DataTable;
+use \Illuminate\Contracts\View\Factory;
 
 class OptionsDataTable extends DataTable
 {
+    // para traduzir tem q ter o construtor
+    public function __construct(\Yajra\Datatables\Datatables $datatables, Factory $viewFactory) {
+        parent::__construct($datatables, $viewFactory);
+    }
 
     /**
      * @return \Illuminate\Http\JsonResponse
@@ -44,6 +48,7 @@ class OptionsDataTable extends DataTable
             ->addAction(['width' => '10%'])
             ->ajax('')
             ->parameters([
+                'language' => $this->languageOptions,
                 'dom' => 'Bfrtip',
                 'scrollX' => false,
                 'buttons' => [

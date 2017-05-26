@@ -5,22 +5,344 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c7ac426-c9ba-42e3-b688-da531505327b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/layouts/scripts.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/4e8ea3db-3c28-440a-8d22-ac31934dff2f/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/4e8ea3db-3c28-440a-8d22-ac31934dff2f/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/4e8ea3db-3c28-440a-8d22-ac31934dff2f/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/4e8ea3db-3c28-440a-8d22-ac31934dff2f/_metadata_/metadata.values.at" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/4e8ea3db-3c28-440a-8d22-ac31934dff2f/_src_/database/embelezzo_db/schema/public.zip" afterPath="$PROJECT_DIR$/.idea/dataSources/4e8ea3db-3c28-440a-8d22-ac31934dff2f/_src_/database/embelezzo_db/schema/public.zip" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Criteria/LocalAppointmentsCriteria.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Criteria/MyAppointmentsCriteria.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Criteria/MyClosedDatesCriteria.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Criteria/MyLocalsCriteria.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Criteria/MySlotTimesCriteria.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Criteria/MyUsersCriteria.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/DataTables/AppointmentDataTable.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/DataTables/ClosedDateDataTable.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/DataTables/ExamDataTable.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/DataTables/HealthPlanDataTable.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/DataTables/LocalDataTable.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/DataTables/OptionsDataTable.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/DataTables/Scopes/AppointmentDataTableScope.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/DataTables/Scopes/ApprovalStatusUserDataTableScope.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/DataTables/Scopes/ClosedDateDataTableScope.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/DataTables/Scopes/DoctorsDataTableScope.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/DataTables/Scopes/LocalDataTableScope.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/DataTables/Scopes/PreferredUserDataTableScope.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/DataTables/Scopes/TimeSlotDataTableScope.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/DataTables/Scopes/TimeSlotLocalDataTableScope.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/DataTables/Scopes/UserTypeDataTableScope.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/DataTables/SpecializationDataTable.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/DataTables/TimeSlotDataTable.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/DataTables/UserWithoutClinicDataTable.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/API/AppointmentAPIController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/API/HomeAPIController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/API/PlaceAPIController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/API/TimelineAPIController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/API/UserAPIController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/AppointmentController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CalendarController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ClosedDateController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ContactController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/EmailController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/ExamController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/HealthPlanController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LocalController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/SpecializationController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/TimeSlotController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/OptionsController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/SiteAppointmentController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/SiteController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/SitePhysiciansController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/SiteRegisterController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Controllers/UploadController.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Middleware/AdminOrDoctorMiddleware.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Middleware/AdminOrSelfDoctorMiddleware.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Middleware/ClinicMiddleware.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Middleware/DoctorMiddleware.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Middleware/DoctorOrClinicMiddleware.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Middleware/adminDoctorOrClinicMiddleware.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/API/AppointmentAPIRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/API/TimelineAPIRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/API/UserAPIRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/API/UserUpdateAPIRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/Admin/CreateElijahRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/Admin/CreateHeheheRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/Admin/CreateHelenRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/Admin/CreateJenniferRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/Admin/CreateRaphaelRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/Admin/UpdateElijahRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/Admin/UpdateHeheheRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/Admin/UpdateHelenRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/Admin/UpdateJenniferRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/Admin/UpdateRaphaelRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/CreateAppointmentRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/CreateClosedDateRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/CreateExamRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/CreateHealthPlanRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/CreateLocalRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/CreateOptionsRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/CreateSpecializationRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/CreateTimeSlotRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/CreateUserRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/LoginUserSITERequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/UpdateAppointmentRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/UpdateClosedDateRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/UpdateExamRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/UpdateHealthPlanRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/UpdateLocalRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/UpdateOptionsRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/UpdateSpecializationRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/UpdateTimeSlotRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/UpdateUserRequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Http/Requests/registerUserSITERequest.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Models/Appointment.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Models/ClinicUser.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Models/ClosedDate.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Models/Exam.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Models/HealthPlan.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Models/Local.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Models/Options.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Models/Site/SiteAppointment.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Models/Site/SitePhysician.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Models/Site/SiteRegister.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Models/Specialization.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Models/TimeSlot.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Models/TimeSlotDetail.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Repositories/Admin/ElijahRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Repositories/Admin/HeheheRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Repositories/Admin/HelenRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Repositories/Admin/JenniferRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Repositories/Admin/RaphaelRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Repositories/AppointmentRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Repositories/ClosedDateRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Repositories/ExamRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Repositories/HealthPlanRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Repositories/LocalRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Repositories/OptionsRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Repositories/SpecializationRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Repositories/TimeSlotRepository.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_08_09_162416_create_health_plans_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_08_09_162719_create_specializations_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_08_09_163307_create_exams_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_08_09_165236_create_locals_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_08_09_171944_create_closed_dates_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_08_09_173026_create_time_slots_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_08_09_173327_create_appointments_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_08_09_173330_create_time_slot_details_table" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_08_09_180113_create_n_to_m_relations.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_08_24_171117_update_users_table_for_doctors.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_08_26_134621_update_locals_table_address_complement.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_11_01_164052_fase2.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_11_04_201725_sql_functions_fase2.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_11_07_164619_drop_old_functions.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_11_22_191139_create_appointment_fn.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_11_30_162609_update_users_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2016_11_30_162851_update_users_table_for_crm_and_cpf.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2017_03_19_162446_create_hehehes_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2017_03_19_162845_create_raphaels_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/database/migrations/2017_03_19_163057_create_elijahs_table.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/site/js/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/appointments/calendar.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/appointments/create.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/appointments/datatables_actions.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/appointments/edit.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/appointments/fields.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/appointments/index.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/appointments/show.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/appointments/show_fields.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/appointments/table.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/calendar/index.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/clinic/index.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/closedDates/create.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/closedDates/datatables_actions.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/closedDates/edit.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/closedDates/fields.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/closedDates/index.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/closedDates/show.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/closedDates/show_fields.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/closedDates/table.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/exams/create.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/exams/datatables_actions.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/exams/edit.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/exams/fields.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/exams/index.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/exams/show.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/exams/show_fields.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/exams/table.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/healthPlans/create.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/healthPlans/datatables_actions.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/healthPlans/edit.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/healthPlans/fields.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/healthPlans/index.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/healthPlans/show.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/healthPlans/show_fields.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/healthPlans/table.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/locals/create.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/locals/datatables_actions.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/locals/edit.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/locals/fields.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/locals/index.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/locals/map_view.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/locals/show.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/locals/show_fields.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/locals/table.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/specializations/create.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/specializations/datatables_actions.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/specializations/edit.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/specializations/fields.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/specializations/index.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/specializations/show.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/specializations/show_fields.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/specializations/table.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/timeSlots/create-multiple.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/timeSlots/create.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/timeSlots/datatables_actions.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/timeSlots/edit.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/timeSlots/fields-multiple.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/timeSlots/fields.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/timeSlots/index.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/timeSlots/show.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/timeSlots/show_fields.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/timeSlots/table.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/users/doctor.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/users/doctors-without-clinic.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/users/reports.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/admin/webview/contato.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/email/contact-app.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/email/contact.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/email/password.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/options/create.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/options/datatables_actions.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/options/edit.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/options/fields.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/options/index.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/options/show.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/options/show_fields.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/options/table.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/basic.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/footer.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/gallery/gallery1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/gallery/gallery2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/gallery/gallery3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/gallery/gallery4.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/gallery/gallery5.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/gallery/gallery6.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/header.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/header/header1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/header/header2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/header/header3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/header/header4.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/header/header5.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/home.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/home/app.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/home/download.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/home/featured.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/home/index-boxed.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/home/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/home/index2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/home/index3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/home/index4.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/home/specialties.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/page.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/pages/appointments.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/pages/calendar.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/pages/contact.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/pages/download.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/pages/physicians.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/pages/physicianslist.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/pages/register.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/pages/results.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/pages/search.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/pages/searchform.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/pages/singlephysician.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/pages/top.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/pages/update.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/partials/cart.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/partials/checkout.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/partials/dark-footer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/partials/light-footer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/partials/login-register.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/partials/payment.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/partials/sidebar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/partials/story-detail.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/partials/timetable.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/popup.blade.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/templates/about.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/templates/appointment.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/templates/blog-detail.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/templates/blog.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/templates/blog2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/templates/calendar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/templates/contact.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/templates/contact.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/templates/department-detail.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/templates/departments.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/templates/event-detail.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/templates/events.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/templates/faqs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/templates/insurance.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/templates/product-detail.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/templates/product.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/templates/real-stories.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/templates/real-stories2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/templates/refer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/templates/service-detail.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/templates/service.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/templates/staff-detail.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/site/templates/staff.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.env" afterPath="$PROJECT_DIR$/.env" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/4e8ea3db-3c28-440a-8d22-ac31934dff2f.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/4e8ea3db-3c28-440a-8d22-ac31934dff2f.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.phpstorm.meta.php" afterPath="$PROJECT_DIR$/.phpstorm.meta.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_ide_helper.php" afterPath="$PROJECT_DIR$/_ide_helper.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/DataTables/Admin/MenuDataTable.php" afterPath="$PROJECT_DIR$/app/DataTables/Admin/MenuDataTable.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/DataTables/Admin/OptionsDataTable.php" afterPath="$PROJECT_DIR$/app/DataTables/Admin/OptionsDataTable.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/DataTables/Scopes/UserDataTableScope.php" afterPath="$PROJECT_DIR$/app/DataTables/Scopes/UserDataTableScope.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/DataTables/UserDataTable.php" afterPath="$PROJECT_DIR$/app/DataTables/UserDataTable.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/MenuController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MenuController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/OptionsController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/OptionsController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PagesController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PagesController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Site/FacebookController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Site/FacebookController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Kernel.php" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/api_routes.php" afterPath="$PROJECT_DIR$/app/Http/api_routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/User.php" afterPath="$PROJECT_DIR$/app/Models/User.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/UserRepository.php" afterPath="$PROJECT_DIR$/app/Repositories/UserRepository.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/laravel-facebook-sdk.php" afterPath="$PROJECT_DIR$/config/laravel-facebook-sdk.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2014_09_00_000000_create_users_table.php" afterPath="$PROJECT_DIR$/database/migrations/2014_09_00_000000_create_users_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/infyom_json.json" afterPath="$PROJECT_DIR$/infyom_json.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/.htaccess" afterPath="$PROJECT_DIR$/public/.htaccess" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/site/js/app-admin.js" afterPath="$PROJECT_DIR$/public/assets/site/js/app-admin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/menus/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/menus/create.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/menus/datatables_actions.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/menus/datatables_actions.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/menus/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/menus/edit.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/menus/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/menus/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/options/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/options/create.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/options/datatables_actions.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/options/datatables_actions.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/options/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/options/edit.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/options/fields.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/options/fields.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/options/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/options/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/pages/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/pages/create.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/pages/datatables_actions.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/pages/datatables_actions.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/pages/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/pages/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/users/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/users/create.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/users/datatables_actions.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/users/datatables_actions.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/users/fields.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/users/fields.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/users/show.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/users/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/users/show_fields.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/users/show_fields.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/errors/404.blade.php" afterPath="$PROJECT_DIR$/resources/views/errors/404.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/home.blade.php" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/menu.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/menu.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/scripts.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/scripts.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/styles.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/styles.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -63,48 +385,15 @@
         <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$GroupNode" />
       </PATH_ELEMENT>
     </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="Embelezzô" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Downloads/login-form/index.html">
+      <file leaf-file-name="DatabaseSeeder.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="36" column="10" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="36" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="387">
-              <caret line="98" column="0" lean-forward="true" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-              <folding>
-                <marker date="1489973257766" expanded="false" signature="1931:1957" ph="..." />
-                <marker date="1489973257766" expanded="false" signature="4274:4288" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="styles.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/auth/styles.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="71" column="32" lean-forward="false" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
+            <state relative-caret-position="-42">
+              <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -115,10 +404,19 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>btn-save-timeslot</find>
-      <find>options</find>
       <find>select</find>
       <find>helens</find>
       <find>dt-</find>
+      <find>p</find>
+      <find>check</find>
+      <find>options</find>
+      <find>admin/home</find>
+      <find>Port</find>
+      <find>Portugue</find>
+      <find>filest</find>
+      <find>Upda</find>
+      <find>email</find>
+      <find>slack</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -127,63 +425,69 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/TimeSlotController.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/calendar/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/clinic/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/auth/emails/base.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/auth/emails/password.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/email/contact.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/email/contact-app.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/users/show_fields.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/API/AppointmentAPIController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/ContactController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Site/SiteController.php" />
-        <option value="$PROJECT_DIR$/config/filesystems.php" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b91276db-1741-44e3-a5ac-b6592586e105/console.sql" />
-        <option value="$PROJECT_DIR$/resources/views/admin/options/datatables_actions.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/pageGenerator/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/pageGenerator/create.blade.php" />
+        <option value="$PROJECT_DIR$/resources/infyom/infyom-generator-templates/scaffold/datatable.stub" />
+        <option value="$PROJECT_DIR$/resources/views/admin/textes/table.blade.php" />
         <option value="$PROJECT_DIR$/public/assets/site/js/app-admin.js" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/styles.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/pageGenerator/fields.blade.php" />
-        <option value="$PROJECT_DIR$/infyom_json.json" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/PageGenerateController.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/pageGenerator/script.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/pages/create.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/pages/fields.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/pages/script.blade.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2017_03_19_134033_create_options_table.php" />
-        <option value="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/PagesController.php" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b91276db-1741-44e3-a5ac-b6592586e105/console_1.sql" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/OptionsController.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/menus/datatables_actions.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/options/datatables_actions.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/menus/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/infyom/infyom-generator-templates/scaffold/views/index.stub" />
+        <option value="$PROJECT_DIR$/resources/infyom/infyom-generator-templates/scaffold/views/create.stub" />
+        <option value="$PROJECT_DIR$/resources/infyom/infyom-generator-templates/scaffold/views/edit.stub" />
+        <option value="$PROJECT_DIR$/resources/views/admin/sdfdsfsfds/table.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/menu.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php" />
-        <option value="$PROJECT_DIR$/app/Models/Admin/Menu.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/menus/fields.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/MenuController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/HomeController.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/scripts.blade.php" />
-        <option value="$PROJECT_DIR$/app/DataTables/OptionsDataTable.php" />
-        <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/resources/views/admin/menus/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/pages/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/options/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/tracking.blade.php" />
+        <option value="$PROJECT_DIR$/resources/assets/js/main.js" />
+        <option value="$PROJECT_DIR$/app/Criteria/UsersCriteria.php" />
+        <option value="$PROJECT_DIR$/app/Repositories/UserRepository.php" />
+        <option value="$PROJECT_DIR$/app/DataTables/UserDataTable.php" />
+        <option value="$PROJECT_DIR$/app/DataTables/Scopes/UserDataTableScope.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/users/datatables_actions.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/users/fields.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/users/show_fields.blade.php" />
+        <option value="$PROJECT_DIR$/app/Models/User.php" />
+        <option value="$PROJECT_DIR$/config/app.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/SlackController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/OptionsController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/PagesController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/MenuController.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/menus/table.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/pages/table.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/options/table.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/auth/styles.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/holder/fields.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/holder/create.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/menus/create.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/menus/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/pages/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/pages/create.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/options/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/options/create.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/options/fields.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/options/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/users/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/users/create.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/users/edit.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/users/show.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/options/list.blade.php" />
+        <option value="$PROJECT_DIR$/config/slack.php" />
+        <option value="$PROJECT_DIR$/config/laravel-facebook-sdk.php" />
+        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/.env" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
     <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>false</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>false</other-services-enabled>
   </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
@@ -202,6 +506,9 @@
     <option name="y" value="30" />
     <option name="width" value="1366" />
     <option name="height" value="738" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -268,29 +575,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="product" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="product" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="auth" />
+              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -332,7 +617,97 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seeds" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="product" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="product" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrations" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="product" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="product" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="product" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="product" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="product" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="product" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Repositories" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="product" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="product" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Repositories" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Admin" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -412,7 +787,33 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Middleware" />
+              <option name="myItemId" value="Requests" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="product" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="product" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Requests" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Admin" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -478,15 +879,7 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Http" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Controllers" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="API" />
+              <option name="myItemId" value="DataTables" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -505,6 +898,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="DataTables" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Scopes" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -527,6 +924,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Admin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="product" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="product" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Criteria" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -537,20 +952,26 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mdb" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="nodejs_interpreter_path" value="/usr/bin/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
+    <property name="JavaScriptPreferStrict" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Criteria" />
+      <recent name="$PROJECT_DIR$/public/assets/site/js" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/DataTables/Admin" />
-      <recent name="$PROJECT_DIR$/app/DataTables" />
-      <recent name="$PROJECT_DIR$/resources/views/admin/pages" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Admin" />
+      <recent name="$PROJECT_DIR$/app/DataTables" />
+      <recent name="$PROJECT_DIR$/app/DataTables/Admin" />
+      <recent name="$PROJECT_DIR$/resources/views/admin/pages" />
     </key>
   </component>
   <component name="RunManager">
@@ -637,29 +1058,40 @@
       <workItem from="1489941405118" duration="8662000" />
       <workItem from="1489950242012" duration="1352000" />
       <workItem from="1489951781282" duration="1337000" />
-      <workItem from="1489967590512" duration="5667000" />
+      <workItem from="1489967590512" duration="6267000" />
+      <workItem from="1491227694732" duration="22000" />
+      <workItem from="1494036024710" duration="113000" />
+      <workItem from="1494036934502" duration="430000" />
+      <workItem from="1494037744001" duration="103000" />
+      <workItem from="1494039497172" duration="23000" />
+      <workItem from="1494638545418" duration="14385000" />
+      <workItem from="1495244605147" duration="5220000" />
+      <workItem from="1495249914854" duration="1843000" />
+      <workItem from="1495546137747" duration="25000" />
+      <workItem from="1495558212098" duration="31000" />
+      <workItem from="1495665061910" duration="15560000" />
+      <workItem from="1495725945032" duration="8807000" />
+      <workItem from="1495752237481" duration="2214000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31715000" />
+    <option name="totallyTimeSpent" value="81091000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="30" width="1366" height="738" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19838946" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27348486" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21522693" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21515152" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -668,11 +1100,13 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" x="0" y="392" width="1366" height="376" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -688,411 +1122,376 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/infyom_json.json">
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/infyomlabs/laravel-generator/samples/fields_sample.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="6" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/HelenController.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/healthPlans/table.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/pageGenerator/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="34" lean-forward="true" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/pages/fields.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2017_03_19_155958_create_helens_table.php" />
-    <entry file="file://$PROJECT_DIR$/database/migrations/2017_03_19_134127_create_options_table.php" />
-    <entry file="file://$PROJECT_DIR$/database/migrations/2017_03_19_134033_create_options_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2017_03_19_160729_create_pages_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/HeheheController.php" />
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/pages/script.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="34" lean-forward="false" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b91276db-1741-44e3-a5ac-b6592586e105/console_1.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="20" lean-forward="false" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/PagesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="58" column="19" lean-forward="false" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="37" lean-forward="false" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/PageGenerateController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="23" column="40" lean-forward="false" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/pages/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="45" lean-forward="false" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/OptionsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="127" column="10" lean-forward="false" selection-start-line="127" selection-start-column="10" selection-end-line="127" selection-end-column="10" />
-          <folding>
-            <element signature="e#1727#2051#0#PHP" expanded="false" />
-            <element signature="e#2190#2514#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b91276db-1741-44e3-a5ac-b6592586e105/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4097">
-          <caret line="1736" column="17" lean-forward="false" selection-start-line="1736" selection-start-column="5" selection-end-line="1736" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/c5d98f14/b91276db-1741-44e3-a5ac-b6592586e105/product.public.migrations">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-          <column-attributes>
-            <column name="ctid" enabled="false" />
-          </column-attributes>
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/API/UserAPIController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1772">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/menus/datatables_actions.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-          <folding>
-            <marker date="1489968927644" expanded="true" signature="401:565" ph="..." />
-            <marker date="1489968927644" expanded="true" signature="415:563" ph="..." />
-            <marker date="1489968927644" expanded="true" signature="461:562" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="41" lean-forward="false" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Models/Admin/Menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="109" column="31" lean-forward="true" selection-start-line="109" selection-start-column="31" selection-end-line="109" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/MenuController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="131" column="52" lean-forward="false" selection-start-line="131" selection-start-column="52" selection-end-line="131" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/menus/fields.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/menu.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="14" lean-forward="false" selection-start-line="33" selection-start-column="14" selection-end-line="33" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/c5d98f14/b91276db-1741-44e3-a5ac-b6592586e105/product.public.menus">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/scripts.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="49" lean-forward="false" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/DataTables/Admin/MenuDataTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/DataTables/AppointmentDataTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/DataTables/DataTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="42" column="6" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="42" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/DataTables/OptionsDataTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding>
-            <element signature="e#34#57#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/locals/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/menus/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="37" lean-forward="false" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/pages/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="37" lean-forward="false" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/users/table.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/timeSlots/table.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/options/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/menus/table.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/pages/table.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="11" lean-forward="true" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
-          <folding />
+        <state relative-caret-position="378">
+          <caret line="26" column="24" lean-forward="false" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/site/js/app-admin.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="656" column="98" lean-forward="true" selection-start-line="646" selection-start-column="4" selection-end-line="656" selection-end-column="98" />
-          <folding>
-            <marker date="1489945930395" expanded="true" signature="3414:3440" ph="..." />
-            <marker date="1489945930395" expanded="true" signature="3474:3489" ph="..." />
-          </folding>
+        <state relative-caret-position="49">
+          <caret line="107" column="45" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="126" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/options/table.blade.php">
+    <entry file="file://$PROJECT_DIR$/public/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="11" lean-forward="false" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
-          <folding />
+        <state relative-caret-position="-1526">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/login-form/index.html">
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/sidebar.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="36" column="10" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="36" selection-end-column="10" />
-          <folding />
+        <state relative-caret-position="168">
+          <caret line="10" column="96" lean-forward="false" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="96" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/login-form/css/style.css">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="26" column="71" lean-forward="false" selection-start-line="26" selection-start-column="71" selection-end-line="26" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/tracking.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-63">
+          <caret line="3" column="81" lean-forward="false" selection-start-line="3" selection-start-column="73" selection-end-line="3" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/scripts.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="20" column="9" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/assets/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-35">
+          <caret line="155" column="7" lean-forward="true" selection-start-line="155" selection-start-column="7" selection-end-line="155" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Repositories/UserRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="33" column="48" lean-forward="false" selection-start-line="33" selection-start-column="48" selection-end-line="33" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Criteria/UsersCriteria.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/users/table.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="77" selection-end-column="1" />
-          <folding />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
+    <entry file="file://$PROJECT_DIR$/app/DataTables/Scopes/UserDataTableScope.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="34" column="34" lean-forward="false" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
-          <folding />
+        <state relative-caret-position="357">
+          <caret line="24" column="22" lean-forward="true" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/users/datatables_actions.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/DataTables/UserDataTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="987">
+          <caret line="68" column="37" lean-forward="false" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="153" column="5" lean-forward="false" selection-start-line="153" selection-start-column="5" selection-end-line="153" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/c5d98f14/b91276db-1741-44e3-a5ac-b6592586e105/product.public.users">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="222" column="51" lean-forward="false" selection-start-line="222" selection-start-column="51" selection-end-line="222" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Models/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="134" column="37" lean-forward="false" selection-start-line="134" selection-start-column="37" selection-end-line="134" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/users/show_fields.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="19" column="100" lean-forward="false" selection-start-line="19" selection-start-column="100" selection-end-line="19" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/SlackController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="36" lean-forward="true" selection-start-line="13" selection-start-column="8" selection-end-line="14" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/users/fields.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="74" column="0" lean-forward="false" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/OptionsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="166" column="53" lean-forward="true" selection-start-line="165" selection-start-column="8" selection-end-line="166" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/queue.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/c5d98f14/b91276db-1741-44e3-a5ac-b6592586e105/product.public.menus">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/PagesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="161" column="9" lean-forward="true" selection-start-line="149" selection-start-column="8" selection-end-line="161" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/MenuController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="165" column="5" lean-forward="true" selection-start-line="165" selection-start-column="5" selection-end-line="165" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="61" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="61" />
+        <state relative-caret-position="524">
+          <caret line="208" column="0" lean-forward="true" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/holder/fields.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="21" column="82" lean-forward="false" selection-start-line="21" selection-start-column="82" selection-end-line="21" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/holder/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/menus/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="23" column="22" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="23" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/menus/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="9" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/pages/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/pages/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="22" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/menus/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="22" column="22" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/options/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="32" lean-forward="false" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/options/fields.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="132" lean-forward="false" selection-start-line="9" selection-start-column="132" selection-end-line="9" selection-end-column="132" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/options/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="24" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/options/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="14" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/users/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="43" lean-forward="false" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/users/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="65" lean-forward="false" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/users/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="65" lean-forward="false" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/users/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="119" column="52" lean-forward="false" selection-start-line="119" selection-start-column="52" selection-end-line="119" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/options/list.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="97" column="103" lean-forward="false" selection-start-line="97" selection-start-column="103" selection-end-line="97" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/slack.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="28" column="36" lean-forward="false" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/laravel-facebook-sdk.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="41" lean-forward="false" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="131" column="56" lean-forward="false" selection-start-line="131" selection-start-column="56" selection-end-line="131" selection-end-column="56" />
-          <folding>
-            <element signature="e#1695#2234#1#PHP" expanded="false" />
-            <element signature="e#7341#7661#0#PHP" expanded="false" />
-            <element signature="e#7675#7813#0#PHP" expanded="false" />
-            <element signature="e#7836#7989#0#PHP" expanded="false" />
-            <element signature="e#8008#8431#0#PHP" expanded="false" />
-            <element signature="e#8467#8660#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/styles.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="71" column="32" lean-forward="false" selection-start-line="71" selection-start-column="32" selection-end-line="71" selection-end-column="32" />
+        <state relative-caret-position="231">
+          <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/login.blade.php">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="98" column="0" lean-forward="true" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-          <folding>
-            <marker date="1489973257766" expanded="false" signature="1931:1957" ph="..." />
-            <marker date="1489973257766" expanded="false" signature="4274:4288" ph="..." />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="37" column="13" lean-forward="false" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-42">
+          <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>

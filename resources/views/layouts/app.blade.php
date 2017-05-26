@@ -35,14 +35,21 @@
     @include("layouts.styles")
 </head>
 
-<body class="skin-red sidebar-mini">
+<body class="skin-red sidebar-mini {{ getenv("LAYOUT_TYPE") }}">
 @if (!Auth::guest())
     <div class="wrapper">
         <!-- Main Header -->
         <header class="main-header">
             <!-- Logo -->
-            <a href="#" class="logo" style="background: #361121;">
-                <b>{{ getenv("TITLE") }}</b>
+            <a href="#" class="logo">
+                <!-- Logo Mini -->
+                <span class="logo-mini">
+                    {{ getenv("MINI_TITLE") }}
+                </span>
+                <!-- Logo Lg -->
+                <span class="logo-lg">
+                    <b>{{ getenv("TITLE") }}</b>
+                </span>
             </a>
 
             <!-- Header Navbar -->
@@ -59,14 +66,14 @@
                             <!-- Menu Toggle Button -->
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <!-- The user image in the navbar-->
-                                <img src="{{ Auth::user()->image_url }}" class="user-image" alt="Imagem do usuário"/>
+                                <img src="https://adminlte.io/themes/AdminLTE/dist/img/user2-160x160.jpg" class="user-image" alt="Imagem do usuário"/>
                                 <!-- hidden-xs hides the username on small devices so only the image appears. -->
                                 <span class="hidden-xs">{!! Auth::user()->name !!}</span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- The user image in the menu -->
                                 <li class="user-header" style="background: #571c36;">
-                                    <img src="{{ Auth::user()->image_url }}" class="img-circle" alt="Imagem do usuário"/>
+                                    <img src="https://adminlte.io/themes/AdminLTE/dist/img/user2-160x160.jpg" class="img-circle" alt="Imagem do usuário"/>
                                     <p>
                                         {!! Auth::user()->name !!}
                                         <small>Membro desde {!! Auth::user()->created_at->format('d/m/Y') !!}</small>
@@ -146,7 +153,7 @@
 
 <!-- Main Footer -->
 <footer class="main-footer" style="max-height: 100px;text-align: center">
-    <strong>Copyright © 2017 <a href="https://aioria.com.br">AIORIA</a>.</strong> Todos os direitos reservados.
+    <strong>Copyright © 2017 <a href="{{ getenv("COMPANY_URL") }}">{{ getenv("COMPANY") }}</a>.</strong> Todos os direitos reservados.
 </footer>
 
 
@@ -155,8 +162,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js"></script>
 
     <!-- AdminLTE App -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.3/js/app.min.js"></script>
@@ -165,11 +170,11 @@
     <script src="{{ asset('assets/site/js/jquery.datatables.js') }}"></script>
     <script src="{{ asset('assets/site/js/jquery.datatables-bootstrap.js') }}"></script>
 
-    <script src="{{ asset('assets/site/js/tableExport.js') }}"></script>
-    <script src="{{ asset('assets/site/js/jquery.base64.js') }}"></script>
-    <script src="{{ asset('assets/site/js/libs/sprintf.js') }}"></script>
-    <script src="{{ asset('assets/site/js/jspdf.js') }}"></script>
-    <script src="{{ asset('assets/site/js/libs/base64.js') }}"></script>
+    {{--<script src="{{ asset('assets/site/js/tableExport.js') }}"></script>--}}
+    {{--<script src="{{ asset('assets/site/js/jquery.base64.js') }}"></script>--}}
+    {{--<script src="{{ asset('assets/site/js/libs/sprintf.js') }}"></script>--}}
+    {{--<script src="{{ asset('assets/site/js/jspdf.js') }}"></script>--}}
+    {{--<script src="{{ asset('assets/site/js/libs/base64.js') }}"></script>--}}
     {{--<script src="//cdn.datatables.net/plug-ins/1.10.12/i18n/Portuguese-Brasil.json"></script>--}}
 
     <!-- Calendar -->
@@ -186,8 +191,8 @@
     <script src="{{ asset('assets/site/js/jquery.multi-select.js') }}"></script>
     <script src="{{ asset('assets/site/js/jquery.mask.js') }}"></script>
     <script src="{{ asset('assets/site/js/jquery.cookie.js') }}"></script>
-    <script src="{{ asset('assets/site/js/jquery.confirm.js') }}"></script>
-    <script src="{{ asset('assets/site/js/chart.min.js') }}"></script>
+    {{--<script src="{{ asset('assets/site/js/jquery.confirm.js') }}"></script>--}}
+    {{--<script src="{{ asset('assets/site/js/chart.min.js') }}"></script>--}}
     <script src="{{ asset('assets/site/js/bootstrap2-toggle.js') }}"></script>
     <script src="{{ asset('assets/site/js/bootstrap-filestyle.js') }}"></script>
     <script src="{{ asset('assets/site/js/pickadate/picker.js') }}"></script>
@@ -196,7 +201,11 @@
     <script src="{{ asset('assets/site/js/picker.js') }}"></script>
     <script src="{{ asset('assets/site/js/select.min.js') }}"></script>
     <script src="{{ asset('assets/site/js/app-admin.js') }}"></script>
+{{--    <script src="{{ asset('js/main.js') }}"></script>--}}
     <!-- Custom Scripts -->
+
+    <!-- JS da App Gerado pelo Gulp -->
+    <script src="{{ asset('js/main.js') }}"></script>
 
     @yield('scripts')
 

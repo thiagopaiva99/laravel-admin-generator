@@ -2,35 +2,15 @@
 
 @section('content')
     <div class="content">
-        <div class="clearfix"></div>
-
-        <div class="box box-danger">
-            <div class="box-header with-border text-center">
-                <span class="pull-left">
-                    @include("admin.util._back")
-                </span>
-
-                @if (Auth::user()->user_type == \App\Models\User::UserTypeDoctor)
-                    @if($user->id == Auth::id())
-                        <h1 class="box-title">Perfil</h1>
-                    @else
-                        <h1 class="box-title">{!! $user->user_type_str !!}</h1>
-                    @endif
-                @else
-                    <h1 class="box-title">{!! $user->user_type_str !!}</h1>
-                @endif
-
-                @if($user->id == Auth::user()->id)
-                    <span class="pull-right">
-                        <a class="btn btn-default" href="{!! route("admin.users.edit", ["users" => $user->id]) !!}">Editar</a>
-                    </span>
-                @endif
-            </div>
-            <div class="box-body">
-                <div class="row" style="padding-left: 20px">
-                    @include('admin.users.show_fields')
-                </div>
-            </div>
+        <div class="" style="text-align: right;">
+            <ol class="breadcrumb">
+                <li><a href="{{ url('/admin/home') }}"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href="{{ url('/admin/users') }}"> Usuarios</a></li>
+                <li class="active">Visualizar Usuario</li>
+            </ol>
+        </div>
+        <div class="row">
+            @include("admin.users.show_fields")
         </div>
     </div>
 @endsection

@@ -1,0 +1,36 @@
+@extends('layouts.app')
+
+@section('content')
+<div class="content">
+    <div class="" style="text-align: right;">
+        <ol class="breadcrumb">
+            <li><a href="{{ url('/admin/home') }}"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="{{ url('/admin/$MODEL_NAME_PLURAL_CAMEL$') }}"> $MODEL_NAME_PLURAL$</a></li>
+            <li class="active">Novo $MODEL_NAME$</li>
+        </ol>
+    </div>
+    <div class="box box-success">
+        <div class="box-header with-border text-center">
+                        <span class="pull-left">
+                            @include("admin.util._back")
+                        </span>
+
+            <h1 class="box-title">$MODEL_NAME$</h1>
+        </div>
+
+        <div class="box-body">
+            <div class="col-md-12">
+                @include('flash::message-admin')
+            </div>
+
+            <div class="row">
+                {!! Form::open(['route' => '$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.store']) !!}
+
+                    @include('$VIEW_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.fields')
+
+                {!! Form::close() !!}
+            </div>
+        </div>
+    </div>
+</div>
+@endsection

@@ -6,10 +6,12 @@ use App\DataTables\Admin\MenuDataTable;
 use App\Http\Requests\Admin;
 use App\Http\Requests\Admin\CreateMenuRequest;
 use App\Http\Requests\Admin\UpdateMenuRequest;
+use App\Http\Requests\Request;
 use App\Models\Admin\Menu;
 use App\Repositories\Admin\MenuRepository;
 use Flash;
 use InfyOm\Generator\Controller\AppBaseController;
+use Maknz\Slack\Facades\Slack;
 use Response;
 use Auth;
 
@@ -66,6 +68,9 @@ class MenuController extends AppBaseController
         $menu = $this->menuRepository->create($input);
 
         Flash::success('Menu saved successfully.');
+
+        // Send a message to the default channel
+        Slack::send('Foi gerado o menu: '.$menu->menu);
 
         return redirect(route('admin.menus.index'));
     }
@@ -153,16 +158,25 @@ class MenuController extends AppBaseController
             return redirect(route('admin.menus.index'));
         }
 
-        $this->menuRepository->delete($id);
-
-        Flash::success('Menu deleted successfully.');
-
-        return redirect(route('admin.menus.index'));
+        if( $this->menuRepository->delete($id) ){
+            return response()->json($menu, 200);
+        }else{
+            return response()->json($menu, 500);
+        }
     }
 
     public function getMenus(){
-        $menus = Menu::where('appears_to', Auth::user()->id)->get();
+        $menus = Menu::where('appears_to', Auth::user()->id)->orderby('order')->get();
 
         return response()->json($menus);
+    }
+
+    public function getViewOrder(){
+        $menus = Menu::orderBy('order')->get();
+        return view('admin.menus.order')->with('menus', $menus);
+    }
+
+    public function postViewOrder(Request $request){
+        return dump($request);
     }
 }

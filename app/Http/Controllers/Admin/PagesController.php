@@ -10,6 +10,7 @@ use App\Models\Admin\Pages;
 use App\Repositories\Admin\PagesRepository;
 use Flash;
 use InfyOm\Generator\Controller\AppBaseController;
+use Maknz\Slack\Facades\Slack;
 use Response;
 
 class PagesController extends AppBaseController
@@ -63,6 +64,9 @@ class PagesController extends AppBaseController
         $shell = "cd .. && echo '[".$request->get("str")."]' > infyom_json.json && php artisan infyom:scaffold ".ucwords($request->name)." --prefix=admin --paginate=10 --datatables=true --fieldsFile=infyom_json.json";
 
         shell_exec($shell);
+
+        // Send a message to the default channel
+        Slack::send('Foi gerada a pagina: '.$request->get("name"));
 
         Flash::success('Pages saved successfully.');
 
@@ -148,13 +152,13 @@ class PagesController extends AppBaseController
         if (empty($pages)) {
             Flash::error('Pages not found');
 
-            return redirect(route('admin.pages.index'));
+            return response()->json("Oops", 500);
         }
 
-        $this->pagesRepository->delete($id);
-
-        Flash::success('Pages deleted successfully.');
-
-        return redirect(route('admin.pages.index'));
+        if( $this->pagesRepository->delete($id) ){
+            return response()->json($pages, 200);
+        }else{
+            return response()->json($pages, 500);
+        }
     }
 }

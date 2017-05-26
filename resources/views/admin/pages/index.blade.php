@@ -2,6 +2,12 @@
 
 @section('content')
     <div class="content">
+        <div class="" style="text-align: right;">
+            <ol class="breadcrumb">
+                <li><a href="{{ url('/admin/home') }}"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li class="active">Paginas</li>
+            </ol>
+        </div>
         <div class="box box-success">
             <div class="box-header with-border text-center">
                             <span class="pull-left">

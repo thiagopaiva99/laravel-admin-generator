@@ -24,5 +24,7 @@ elixir(function(mix) {
         'jquery.plugins/jquery.cookie.js'
     ]);
 
+    mix.browserify('main.js');
+
     mix.version(['css/all.css', 'js/all.js']);
 });

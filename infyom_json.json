@@ -3,15 +3,9 @@
 "htmlType": "",
 "validations": "",
 "searchable": false},{
-    "fieldInput": "Qui:double",
-    "htmlType": "date",
-    "validations": "unique",
-    "searchable": "false"
-},
-{
-    "fieldInput": "Nulla:float",
+    "fieldInput": "sadasdasd:string",
     "htmlType": "text",
-    "validations": "unique:email",
+    "validations": "required",
     "searchable": "false"
 }
 ]

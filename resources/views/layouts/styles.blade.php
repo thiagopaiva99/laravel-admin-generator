@@ -15,6 +15,10 @@
         border-top-color: {{ getenv("COLOR_PRIMARY") }} !important;
     }
 
+    .nav-tabs-custom > .nav-tabs > li.active{
+        border-top-color: {{ getenv("COLOR_PRIMARY") }} !important;
+    }
+
     .sidebar-toggle:hover{
         background-color: {{ getenv("COLOR_PRIMARY_DARK") }} !important;
     }
@@ -34,6 +38,16 @@
 
     .btn-danger:hover{
         background: {{ getenv("COLOR_PRIMARY") }} !important;
+    }
+
+    .btn-success{
+        border-color: {{ getenv("COLOR_PRIMARY") }} !important;
+        background: {{ getenv("COLOR_PRIMARY") }} !important;
+    }
+
+    .btn-success:hover{
+        border-color: {{ getenv("COLOR_PRIMARY_DARK") }} !important;
+        background: {{ getenv("COLOR_PRIMARY_DARK") }} !important;
     }
 
     .pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover{

@@ -2,7 +2,13 @@
 
 @section('content')
     <div class="content">
-       @include('adminlte-templates::common.errors')
+        <div class="" style="text-align: right;">
+            <ol class="breadcrumb">
+                <li><a href="{{ url('/admin/home') }}"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href="{{ url('/admin/users') }}"> Usuarios</a></li>
+                <li class="active">Editar Usuario</li>
+            </ol>
+        </div>
        <div class="box box-danger">
            <div class="box-header with-border text-center">
                 <span class="pull-left">

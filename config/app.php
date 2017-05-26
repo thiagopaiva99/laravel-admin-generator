@@ -216,6 +216,16 @@ return [
          * Excel
          */
         'Maatwebsite\Excel\ExcelServiceProvider',
+
+        /**
+         * Robots.txt
+         */
+        'EllisTheDev\Robots\RobotsServiceProvider',
+
+        /**
+         * Slack Integration
+         */
+        Maknz\Slack\Laravel\ServiceProvider::class,
     ],
 
     /*
@@ -295,8 +305,14 @@ return [
         // Facebook
         'Facebook' => SammyK\LaravelFacebookSdk\FacebookFacade::class,
 
-        //Excel
+        // Excel
         'Excel' => 'Maatwebsite\Excel\Facades\Excel',
+
+        // Robots.txt
+        'Robots' => 'EllisTheDev\Robots\RobotsFacade',
+
+        // Slack
+        'Slack' => Maknz\Slack\Laravel\Facade::class,
 ],
 
 ];

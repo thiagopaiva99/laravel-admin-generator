@@ -6,10 +6,13 @@ use App\DataTables\Admin\OptionsDataTable;
 use App\Http\Requests\Admin;
 use App\Http\Requests\Admin\CreateOptionsRequest;
 use App\Http\Requests\Admin\UpdateOptionsRequest;
+use App\Models\Admin\Options;
 use App\Repositories\Admin\OptionsRepository;
 use Flash;
 use InfyOm\Generator\Controller\AppBaseController;
+use Maknz\Slack\Facades\Slack;
 use Response;
+use Request;
 
 class OptionsController extends AppBaseController
 {
@@ -58,6 +61,9 @@ class OptionsController extends AppBaseController
         $shell = "cd .. && cat .env && echo ".strtoupper($input['key'])."='".$input['value']."' >> .env";
 
         shell_exec($shell);
+
+        // Send a message to the default channel
+        Slack::send('Foi gerada a opçao '.$input['key'].' com o valor de "'.$input['value'].'"');
 
         Flash::success('Options saved successfully.');
 
@@ -123,8 +129,6 @@ class OptionsController extends AppBaseController
 
         return $shell;
 
-//        return shell_exec($shell);
-
         if (empty($options)) {
             Flash::error('Options not found');
 
@@ -154,6 +158,13 @@ class OptionsController extends AppBaseController
 
             return redirect(route('admin.options.index'));
         }
+
+        $option = Options::find($id)->key;
+
+        shell_exec("cd .. && sed -i \"/$option/d\" .env");
+
+        // Send a message to the default channel
+        Slack::send('Foi deletada o opçao '.$option);
 
         $this->optionsRepository->delete($id);
 

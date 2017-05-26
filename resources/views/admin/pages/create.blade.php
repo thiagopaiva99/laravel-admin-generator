@@ -1,23 +1,29 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="content-header">
-        <h1>
-            Pages
-        </h1>
-    </section>
     <div class="content">
-        @include('adminlte-templates::common.errors')
-        <div class="box box-primary">
+        <div class="" style="text-align: right;">
+            <ol class="breadcrumb">
+                <li><a href="{{ url('/admin/home') }}"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li class=""><a href="{{ url('/admin/pages') }}">Paginas</a></li>
+                <li class="active">Nova Pagina</li>
+            </ol>
+        </div>
+        <div class="box box-success">
+            <div class="box-header with-border text-center">
+                            <span class="pull-left">
+                                @include("admin.util._back")
+                            </span>
+
+                <h1 class="box-title">Nova Pagina</h1>
+            </div>
 
             <div class="box-body">
-                <div class="row">
-{{--                    {!! Form::open(['route' => 'admin.pages.store']) !!}--}}
-
-                        @include('admin.pages.fields')
-
-{{--                    {!! Form::close() !!}--}}
+                <div class="col-md-12">
+                    @include('flash::message-admin')
                 </div>
+
+                @include('admin.pages.fields')
             </div>
         </div>
     </div>

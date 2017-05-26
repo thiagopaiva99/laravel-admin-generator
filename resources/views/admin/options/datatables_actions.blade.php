@@ -9,7 +9,7 @@
     {!! Form::button('<i class="fa fa-trash"></i>', [
         'type' => 'submit',
         'class' => 'btn btn-danger btn-xs',
-        'onclick' => "alert('ops')"
+        'onclick' => "return confirmation('options', $id);"
     ]) !!}
 </div>
 {!! Form::close() !!}

@@ -80,6 +80,6 @@ class AuthController extends Controller
      */
     public function redirectPath()
     {
-        return \Auth::user()->user_type == User::UserTypePatient ? "/" : '/admin/home';
+        return '/admin/home';
     }
 }

@@ -2,7 +2,7 @@
 
 namespace App\Repositories;
 
-use App\Criteria\MyUsersCriteria;
+use App\Criteria\UsersCriteria;
 use App\Models\User;
 use InfyOm\Generator\Common\BaseRepository;
 
@@ -31,6 +31,6 @@ class UserRepository extends BaseRepository
     {
         parent::boot();
 
-        $this->pushCriteria(MyUsersCriteria::class);
+        $this->pushCriteria(UsersCriteria::class);
     }
 }

@@ -22,11 +22,6 @@ class UserDataTableScope implements DataTableScopeContract {
      */
     public function apply($query)
     {
-        $user = User::find(Auth::user()->id);
-        if ($user->user_type == User::UserTypeDoctor) {
-            $query = $query->whereRaw("id IN (SELECT user_id FROM appointments WHERE time_slot_user_id = $user->id)");
-        }
-
         return $query;
     }
 }

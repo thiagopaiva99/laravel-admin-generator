@@ -1,23 +1,32 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="content-header">
-        <h1>
-            Menu
-        </h1>
-    </section>
     <div class="content">
-       @include('adminlte-templates::common.errors')
-       <div class="box box-primary">
-           <div class="box-body">
-               <div class="row">
-                   {!! Form::model($menu, ['route' => ['admin.menus.update', $menu->id], 'method' => 'patch']) !!}
+        <div class="" style="text-align: right;">
+            <ol class="breadcrumb">
+                <li><a href="{{ url('/admin/home') }}"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li class="active">Menus</li>
+            </ol>
+        </div>
+        <div class="box box-success">
+            <div class="box-header with-border text-center">
+                <span class="pull-left">
+                    @include("admin.util._back")
+                </span>
 
-                        @include('admin.menus.fields')
+                <h1 class="box-title">Menus</h1>
+            </div>
 
-                   {!! Form::close() !!}
-               </div>
+            <div class="box-body">
+                <div class="col-md-12">
+                    @include('flash::message-admin')
+                </div>
+               {!! Form::model($menu, ['route' => ['admin.menus.update', $menu->id], 'method' => 'patch']) !!}
+
+                    @include('admin.menus.fields')
+
+               {!! Form::close() !!}
            </div>
        </div>
-    </div>
+   </div>
 @endsection

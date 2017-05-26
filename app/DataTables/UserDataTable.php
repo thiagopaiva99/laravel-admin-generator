@@ -25,51 +25,10 @@ class UserDataTable extends DataTable
      */
     public function ajax()
     {
-        if(Auth::user()->user_type != User::UserTypeClinic){
-            return $this->datatables->eloquent($this->query())
-                ->addColumn('action', 'admin.users.datatables_actions')
-                ->editColumn('user_type', function($user) {
-                    return User::getUserTypeName($user->user_type);
-                })
-                ->editColumn("email", function($user) {
-                    if (isset($user->email)) {
-                        return '<a href="mailto:'.$user->email.'" class="btn btn-default btn-xs btn-social" target="_top"><i class="fa fa-envelope"></i> '.$user->email.'</a>';
-                    }
-                    return "";
-                })
-                ->editColumn("phone", function($user) {
-                    if(isset($user->phone)) {
-                        $phone = $user->phone;
-                        $phoneNumbers = StringHelper::onlyNumbers($phone);
-                        return StringHelper::phoneFormat($phoneNumbers);
-                    }
-                    return "";
-                })
-                ->make(true);
-        }else{
-            return $this->datatables->collection(User::select('users.*')->where('user_type', 2)->join('clinic_user', function($join){
-                $join->on('users.id', '=', 'clinic_user.user_id')->where('clinic_id', '=', Auth::user()->id);
-            })->get())
-                ->addColumn('action', 'admin.users.datatables_actions')
-                ->editColumn('user_type', function($user) {
-                    return User::getUserTypeName($user->user_type);
-                })
-                ->editColumn("email", function($user) {
-                    if (isset($user->email)) {
-                        return '<a href="mailto:'.$user->email.'" class="btn btn-default btn-xs btn-social" target="_top"><i class="fa fa-envelope"></i> '.$user->email.'</a>';
-                    }
-                    return "";
-                })
-                ->editColumn("phone", function($user) {
-                    if(isset($user->phone)) {
-                        $phone = $user->phone;
-                        $phoneNumbers = StringHelper::onlyNumbers($phone);
-                        return StringHelper::phoneFormat($phoneNumbers);
-                    }
-                    return "";
-                })
-                ->make(true);
-        }
+        return $this->datatables
+            ->eloquent($this->query())
+            ->addColumn('action', 'admin.users.datatables_actions')
+            ->make(true);
     }
 
     /**
@@ -79,16 +38,7 @@ class UserDataTable extends DataTable
      */
     public function query()
     {
-
-        if(Auth::user()->user_type != User::UserTypeClinic){
-            $users = User::query();
-        }else{
-            $users = User::where('user_type', 2)->join('clinic_user', function($join){
-                $join->on('users.id', '=', 'clinic_user.user_id')->where('clinic_id', '=', Auth::user()->id);
-            });
-        }
-
-
+        $users = User::query();
 
         return $this->applyScopes($users);
     }
@@ -101,6 +51,7 @@ class UserDataTable extends DataTable
     public function html()
     {
         $buttons = [
+            'create',
             'print',
             'reset',
             'reload',

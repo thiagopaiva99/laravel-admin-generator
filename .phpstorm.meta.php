@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2017-02-21.
+    * Generated on 2017-05-24.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -30,6 +30,8 @@ namespace PHPSTORM_META {
             'encrypter' instanceof \Illuminate\Encryption\Encrypter,
             'files' instanceof \Illuminate\Filesystem\Filesystem,
             'filesystem' instanceof \Illuminate\Filesystem\FilesystemManager,
+            'filesystem.disk' instanceof \Illuminate\Filesystem\FilesystemAdapter,
+            'filesystem.cloud' instanceof \Illuminate\Filesystem\FilesystemAdapter,
             'session' instanceof \Illuminate\Session\SessionManager,
             'session.store' instanceof \Illuminate\Session\Store,
             'Illuminate\Session\Middleware\StartSession' instanceof \Illuminate\Session\Middleware\StartSession,
@@ -68,6 +70,7 @@ namespace PHPSTORM_META {
             'datatables' instanceof \Yajra\Datatables\Datatables,
             'datatables.fractal' instanceof \League\Fractal\Manager,
             'image' instanceof \Intervention\Image\ImageManager,
+            'robots' instanceof \EllisTheDev\Robots\Robots,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'translation.loader' instanceof \Illuminate\Translation\FileLoader,
             'translator' instanceof \Illuminate\Translation\Translator,
@@ -173,6 +176,8 @@ namespace PHPSTORM_META {
             'encrypter' instanceof \Illuminate\Encryption\Encrypter,
             'files' instanceof \Illuminate\Filesystem\Filesystem,
             'filesystem' instanceof \Illuminate\Filesystem\FilesystemManager,
+            'filesystem.disk' instanceof \Illuminate\Filesystem\FilesystemAdapter,
+            'filesystem.cloud' instanceof \Illuminate\Filesystem\FilesystemAdapter,
             'session' instanceof \Illuminate\Session\SessionManager,
             'session.store' instanceof \Illuminate\Session\Store,
             'Illuminate\Session\Middleware\StartSession' instanceof \Illuminate\Session\Middleware\StartSession,
@@ -211,6 +216,7 @@ namespace PHPSTORM_META {
             'datatables' instanceof \Yajra\Datatables\Datatables,
             'datatables.fractal' instanceof \League\Fractal\Manager,
             'image' instanceof \Intervention\Image\ImageManager,
+            'robots' instanceof \EllisTheDev\Robots\Robots,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'translation.loader' instanceof \Illuminate\Translation\FileLoader,
             'translator' instanceof \Illuminate\Translation\Translator,
@@ -316,6 +322,8 @@ namespace PHPSTORM_META {
             'encrypter' instanceof \Illuminate\Encryption\Encrypter,
             'files' instanceof \Illuminate\Filesystem\Filesystem,
             'filesystem' instanceof \Illuminate\Filesystem\FilesystemManager,
+            'filesystem.disk' instanceof \Illuminate\Filesystem\FilesystemAdapter,
+            'filesystem.cloud' instanceof \Illuminate\Filesystem\FilesystemAdapter,
             'session' instanceof \Illuminate\Session\SessionManager,
             'session.store' instanceof \Illuminate\Session\Store,
             'Illuminate\Session\Middleware\StartSession' instanceof \Illuminate\Session\Middleware\StartSession,
@@ -354,6 +362,7 @@ namespace PHPSTORM_META {
             'datatables' instanceof \Yajra\Datatables\Datatables,
             'datatables.fractal' instanceof \League\Fractal\Manager,
             'image' instanceof \Intervention\Image\ImageManager,
+            'robots' instanceof \EllisTheDev\Robots\Robots,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'translation.loader' instanceof \Illuminate\Translation\FileLoader,
             'translator' instanceof \Illuminate\Translation\Translator,
@@ -459,6 +468,8 @@ namespace PHPSTORM_META {
             'encrypter' instanceof \Illuminate\Encryption\Encrypter,
             'files' instanceof \Illuminate\Filesystem\Filesystem,
             'filesystem' instanceof \Illuminate\Filesystem\FilesystemManager,
+            'filesystem.disk' instanceof \Illuminate\Filesystem\FilesystemAdapter,
+            'filesystem.cloud' instanceof \Illuminate\Filesystem\FilesystemAdapter,
             'session' instanceof \Illuminate\Session\SessionManager,
             'session.store' instanceof \Illuminate\Session\Store,
             'Illuminate\Session\Middleware\StartSession' instanceof \Illuminate\Session\Middleware\StartSession,
@@ -497,6 +508,7 @@ namespace PHPSTORM_META {
             'datatables' instanceof \Yajra\Datatables\Datatables,
             'datatables.fractal' instanceof \League\Fractal\Manager,
             'image' instanceof \Intervention\Image\ImageManager,
+            'robots' instanceof \EllisTheDev\Robots\Robots,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'translation.loader' instanceof \Illuminate\Translation\FileLoader,
             'translator' instanceof \Illuminate\Translation\Translator,

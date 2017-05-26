@@ -14,7 +14,7 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $middleware = [
-        \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
+        \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class
     ];
 
     /**
@@ -54,11 +54,5 @@ class Kernel extends HttpKernel
          * Middlewares do painel administrativo
          */
         'auth.admin' => \App\Http\Middleware\AdminMiddleware::class,
-        'auth.doctor' => \App\Http\Middleware\DoctorMiddleware::class,
-        'auth.adminOrSelfDoctor' => \App\Http\Middleware\AdminOrSelfDoctorMiddleware::class,
-        'auth.adminOrDoctor' => \App\Http\Middleware\AdminOrDoctorMiddleware::class,
-        'auth.clinic' => \App\Http\Middleware\ClinicMiddleware::class,
-        'auth.adminDoctorOrClinic' => \App\Http\Middleware\adminDoctorOrClinicMiddleware::class,
-        'auth.doctorOrClinic' => \App\Http\Middleware\DoctorOrClinicMiddleware::class
     ];
 }
