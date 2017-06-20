@@ -6,6 +6,8 @@ use App\DataTables\Scopes\UserDataTableScope;
 use App\DataTables\UserDataTable;
 use App\Repositories\UserRepository;
 use App\Http\Controllers\AppBaseController as InfyOmBaseController;
+use Barryvdh\Debugbar\Middleware\Debugbar;
+use DB;
 use Illuminate\Http\Request;
 use Flash;
 use Response;
@@ -48,6 +50,8 @@ class UserController extends InfyOmBaseController
             User::ApprovalStatusAccepted => "Aprovado",
             User::ApprovalStatusDenied => "Negado"
         ];
+
+//        Debugbar::error($approvalStatus);
 
         return view('admin.users.create', compact('clinics', 'approvalStatus'));
     }
@@ -207,5 +211,36 @@ class UserController extends InfyOmBaseController
         Flash::success('Usuário deletado com sucesso!');
 
         return redirect(route('admin.users.index'));
+    }
+
+    public function test(){
+        $tables = DB::raw(DB::select("SELECT table_name FROM information_schema.tables WHERE table_schema='public'"));
+
+        dump($tables);
+
+        $table = DB::raw(DB::select("
+            SELECT DISTINCT
+                a.attnum as num,
+                a.attname as name,
+                format_type(a.atttypid, a.atttypmod) as typ,
+                a.attnotnull as notnull, 
+                com.description as comment,
+                coalesce(i.indisprimary,false) as primary_key,
+                def.adsrc as default
+            FROM pg_attribute a 
+            JOIN pg_class pgc ON pgc.oid = a.attrelid
+            LEFT JOIN pg_index i ON 
+                (pgc.oid = i.indrelid AND i.indkey[0] = a.attnum)
+            LEFT JOIN pg_description com on 
+                (pgc.oid = com.objoid AND a.attnum = com.objsubid)
+            LEFT JOIN pg_attrdef def ON 
+                (a.attrelid = def.adrelid AND a.attnum = def.adnum)
+            WHERE a.attnum > 0 AND pgc.oid = a.attrelid
+            AND pg_table_is_visible(pgc.oid)
+            AND NOT a.attisdropped
+            AND pgc.relname = 'users'  -- Your table name here
+            ORDER BY a.attnum;
+        "))->getValue();
+        return;
     }
 }

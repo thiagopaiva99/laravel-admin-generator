@@ -159,6 +159,68 @@ $(document).ready(function () {
         var divoptions = $("#options");
         divoptions.toggle();
     });
+
+    // Getting the table attributes
+    var tablesselect = $("select[name=table]");
+    tablesselect.on('change', function () {
+        $.ajax({
+            url: URL() + 'admin/api/get-attributes',
+            type: 'GET',
+            data: {
+                _token: "IvzRD8Tx4NayjumiI2cea9nIEV0w3XY7NcXSULxZ",
+                table: tablesselect.val()
+            },
+            success: function success(res) {
+                if (res) {
+                    var attributes = $("#attributes");
+                    attributes.html("<hr>");
+
+                    res.forEach(function (item) {
+                        var html = '\n                            <div class="checkbox checkbox-success checkbox-inline" style="margin-left: 5px;">\n                                <input type="checkbox" name="fields[]" id="check_' + item.name + '" value="' + item.name + '">\n                                <label for="check_' + item.name + '"> ' + item.name + '</label>\n                            </div>\n                        ';
+                        attributes.append(html);
+                    });
+
+                    var _buttonAPI = $(".btn-generate-api");
+                    _buttonAPI.removeAttr("disabled");
+                }
+            },
+            error: function error() {
+                swal("Oops!", "Ocoreu algum erro :/", "error");
+            }
+        });
+    });
+
+    // Generating API
+    var buttonAPI = $(".btn-generate-api");
+    buttonAPI.on('click', function () {
+        var fields = [];
+        var checkboxes = $("input[type=checkbox]:checked").each(function () {
+            fields.push($(this).val());
+        });
+
+        $.ajax({
+            url: URL() + 'admin/api/generate',
+            type: 'GET',
+            data: {
+                _token: "IvzRD8Tx4NayjumiI2cea9nIEV0w3XY7NcXSULxZ",
+                table: $("select[name=table]").val(),
+                type: $("select[name=type]").val(),
+                fields: fields
+            },
+            success: function success(res) {
+                if (res) {
+                    var modal = $("#myModal");
+                    modal.modal('toggle');
+
+                    var modalBody = $(".modal-body");
+                    modalBody.text(res);
+                }
+            },
+            error: function error() {
+                swal("Oops!", "Ocoreu algum erro :/", "error");
+            }
+        });
+    });
 });
 
 },{}]},{},[1]);

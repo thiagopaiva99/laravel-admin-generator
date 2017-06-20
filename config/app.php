@@ -226,6 +226,21 @@ return [
          * Slack Integration
          */
         Maknz\Slack\Laravel\ServiceProvider::class,
+
+        /*
+         * LogViewer
+         */
+        Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
+
+        /*
+         * Debugbar
+         */
+        Barryvdh\Debugbar\ServiceProvider::class,
+
+        /*
+         * Apidoc
+         */
+        Despark\Apidoc\ApiDocServiceProvider::class,
     ],
 
     /*
@@ -313,6 +328,9 @@ return [
 
         // Slack
         'Slack' => Maknz\Slack\Laravel\Facade::class,
+
+        // Debugbar
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
 ],
 
 ];

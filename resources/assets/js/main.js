@@ -176,4 +176,71 @@ $(document).ready(() => {
         const divoptions = $("#options");
         divoptions.toggle();
     });
+
+    // Getting the table attributes
+    const tablesselect = $("select[name=table]");
+    tablesselect.on('change', () => {
+        $.ajax({
+            url: URL() + 'admin/api/get-attributes',
+            type: 'GET',
+            data: {
+                _token: "IvzRD8Tx4NayjumiI2cea9nIEV0w3XY7NcXSULxZ",
+                table: tablesselect.val()
+            },
+            success: (res) => {
+                if( res ){
+                    const attributes = $("#attributes");
+                    attributes.html("<hr>");
+
+                    res.forEach((item) => {
+                       const html = `
+                            <div class="checkbox checkbox-success checkbox-inline" style="margin-left: 5px;">
+                                <input type="checkbox" name="fields[]" id="check_` + item.name + `" value="` + item.name + `">
+                                <label for="check_` + item.name + `"> ` + item.name + `</label>
+                            </div>
+                        `;
+                       attributes.append(html);
+                    });
+
+                    const buttonAPI = $(".btn-generate-api");
+                    buttonAPI.removeAttr("disabled");
+                }
+            },
+            error: () => {
+                swal("Oops!", "Ocoreu algum erro :/", "error");
+            }
+        });
+    });
+
+    // Generating API
+    const buttonAPI = $(".btn-generate-api");
+    buttonAPI.on('click', () => {
+        const fields = [];
+        const checkboxes = $("input[type=checkbox]:checked").each(function(){
+            fields.push($(this).val());
+        });
+
+        $.ajax({
+            url: URL() + 'admin/api/generate',
+            type: 'GET',
+            data: {
+                _token: "IvzRD8Tx4NayjumiI2cea9nIEV0w3XY7NcXSULxZ",
+                table:  $("select[name=table]").val(),
+                type:   $("select[name=type]").val(),
+                fields: fields
+            },
+            success: (res) => {
+                if( res ){
+                    const modal = $("#myModal");
+                    modal.modal('toggle');
+
+                    const modalBody = $(".modal-body");
+                    modalBody.text(res);
+                }
+            },
+            error: () => {
+                swal("Oops!", "Ocoreu algum erro :/", "error");
+            }
+        });
+    });
 });

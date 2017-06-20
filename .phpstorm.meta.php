@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2017-05-24.
+    * Generated on 2017-06-03.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -71,6 +71,10 @@ namespace PHPSTORM_META {
             'datatables.fractal' instanceof \League\Fractal\Manager,
             'image' instanceof \Intervention\Image\ImageManager,
             'robots' instanceof \EllisTheDev\Robots\Robots,
+            'maknz.slack' instanceof \Maknz\Slack\Client,
+            'Maknz\Slack\Client' instanceof \Maknz\Slack\Client,
+            'debugbar' instanceof \Barryvdh\Debugbar\LaravelDebugbar,
+            'command.debugbar.clear' instanceof \Barryvdh\Debugbar\Console\ClearCommand,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'translation.loader' instanceof \Illuminate\Translation\FileLoader,
             'translator' instanceof \Illuminate\Translation\Translator,
@@ -217,6 +221,10 @@ namespace PHPSTORM_META {
             'datatables.fractal' instanceof \League\Fractal\Manager,
             'image' instanceof \Intervention\Image\ImageManager,
             'robots' instanceof \EllisTheDev\Robots\Robots,
+            'maknz.slack' instanceof \Maknz\Slack\Client,
+            'Maknz\Slack\Client' instanceof \Maknz\Slack\Client,
+            'debugbar' instanceof \Barryvdh\Debugbar\LaravelDebugbar,
+            'command.debugbar.clear' instanceof \Barryvdh\Debugbar\Console\ClearCommand,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'translation.loader' instanceof \Illuminate\Translation\FileLoader,
             'translator' instanceof \Illuminate\Translation\Translator,
@@ -363,6 +371,10 @@ namespace PHPSTORM_META {
             'datatables.fractal' instanceof \League\Fractal\Manager,
             'image' instanceof \Intervention\Image\ImageManager,
             'robots' instanceof \EllisTheDev\Robots\Robots,
+            'maknz.slack' instanceof \Maknz\Slack\Client,
+            'Maknz\Slack\Client' instanceof \Maknz\Slack\Client,
+            'debugbar' instanceof \Barryvdh\Debugbar\LaravelDebugbar,
+            'command.debugbar.clear' instanceof \Barryvdh\Debugbar\Console\ClearCommand,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'translation.loader' instanceof \Illuminate\Translation\FileLoader,
             'translator' instanceof \Illuminate\Translation\Translator,
@@ -509,6 +521,10 @@ namespace PHPSTORM_META {
             'datatables.fractal' instanceof \League\Fractal\Manager,
             'image' instanceof \Intervention\Image\ImageManager,
             'robots' instanceof \EllisTheDev\Robots\Robots,
+            'maknz.slack' instanceof \Maknz\Slack\Client,
+            'Maknz\Slack\Client' instanceof \Maknz\Slack\Client,
+            'debugbar' instanceof \Barryvdh\Debugbar\LaravelDebugbar,
+            'command.debugbar.clear' instanceof \Barryvdh\Debugbar\Console\ClearCommand,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'translation.loader' instanceof \Illuminate\Translation\FileLoader,
             'translator' instanceof \Illuminate\Translation\Translator,

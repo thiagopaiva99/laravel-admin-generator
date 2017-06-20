@@ -141,13 +141,6 @@ class MenuController extends AppBaseController
         return redirect(route('admin.menus.index'));
     }
 
-    /**
-     * Remove the specified Menu from storage.
-     *
-     * @param  int $id
-     *
-     * @return Response
-     */
     public function destroy($id)
     {
         $menu = $this->menuRepository->findWithoutFail($id);

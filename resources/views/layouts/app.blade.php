@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- CSS da App -->
     <link rel="stylesheet" href="{{ elixir('css/all.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 
     <link rel="shortcut icon" type="image/png" href="{{ url("assets/site/images/favicon.ico") }}"/>
 

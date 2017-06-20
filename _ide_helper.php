@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.2.45 on 2017-05-24.
+ * Generated for Laravel 5.2.45 on 2017-06-03.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -14055,6 +14055,809 @@ namespace EllisTheDev\Robots {
     }         
 }
     
+namespace Maknz\Slack\Laravel {
+
+    class Facade {
+        
+        /**
+         * Get the Slack endpoint
+         *
+         * @return string 
+         * @static 
+         */
+        public static function getEndpoint()
+        {
+            return \Maknz\Slack\Client::getEndpoint();
+        }
+        
+        /**
+         * Set the Slack endpoint
+         *
+         * @param string $endpoint
+         * @return void 
+         * @static 
+         */
+        public static function setEndpoint($endpoint)
+        {
+            \Maknz\Slack\Client::setEndpoint($endpoint);
+        }
+        
+        /**
+         * Get the default channel messages will be created for
+         *
+         * @return string 
+         * @static 
+         */
+        public static function getDefaultChannel()
+        {
+            return \Maknz\Slack\Client::getDefaultChannel();
+        }
+        
+        /**
+         * Set the default channel messages will be created for
+         *
+         * @param string $channel
+         * @return void 
+         * @static 
+         */
+        public static function setDefaultChannel($channel)
+        {
+            \Maknz\Slack\Client::setDefaultChannel($channel);
+        }
+        
+        /**
+         * Get the default username messages will be created for
+         *
+         * @return string 
+         * @static 
+         */
+        public static function getDefaultUsername()
+        {
+            return \Maknz\Slack\Client::getDefaultUsername();
+        }
+        
+        /**
+         * Set the default username messages will be created for
+         *
+         * @param string $username
+         * @return void 
+         * @static 
+         */
+        public static function setDefaultUsername($username)
+        {
+            \Maknz\Slack\Client::setDefaultUsername($username);
+        }
+        
+        /**
+         * Get the default icon messages will be created with
+         *
+         * @return string 
+         * @static 
+         */
+        public static function getDefaultIcon()
+        {
+            return \Maknz\Slack\Client::getDefaultIcon();
+        }
+        
+        /**
+         * Set the default icon messages will be created with
+         *
+         * @param string $icon
+         * @return void 
+         * @static 
+         */
+        public static function setDefaultIcon($icon)
+        {
+            \Maknz\Slack\Client::setDefaultIcon($icon);
+        }
+        
+        /**
+         * Get whether messages sent will have names (like @regan)
+         * will be converted into links
+         *
+         * @return boolean 
+         * @static 
+         */
+        public static function getLinkNames()
+        {
+            return \Maknz\Slack\Client::getLinkNames();
+        }
+        
+        /**
+         * Set whether messages sent will have names (like @regan)
+         * will be converted into links
+         *
+         * @param boolean $value
+         * @return void 
+         * @static 
+         */
+        public static function setLinkNames($value)
+        {
+            \Maknz\Slack\Client::setLinkNames($value);
+        }
+        
+        /**
+         * Get whether text links should be unfurled
+         *
+         * @return boolean 
+         * @static 
+         */
+        public static function getUnfurlLinks()
+        {
+            return \Maknz\Slack\Client::getUnfurlLinks();
+        }
+        
+        /**
+         * Set whether text links should be unfurled
+         *
+         * @param boolean $value
+         * @return void 
+         * @static 
+         */
+        public static function setUnfurlLinks($value)
+        {
+            \Maknz\Slack\Client::setUnfurlLinks($value);
+        }
+        
+        /**
+         * Get whether media links should be unfurled
+         *
+         * @return boolean 
+         * @static 
+         */
+        public static function getUnfurlMedia()
+        {
+            return \Maknz\Slack\Client::getUnfurlMedia();
+        }
+        
+        /**
+         * Set whether media links should be unfurled
+         *
+         * @param boolean $value
+         * @return void 
+         * @static 
+         */
+        public static function setUnfurlMedia($value)
+        {
+            \Maknz\Slack\Client::setUnfurlMedia($value);
+        }
+        
+        /**
+         * Get whether message text should be formatted with
+         * Slack's Markdown-like language
+         *
+         * @return boolean 
+         * @static 
+         */
+        public static function getAllowMarkdown()
+        {
+            return \Maknz\Slack\Client::getAllowMarkdown();
+        }
+        
+        /**
+         * Set whether message text should be formatted with
+         * Slack's Markdown-like language
+         *
+         * @param boolean $value
+         * @return void 
+         * @static 
+         */
+        public static function setAllowMarkdown($value)
+        {
+            \Maknz\Slack\Client::setAllowMarkdown($value);
+        }
+        
+        /**
+         * Get the attachment fields which should be formatted
+         * in Slack's Markdown-like language
+         *
+         * @return array 
+         * @static 
+         */
+        public static function getMarkdownInAttachments()
+        {
+            return \Maknz\Slack\Client::getMarkdownInAttachments();
+        }
+        
+        /**
+         * Set the attachment fields which should be formatted
+         * in Slack's Markdown-like language
+         *
+         * @param array $fields
+         * @return void 
+         * @static 
+         */
+        public static function setMarkdownInAttachments($fields)
+        {
+            \Maknz\Slack\Client::setMarkdownInAttachments($fields);
+        }
+        
+        /**
+         * Create a new message with defaults
+         *
+         * @return \Maknz\Slack\Message 
+         * @static 
+         */
+        public static function createMessage()
+        {
+            return \Maknz\Slack\Client::createMessage();
+        }
+        
+        /**
+         * Send a message
+         *
+         * @param \Maknz\Slack\Message $message
+         * @return void 
+         * @static 
+         */
+        public static function sendMessage($message)
+        {
+            \Maknz\Slack\Client::sendMessage($message);
+        }
+        
+        /**
+         * Prepares the payload to be sent to the webhook
+         *
+         * @param \Maknz\Slack\Message $message The message to send
+         * @return array 
+         * @static 
+         */
+        public static function preparePayload($message)
+        {
+            return \Maknz\Slack\Client::preparePayload($message);
+        }
+        
+    }         
+}
+    
+namespace Barryvdh\Debugbar {
+
+    class Facade {
+        
+        /**
+         * Enable the Debugbar and boot, if not already booted.
+         *
+         * @static 
+         */
+        public static function enable()
+        {
+            return \Barryvdh\Debugbar\LaravelDebugbar::enable();
+        }
+        
+        /**
+         * Boot the debugbar (add collectors, renderer and listener)
+         *
+         * @static 
+         */
+        public static function boot()
+        {
+            return \Barryvdh\Debugbar\LaravelDebugbar::boot();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function shouldCollect($name, $default = false)
+        {
+            return \Barryvdh\Debugbar\LaravelDebugbar::shouldCollect($name, $default);
+        }
+        
+        /**
+         * Handle silenced errors
+         *
+         * @param $level
+         * @param $message
+         * @param string $file
+         * @param int $line
+         * @param array $context
+         * @throws \ErrorException
+         * @static 
+         */
+        public static function handleError($level, $message, $file = '', $line = 0, $context = array())
+        {
+            return \Barryvdh\Debugbar\LaravelDebugbar::handleError($level, $message, $file, $line, $context);
+        }
+        
+        /**
+         * Starts a measure
+         *
+         * @param string $name Internal name, used to stop the measure
+         * @param string $label Public name
+         * @static 
+         */
+        public static function startMeasure($name, $label = null)
+        {
+            return \Barryvdh\Debugbar\LaravelDebugbar::startMeasure($name, $label);
+        }
+        
+        /**
+         * Stops a measure
+         *
+         * @param string $name
+         * @static 
+         */
+        public static function stopMeasure($name)
+        {
+            return \Barryvdh\Debugbar\LaravelDebugbar::stopMeasure($name);
+        }
+        
+        /**
+         * Adds an exception to be profiled in the debug bar
+         *
+         * @param \Exception $e
+         * @deprecated in favor of addThrowable
+         * @static 
+         */
+        public static function addException($e)
+        {
+            return \Barryvdh\Debugbar\LaravelDebugbar::addException($e);
+        }
+        
+        /**
+         * Adds an exception to be profiled in the debug bar
+         *
+         * @param \Exception $e
+         * @static 
+         */
+        public static function addThrowable($e)
+        {
+            return \Barryvdh\Debugbar\LaravelDebugbar::addThrowable($e);
+        }
+        
+        /**
+         * Returns a JavascriptRenderer for this instance
+         *
+         * @param string $baseUrl
+         * @param string $basePathng
+         * @return \Barryvdh\Debugbar\JavascriptRenderer 
+         * @static 
+         */
+        public static function getJavascriptRenderer($baseUrl = null, $basePath = null)
+        {
+            return \Barryvdh\Debugbar\LaravelDebugbar::getJavascriptRenderer($baseUrl, $basePath);
+        }
+        
+        /**
+         * Modify the response and inject the debugbar (or data in headers)
+         *
+         * @param \Symfony\Component\HttpFoundation\Request $request
+         * @param \Symfony\Component\HttpFoundation\Response $response
+         * @return \Symfony\Component\HttpFoundation\Response 
+         * @static 
+         */
+        public static function modifyResponse($request, $response)
+        {
+            return \Barryvdh\Debugbar\LaravelDebugbar::modifyResponse($request, $response);
+        }
+        
+        /**
+         * Check if the Debugbar is enabled
+         *
+         * @return boolean 
+         * @static 
+         */
+        public static function isEnabled()
+        {
+            return \Barryvdh\Debugbar\LaravelDebugbar::isEnabled();
+        }
+        
+        /**
+         * Collects the data from the collectors
+         *
+         * @return array 
+         * @static 
+         */
+        public static function collect()
+        {
+            return \Barryvdh\Debugbar\LaravelDebugbar::collect();
+        }
+        
+        /**
+         * Injects the web debug toolbar into the given Response.
+         *
+         * @param \Symfony\Component\HttpFoundation\Response $response A Response instance
+         * Based on https://github.com/symfony/WebProfilerBundle/blob/master/EventListener/WebDebugToolbarListener.php
+         * @static 
+         */
+        public static function injectDebugbar($response)
+        {
+            return \Barryvdh\Debugbar\LaravelDebugbar::injectDebugbar($response);
+        }
+        
+        /**
+         * Disable the Debugbar
+         *
+         * @static 
+         */
+        public static function disable()
+        {
+            return \Barryvdh\Debugbar\LaravelDebugbar::disable();
+        }
+        
+        /**
+         * Adds a measure
+         *
+         * @param string $label
+         * @param float $start
+         * @param float $end
+         * @static 
+         */
+        public static function addMeasure($label, $start, $end)
+        {
+            return \Barryvdh\Debugbar\LaravelDebugbar::addMeasure($label, $start, $end);
+        }
+        
+        /**
+         * Utility function to measure the execution of a Closure
+         *
+         * @param string $label
+         * @param \Closure $closure
+         * @static 
+         */
+        public static function measure($label, $closure)
+        {
+            return \Barryvdh\Debugbar\LaravelDebugbar::measure($label, $closure);
+        }
+        
+        /**
+         * Collect data in a CLI request
+         *
+         * @return array 
+         * @static 
+         */
+        public static function collectConsole()
+        {
+            return \Barryvdh\Debugbar\LaravelDebugbar::collectConsole();
+        }
+        
+        /**
+         * Adds a message to the MessagesCollector
+         * 
+         * A message can be anything from an object to a string
+         *
+         * @param mixed $message
+         * @param string $label
+         * @static 
+         */
+        public static function addMessage($message, $label = 'info')
+        {
+            return \Barryvdh\Debugbar\LaravelDebugbar::addMessage($message, $label);
+        }
+        
+        /**
+         * Adds a data collector
+         *
+         * @param \DebugBar\DataCollectorInterface $collector
+         * @throws DebugBarException
+         * @return $this 
+         * @static 
+         */
+        public static function addCollector($collector)
+        {
+            //Method inherited from \DebugBar\DebugBar            
+            return \Barryvdh\Debugbar\LaravelDebugbar::addCollector($collector);
+        }
+        
+        /**
+         * Checks if a data collector has been added
+         *
+         * @param string $name
+         * @return boolean 
+         * @static 
+         */
+        public static function hasCollector($name)
+        {
+            //Method inherited from \DebugBar\DebugBar            
+            return \Barryvdh\Debugbar\LaravelDebugbar::hasCollector($name);
+        }
+        
+        /**
+         * Returns a data collector
+         *
+         * @param string $name
+         * @return \DebugBar\DataCollectorInterface 
+         * @throws DebugBarException
+         * @static 
+         */
+        public static function getCollector($name)
+        {
+            //Method inherited from \DebugBar\DebugBar            
+            return \Barryvdh\Debugbar\LaravelDebugbar::getCollector($name);
+        }
+        
+        /**
+         * Returns an array of all data collectors
+         *
+         * @return \DebugBar\array[DataCollectorInterface] 
+         * @static 
+         */
+        public static function getCollectors()
+        {
+            //Method inherited from \DebugBar\DebugBar            
+            return \Barryvdh\Debugbar\LaravelDebugbar::getCollectors();
+        }
+        
+        /**
+         * Sets the request id generator
+         *
+         * @param \DebugBar\RequestIdGeneratorInterface $generator
+         * @return $this 
+         * @static 
+         */
+        public static function setRequestIdGenerator($generator)
+        {
+            //Method inherited from \DebugBar\DebugBar            
+            return \Barryvdh\Debugbar\LaravelDebugbar::setRequestIdGenerator($generator);
+        }
+        
+        /**
+         * 
+         *
+         * @return \DebugBar\RequestIdGeneratorInterface 
+         * @static 
+         */
+        public static function getRequestIdGenerator()
+        {
+            //Method inherited from \DebugBar\DebugBar            
+            return \Barryvdh\Debugbar\LaravelDebugbar::getRequestIdGenerator();
+        }
+        
+        /**
+         * Returns the id of the current request
+         *
+         * @return string 
+         * @static 
+         */
+        public static function getCurrentRequestId()
+        {
+            //Method inherited from \DebugBar\DebugBar            
+            return \Barryvdh\Debugbar\LaravelDebugbar::getCurrentRequestId();
+        }
+        
+        /**
+         * Sets the storage backend to use to store the collected data
+         *
+         * @param \DebugBar\StorageInterface $storage
+         * @return $this 
+         * @static 
+         */
+        public static function setStorage($storage = null)
+        {
+            //Method inherited from \DebugBar\DebugBar            
+            return \Barryvdh\Debugbar\LaravelDebugbar::setStorage($storage);
+        }
+        
+        /**
+         * 
+         *
+         * @return \DebugBar\StorageInterface 
+         * @static 
+         */
+        public static function getStorage()
+        {
+            //Method inherited from \DebugBar\DebugBar            
+            return \Barryvdh\Debugbar\LaravelDebugbar::getStorage();
+        }
+        
+        /**
+         * Checks if the data will be persisted
+         *
+         * @return boolean 
+         * @static 
+         */
+        public static function isDataPersisted()
+        {
+            //Method inherited from \DebugBar\DebugBar            
+            return \Barryvdh\Debugbar\LaravelDebugbar::isDataPersisted();
+        }
+        
+        /**
+         * Sets the HTTP driver
+         *
+         * @param \DebugBar\HttpDriverInterface $driver
+         * @return $this 
+         * @static 
+         */
+        public static function setHttpDriver($driver)
+        {
+            //Method inherited from \DebugBar\DebugBar            
+            return \Barryvdh\Debugbar\LaravelDebugbar::setHttpDriver($driver);
+        }
+        
+        /**
+         * Returns the HTTP driver
+         * 
+         * If no http driver where defined, a PhpHttpDriver is automatically created
+         *
+         * @return \DebugBar\HttpDriverInterface 
+         * @static 
+         */
+        public static function getHttpDriver()
+        {
+            //Method inherited from \DebugBar\DebugBar            
+            return \Barryvdh\Debugbar\LaravelDebugbar::getHttpDriver();
+        }
+        
+        /**
+         * Returns collected data
+         * 
+         * Will collect the data if none have been collected yet
+         *
+         * @return array 
+         * @static 
+         */
+        public static function getData()
+        {
+            //Method inherited from \DebugBar\DebugBar            
+            return \Barryvdh\Debugbar\LaravelDebugbar::getData();
+        }
+        
+        /**
+         * Returns an array of HTTP headers containing the data
+         *
+         * @param string $headerName
+         * @param integer $maxHeaderLength
+         * @return array 
+         * @static 
+         */
+        public static function getDataAsHeaders($headerName = 'phpdebugbar', $maxHeaderLength = 4096, $maxTotalHeaderLength = 250000)
+        {
+            //Method inherited from \DebugBar\DebugBar            
+            return \Barryvdh\Debugbar\LaravelDebugbar::getDataAsHeaders($headerName, $maxHeaderLength, $maxTotalHeaderLength);
+        }
+        
+        /**
+         * Sends the data through the HTTP headers
+         *
+         * @param bool $useOpenHandler
+         * @param string $headerName
+         * @param integer $maxHeaderLength
+         * @return $this 
+         * @static 
+         */
+        public static function sendDataInHeaders($useOpenHandler = null, $headerName = 'phpdebugbar', $maxHeaderLength = 4096)
+        {
+            //Method inherited from \DebugBar\DebugBar            
+            return \Barryvdh\Debugbar\LaravelDebugbar::sendDataInHeaders($useOpenHandler, $headerName, $maxHeaderLength);
+        }
+        
+        /**
+         * Stacks the data in the session for later rendering
+         *
+         * @static 
+         */
+        public static function stackData()
+        {
+            //Method inherited from \DebugBar\DebugBar            
+            return \Barryvdh\Debugbar\LaravelDebugbar::stackData();
+        }
+        
+        /**
+         * Checks if there is stacked data in the session
+         *
+         * @return boolean 
+         * @static 
+         */
+        public static function hasStackedData()
+        {
+            //Method inherited from \DebugBar\DebugBar            
+            return \Barryvdh\Debugbar\LaravelDebugbar::hasStackedData();
+        }
+        
+        /**
+         * Returns the data stacked in the session
+         *
+         * @param boolean $delete Whether to delete the data in the session
+         * @return array 
+         * @static 
+         */
+        public static function getStackedData($delete = true)
+        {
+            //Method inherited from \DebugBar\DebugBar            
+            return \Barryvdh\Debugbar\LaravelDebugbar::getStackedData($delete);
+        }
+        
+        /**
+         * Sets the key to use in the $_SESSION array
+         *
+         * @param string $ns
+         * @return $this 
+         * @static 
+         */
+        public static function setStackDataSessionNamespace($ns)
+        {
+            //Method inherited from \DebugBar\DebugBar            
+            return \Barryvdh\Debugbar\LaravelDebugbar::setStackDataSessionNamespace($ns);
+        }
+        
+        /**
+         * Returns the key used in the $_SESSION array
+         *
+         * @return string 
+         * @static 
+         */
+        public static function getStackDataSessionNamespace()
+        {
+            //Method inherited from \DebugBar\DebugBar            
+            return \Barryvdh\Debugbar\LaravelDebugbar::getStackDataSessionNamespace();
+        }
+        
+        /**
+         * Sets whether to only use the session to store stacked data even
+         * if a storage is enabled
+         *
+         * @param boolean $enabled
+         * @return $this 
+         * @static 
+         */
+        public static function setStackAlwaysUseSessionStorage($enabled = true)
+        {
+            //Method inherited from \DebugBar\DebugBar            
+            return \Barryvdh\Debugbar\LaravelDebugbar::setStackAlwaysUseSessionStorage($enabled);
+        }
+        
+        /**
+         * Checks if the session is always used to store stacked data
+         * even if a storage is enabled
+         *
+         * @return boolean 
+         * @static 
+         */
+        public static function isStackAlwaysUseSessionStorage()
+        {
+            //Method inherited from \DebugBar\DebugBar            
+            return \Barryvdh\Debugbar\LaravelDebugbar::isStackAlwaysUseSessionStorage();
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function offsetSet($key, $value)
+        {
+            //Method inherited from \DebugBar\DebugBar            
+            return \Barryvdh\Debugbar\LaravelDebugbar::offsetSet($key, $value);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function offsetGet($key)
+        {
+            //Method inherited from \DebugBar\DebugBar            
+            return \Barryvdh\Debugbar\LaravelDebugbar::offsetGet($key);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function offsetExists($key)
+        {
+            //Method inherited from \DebugBar\DebugBar            
+            return \Barryvdh\Debugbar\LaravelDebugbar::offsetExists($key);
+        }
+        
+        /**
+         * 
+         *
+         * @static 
+         */
+        public static function offsetUnset($key)
+        {
+            //Method inherited from \DebugBar\DebugBar            
+            return \Barryvdh\Debugbar\LaravelDebugbar::offsetUnset($key);
+        }
+        
+    }         
+}
+    
     
 namespace {
 
@@ -15986,6 +16789,10 @@ namespace {
     class Excel extends \Maatwebsite\Excel\Facades\Excel {}
     
     class Robots extends \EllisTheDev\Robots\RobotsFacade {}
+    
+    class Slack extends \Maknz\Slack\Laravel\Facade {}
+    
+    class Debugbar extends \Barryvdh\Debugbar\Facade {}
     
 }
 

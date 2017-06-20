@@ -1,4 +1,5 @@
 <?php
+Route::get('/admin/users/test', 'Admin\UserController@test');
 
 /*
 |--------------------------------------------------------------------------
@@ -43,10 +44,13 @@ Route::group(["prefix" => "admin", 'namespace' => 'Admin', "middleware" => "auth
     Route::get("/", function () { return redirect('admin/home'); });
     Route::get('home', 'HomeController@index');
     Route::get('get-menus', 'MenuController@getMenus');
+    Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 
     // ROUTES WITHOUT RESOURCES
     // ONLY GETS
     Route::get('menus/order', 'MenuController@getViewOrder');
+    Route::get('api/get-attributes', 'APIGeneratorController@getAttributes');
+    Route::get('api/generate', 'APIGeneratorController@generateMethod');
 
     // ONLY POSTS
     Route::post('menus/order', 'MenuController@postViewOrder');
@@ -58,6 +62,7 @@ Route::group(["prefix" => "admin", 'namespace' => 'Admin', "middleware" => "auth
     Route::resource('holder', 'HolderController');
     Route::resource('users', 'UserController');
     Route::resource('slack', 'SlackController');
+    Route::resource('api', 'APIGeneratorController');
 });
 
 /*
@@ -67,3 +72,4 @@ Route::group(["prefix" => "admin", 'namespace' => 'Admin', "middleware" => "auth
  */
 
 Route::auth();
+

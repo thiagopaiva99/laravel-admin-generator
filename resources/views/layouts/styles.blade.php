@@ -66,4 +66,13 @@
     .dropdown-menu > .active > a, .dropdown-menu > .active > a:focus, .dropdown-menu > .active > a:hover{
         background: {{ getenv("COLOR_PRIMARY") }} !important;
     }
+
+    .checkbox-success input[type="checkbox"]:checked + label::before {
+        background-color: {{ getenv("COLOR_PRIMARY") }} !important;
+        border-color: {{ getenv("COLOR_PRIMARY_DARK") }} !important;
+    }
+
+    .modal-header{
+        background: {{ getenv("COLOR_PRIMARY") }} !important;
+    }
 </style>
