@@ -1,7 +1,7 @@
 <?php
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 5.2.45 on 2017-06-03.
+ * Generated for Laravel 5.2.45 on 2017-07-26.
  *
  * @author Barry vd. Heuvel <barryvdh@gmail.com>
  * @see https://github.com/barryvdh/laravel-ide-helper
@@ -5695,6 +5695,64 @@ namespace Illuminate\Support\Facades {
         public static function setSession($session)
         {
             \Illuminate\Routing\Redirector::setSession($session);
+        }
+        
+    }         
+
+    class Redis {
+        
+        /**
+         * Get a specific Redis connection instance.
+         *
+         * @param string $name
+         * @return \Predis\ClientInterface|null 
+         * @static 
+         */
+        public static function connection($name = 'default')
+        {
+            return \Illuminate\Redis\Database::connection($name);
+        }
+        
+        /**
+         * Run a command against the Redis database.
+         *
+         * @param string $method
+         * @param array $parameters
+         * @return mixed 
+         * @static 
+         */
+        public static function command($method, $parameters = array())
+        {
+            return \Illuminate\Redis\Database::command($method, $parameters);
+        }
+        
+        /**
+         * Subscribe to a set of given channels for messages.
+         *
+         * @param array|string $channels
+         * @param \Closure $callback
+         * @param string $connection
+         * @param string $method
+         * @return void 
+         * @static 
+         */
+        public static function subscribe($channels, $callback, $connection = null, $method = 'subscribe')
+        {
+            \Illuminate\Redis\Database::subscribe($channels, $callback, $connection, $method);
+        }
+        
+        /**
+         * Subscribe to a set of given channels with wildcards.
+         *
+         * @param array|string $channels
+         * @param \Closure $callback
+         * @param string $connection
+         * @return void 
+         * @static 
+         */
+        public static function psubscribe($channels, $callback, $connection = null)
+        {
+            \Illuminate\Redis\Database::psubscribe($channels, $callback, $connection);
         }
         
     }         
@@ -14858,6 +14916,226 @@ namespace Barryvdh\Debugbar {
     }         
 }
     
+namespace Brotzka\DotenvEditor {
+
+    class DotenvEditorFacade {
+        
+        /**
+         * Returns the current backup-path
+         *
+         * @return mixed 
+         * @static 
+         */
+        public static function getBackupPath()
+        {
+            return \Brotzka\DotenvEditor\DotenvEditor::getBackupPath();
+        }
+        
+        /**
+         * Set a new backup-path.
+         * 
+         * The new directory will be created if it doesn't exist
+         *
+         * @param $path
+         * @return bool 
+         * @static 
+         */
+        public static function setBackupPath($path)
+        {
+            return \Brotzka\DotenvEditor\DotenvEditor::setBackupPath($path);
+        }
+        
+        /**
+         * Checks, if a given key exists in your .env-file.
+         * 
+         * Returns false or true
+         *
+         * @param $key
+         * @return bool 
+         * @static 
+         */
+        public static function keyExists($key)
+        {
+            return \Brotzka\DotenvEditor\DotenvEditor::keyExists($key);
+        }
+        
+        /**
+         * Returns the value matching to a given key.
+         * 
+         * Returns false, if key does not exist.
+         *
+         * @param $key
+         * @return mixed 
+         * @throws DotEnvException
+         * @static 
+         */
+        public static function getValue($key)
+        {
+            return \Brotzka\DotenvEditor\DotenvEditor::getValue($key);
+        }
+        
+        /**
+         * Activate or deactivate the AutoBackup-Functionality
+         *
+         * @param $onOff
+         * @throws DotEnvException
+         * @static 
+         */
+        public static function setAutoBackup($onOff)
+        {
+            return \Brotzka\DotenvEditor\DotenvEditor::setAutoBackup($onOff);
+        }
+        
+        /**
+         * Checks, if Autobackup is enabled
+         *
+         * @return bool 
+         * @static 
+         */
+        public static function AutoBackupEnabled()
+        {
+            return \Brotzka\DotenvEditor\DotenvEditor::AutoBackupEnabled();
+        }
+        
+        /**
+         * Used to create a backup of the current .env.
+         * 
+         * Will be assigned with the current timestamp.
+         *
+         * @return bool 
+         * @static 
+         */
+        public static function createBackup()
+        {
+            return \Brotzka\DotenvEditor\DotenvEditor::createBackup();
+        }
+        
+        /**
+         * Restores the latest backup or a backup from a given timestamp.
+         * 
+         * Restores the latest version when no timestamp is given.
+         *
+         * @param null $timestamp
+         * @return string 
+         * @static 
+         */
+        public static function restoreBackup($timestamp = null)
+        {
+            return \Brotzka\DotenvEditor\DotenvEditor::restoreBackup($timestamp);
+        }
+        
+        /**
+         * Returns an array with all available backups.
+         * 
+         * Array contains the formatted and unformatted version of each backup.
+         * Throws exception, if no backups were found.
+         *
+         * @return array 
+         * @throws DotEnvException
+         * @static 
+         */
+        public static function getBackupVersions()
+        {
+            return \Brotzka\DotenvEditor\DotenvEditor::getBackupVersions();
+        }
+        
+        /**
+         * Returns filename and path for the given timestamp
+         *
+         * @param $timestamp
+         * @return string 
+         * @throws DotEnvException
+         * @static 
+         */
+        public static function getBackupFile($timestamp)
+        {
+            return \Brotzka\DotenvEditor\DotenvEditor::getBackupFile($timestamp);
+        }
+        
+        /**
+         * Delete the given backup-file
+         *
+         * @param $timestamp
+         * @throws DotEnvException
+         * @static 
+         */
+        public static function deleteBackup($timestamp)
+        {
+            return \Brotzka\DotenvEditor\DotenvEditor::deleteBackup($timestamp);
+        }
+        
+        /**
+         * Returns the content of a given backup file
+         * or the content of the current env file.
+         *
+         * @param null $timestamp
+         * @return array 
+         * @static 
+         */
+        public static function getContent($timestamp = null)
+        {
+            return \Brotzka\DotenvEditor\DotenvEditor::getContent($timestamp);
+        }
+        
+        /**
+         * Returns the given .env as JSON array containing all entries as object
+         * with key and value
+         *
+         * @param null $timestamp
+         * @return string 
+         * @static 
+         */
+        public static function getAsJson($timestamp = null)
+        {
+            return \Brotzka\DotenvEditor\DotenvEditor::getAsJson($timestamp);
+        }
+        
+        /**
+         * Change the given values of the current env file.
+         * 
+         * If the given key(s) is/are not found, nothing happens.
+         *
+         * @param array $data
+         * @return bool 
+         * @throws DotEnvException
+         * @static 
+         */
+        public static function changeEnv($data = array())
+        {
+            return \Brotzka\DotenvEditor\DotenvEditor::changeEnv($data);
+        }
+        
+        /**
+         * Add data to the current env file.
+         * 
+         * Data will be placed at the end.
+         *
+         * @param array $data
+         * @return bool 
+         * @throws DotEnvException
+         * @static 
+         */
+        public static function addData($data = array())
+        {
+            return \Brotzka\DotenvEditor\DotenvEditor::addData($data);
+        }
+        
+        /**
+         * Delete one or more entries from the env file.
+         *
+         * @param array $data
+         * @return bool 
+         * @throws DotEnvException
+         * @static 
+         */
+        public static function deleteData($data = array())
+        {
+            return \Brotzka\DotenvEditor\DotenvEditor::deleteData($data);
+        }
+        
+    }         
+}
+    
     
 namespace {
 
@@ -14898,6 +15176,8 @@ namespace {
     class Queue extends \Illuminate\Support\Facades\Queue {}
     
     class Redirect extends \Illuminate\Support\Facades\Redirect {}
+    
+    class Redis extends \Illuminate\Support\Facades\Redis {}
     
     class Request extends \Illuminate\Support\Facades\Request {}
     
@@ -16793,6 +17073,8 @@ namespace {
     class Slack extends \Maknz\Slack\Laravel\Facade {}
     
     class Debugbar extends \Barryvdh\Debugbar\Facade {}
+    
+    class DotenvEditor extends \Brotzka\DotenvEditor\DotenvEditorFacade {}
     
 }
 

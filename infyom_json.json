@@ -3,9 +3,9 @@
 "htmlType": "",
 "validations": "",
 "searchable": false},{
-    "fieldInput": "sadasdasd:string",
+    "fieldInput": "aaaa:string",
     "htmlType": "text",
     "validations": "required",
-    "searchable": "false"
+    "searchable": "true"
 }
 ]

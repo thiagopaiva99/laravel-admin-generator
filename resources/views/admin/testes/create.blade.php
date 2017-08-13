@@ -5,8 +5,8 @@
     <div class="" style="text-align: right;">
         <ol class="breadcrumb">
             <li><a href="{{ url('/admin/home') }}"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li><a href="{{ url('/admin/$MODEL_NAME_PLURAL_CAMEL$') }}"> $MODEL_NAME_PLURAL$</a></li>
-            <li class="active">Novo $MODEL_NAME$</li>
+            <li><a href="{{ url('/admin/testes') }}"> Testes</a></li>
+            <li class="active">Novo Teste</li>
         </ol>
     </div>
     <div class="box box-success">
@@ -15,7 +15,7 @@
                             @include("admin.util._back")
                         </span>
 
-            <h1 class="box-title">$MODEL_NAME$</h1>
+            <h1 class="box-title">Teste</h1>
         </div>
 
         <div class="box-body">
@@ -24,9 +24,9 @@
             </div>
 
             <div class="row">
-                {!! Form::open(['route' => '$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.store', 'data-toggle' => 'validator', 'role' => 'form']) !!}
+                {!! Form::open(['route' => 'admin.testes.store', 'data-toggle' => 'validator', 'role' => 'form']) !!}
 
-                    @include('$VIEW_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.fields')
+                    @include('admin.testes.fields')
 
                 {!! Form::close() !!}
             </div>

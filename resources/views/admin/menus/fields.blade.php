@@ -10,6 +10,9 @@
     {!! Form::text('link_to', null, ['class' => 'form-control']) !!}
 </div>
 
+<!-- Example 1 -->
+<button class="btn btn-default" data-iconset="glyphicon" data-icon="glyphicon-camera" role="iconpicker" type="button"></button>
+
 
 <!-- Icon Field -->
 <div class="form-group col-sm-6">

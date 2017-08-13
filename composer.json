@@ -36,7 +36,11 @@
         "rap2hpoutre/laravel-log-viewer": "^0.10.2",
         "barryvdh/laravel-debugbar": "^2.4",
         "despark/apidoc": "^1.4",
-        "berkayk/onesignal-laravel": "^0.9.7"
+        "berkayk/onesignal-laravel": "^0.9.7",
+        "garygreen/pretty-routes": "^0.0.8",
+        "lubusin/laravel-decomposer": "^1.2",
+        "brotzka/laravel-dotenv-editor": "^2.0",
+        "jorenvanhocht/blogify": "v2.0"
     },
     "repositories": [
         {

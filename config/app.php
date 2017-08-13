@@ -241,6 +241,12 @@ return [
          * Apidoc
          */
         Despark\Apidoc\ApiDocServiceProvider::class,
+
+        PrettyRoutes\ServiceProvider::class,
+
+        Lubusin\Decomposer\DecomposerServiceProvider::class,
+
+        Brotzka\DotenvEditor\DotenvEditorServiceProvider::class,
     ],
 
     /*
@@ -331,6 +337,8 @@ return [
 
         // Debugbar
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+
+        'DotenvEditor' => Brotzka\DotenvEditor\DotenvEditorFacade::class,
 ],
 
 ];
