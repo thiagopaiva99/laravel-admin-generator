@@ -13,6 +13,12 @@ Some libraries I've used in this project:
   - InfyOmLabs - https://github.com/InfyOmLabs/laravel-generator
   - Yajra Datatables - https://github.com/yajra/laravel-datatables
   - Slack Laravel - https://github.com/maknz/slack-laravel
+  - Log Viewer - https://github.com/rap2hpoutre/laravel-log-viewer
+  - Postgis - https://github.com/phaza/laravel-postgis
+  - Laravel Decomposer - https://github.com/lubusin/laravel-decomposer
+  - Pretty Routes - https://github.com/garygreen/pretty-routes
+  - .Env Editor - https://github.com/brotzka/laravel-dotenv-editor
+  - Laravel Debugbar - https://github.com/barryvdh/laravel-debugbar
   - More references will be added ...
 
 # TECHNOLOGIES USED 
@@ -22,6 +28,7 @@ Some libraries I've used in this project:
   - Javascript (w/ jQuery)(in ES6)(compiled to vanilla JS)
   - Shellscript
   - Bootstrap
+  - PostgreSQL
  
 
 # REQUIREMENTS 
@@ -56,13 +63,19 @@ Now we can login!
 
 Now, everything we have here at the beginning is an ugly login screen, and do not worry, inside the panel will be even worse for now, but let's go !!
 
-With the login done we will have a blank panel, zeroed, with nothing ... BUT ... we have some secret routes (that for lack of seed are secret hehehe), they are:
-  - /admin/home -> Here we have our panel home
-  - /admin/menus -> Here we are going to create and order the menus
-  - /admin/options -> Here we are going to configure some options for our application
-  - /admin/pages -> Here we are going to create pages (yes PAGES!!!!) for our application
-  - /admin/holder -> Here we are going to customize our holder application (If it be setted on options hehe)
-  - /admin/users -> The users CRUD
+With login done, we have access to the panel, and with that we have some menus next, which are:
+  - Dashboard - /admin/dashboard -> Here we have informations about our server, like disk usage, memory usage, database usage, deploy status 
+  - Home - /admin/home -> Here we have our panel home
+  - Menus - /admin/menus -> Here we are going to create and order the menus
+  - Options - /admin/options -> Here we are going to configure some options for our application
+  - Pages - /admin/pages -> Here we are going to create pages (yes PAGES!!!!) for our application
+  - Holder - /admin/holder -> Here we are going to customize our holder application (If it be setted on options hehe)
+  - Users - /admin/users -> The users CRUD
+  - Logs - /admin/logs -> Here we are going to see all the Laraver logs
+  - APIs - /admin/api -> Here we are going to see an API generator
+  - Env Editor - /admin/enveditor -> Here we have a .env editor
+  - Routes - /admin/routes -> Here we have a list of our routes application
+  - Environment - /admin/decompose -> here we have a full description of our environment
    
 
 
@@ -152,5 +165,24 @@ After giving the name to the page, we are adding the fields that this page will 
 # THE USERS CRUD
 The CRUD of users was generated when we ran the first migrate, as we already have the user table I left CRUD users ready !!! Enjoy!!!
 
+# THE DASHBOARD MENU
+    Being written, but running in this version
+
+# THE LOG VIEWER
+    Being written, but running in this version
+
+# THE API GENERATOR
+    Being written, but running in this version
+
+# THE ENV EDITOR MENU
+    Being written, but running in this version
+
+# THE ROUTES VIEWER
+    Being written, but running in this version
+
+# THE ENVIRONMENT VIEWER
+    Being written, but running in this version
+
 # LICENSE
 This project has an MIT license, because we <3 Open Source!
+
