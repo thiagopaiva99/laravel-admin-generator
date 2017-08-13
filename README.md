@@ -44,7 +44,7 @@ touch .env
 ``` 
    
 So, lets start...
-Eu deixei um seed para vocês rodarem, esse seed vai criar um usuario administrador apenas para logar, após vocês podem excluir ou manter ele, enfim, para rodar o seed, mas primeiro, execute o migrate para criar as tabelas:
+I left a seed for you to run, this seed will create an administrator user and some menus already pre-configured, finally, to run the seed, but first, run migrate to create the tables:
 
 ```sh
 php artisan migrate
@@ -151,3 +151,6 @@ After giving the name to the page, we are adding the fields that this page will 
 
 # THE USERS CRUD
 The CRUD of users was generated when we ran the first migrate, as we already have the user table I left CRUD users ready !!! Enjoy!!!
+
+# LICENSE
+This project has an MIT license, because we <3 Open Source!
