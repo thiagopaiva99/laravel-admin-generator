@@ -21,7 +21,6 @@
     <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.3/css/AdminLTE.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.3.3/css/skins/_all-skins.min.css">
-    <link rel="stylesheet" href="{{ url('css/bootstrap-iconpicker.min.css') }}"/>
 
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
@@ -202,8 +201,6 @@
     <script src="{{ asset('assets/site/js/picker.js') }}"></script>
     <script src="{{ asset('assets/site/js/select.min.js') }}"></script>
     <script src="{{ asset('assets/site/js/app-admin.js') }}"></script>
-    <script type="text/javascript" src="{{ url('js/bootstrap-iconpicker-iconset-all.min.js') }}"></script>
-    <script type="text/javascript" src="/js/bootstrap-iconpicker.min.js"></script>
     <!-- Custom Scripts -->
 
     <!-- JS da App Gerado pelo Gulp -->

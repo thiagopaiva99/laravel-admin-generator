@@ -101,7 +101,32 @@
                     @include('flash::message-admin')
                 </div>
 
+                <div class="row col-md-3">
+                    <div class="box box-warning">
+                        <div class="box-header with-border">
+                            <h1 class="box-title">
+                                Deploy
+                            </h1>
+                        </div>
+                        <div class="box-body">
+                            <p>
+                                Status do ZIP:
 
+                                <strong>{{ $existZip ? 'Gerado' : 'Não Gerado' }}</strong>
+                            </p>
+
+                            <hr>
+
+                            @if ( $existZip )
+                                <a href="{{ url('/zip/' . strtolower(getenv('TITLE')) . '.zip') }}" class="btn btn-primary btn-block">Download</a>
+                                <a href="{{ url('/admin/dashboard/delete-zip') }}" class="btn btn-danger btn-block">Deletar ZIP</a>
+                            @else
+                                <a href="{{ url('/admin/dashboard/prepare-zip') }}" class="btn btn-primary btn-block">Gerar ZIP Completo</a>
+                                <a href="{{ url('/admin/dashboard/prepare-zip-vendor') }}" class="btn btn-danger btn-block">Gerar ZIP Sem Vendor</a>
+                            @endif
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

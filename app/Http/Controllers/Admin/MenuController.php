@@ -8,6 +8,7 @@ use App\Http\Requests\Admin\CreateMenuRequest;
 use App\Http\Requests\Admin\UpdateMenuRequest;
 use App\Http\Requests\Request;
 use App\Models\Admin\Menu;
+use App\Models\User;
 use App\Repositories\Admin\MenuRepository;
 use Flash;
 use InfyOm\Generator\Controller\AppBaseController;
@@ -43,7 +44,11 @@ class MenuController extends AppBaseController
      */
     public function create()
     {
-        return view('admin.menus.create');
+        $types = [
+            User::UserTypeAdmin => 'Administrador'
+        ];
+
+        return view('admin.menus.create', compact('types'));
     }
 
     /**
@@ -112,7 +117,10 @@ class MenuController extends AppBaseController
             return redirect(route('admin.menus.index'));
         }
 
-        return view('admin.menus.edit')->with('menu', $menu);
+        $types = [
+            User::UserTypeAdmin => 'Administrador'
+        ];
+        return view('admin.menus.edit', compact('types'))->with('menu', $menu);
     }
 
     /**

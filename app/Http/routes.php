@@ -57,6 +57,9 @@ Route::group(["prefix" => "admin", 'namespace' => 'Admin', "middleware" => "auth
     // ROUTES WITHOUT RESOURCES
     // ONLY GETS
     Route::get('dashboard', 'DashboardController@index');
+    Route::get('dashboard/prepare-zip', 'DashboardController@prepareZip');
+    Route::get('dashboard/prepare-zip-vendor', 'DashboardController@prepareZipVendor');
+    Route::get('dashboard/delete-zip', 'DashboardController@deleteZip');
     Route::get('menus/order', 'MenuController@getViewOrder');
     Route::get('api/get-attributes', 'APIGeneratorController@getAttributes');
     Route::get('api/generate', 'APIGeneratorController@generateMethod');
@@ -81,24 +84,3 @@ Route::group(["prefix" => "admin", 'namespace' => 'Admin', "middleware" => "auth
  */
 
 Route::auth();
-
-
-
-Route::get('admin/testes', ['as'=> 'admin.testes.index', 'uses' => 'Admin\TesteController@index']);
-Route::post('admin/testes', ['as'=> 'admin.testes.store', 'uses' => 'Admin\TesteController@store']);
-Route::get('admin/testes/create', ['as'=> 'admin.testes.create', 'uses' => 'Admin\TesteController@create']);
-Route::put('admin/testes/{testes}', ['as'=> 'admin.testes.update', 'uses' => 'Admin\TesteController@update']);
-Route::patch('admin/testes/{testes}', ['as'=> 'admin.testes.update', 'uses' => 'Admin\TesteController@update']);
-Route::delete('admin/testes/{testes}', ['as'=> 'admin.testes.destroy', 'uses' => 'Admin\TesteController@destroy']);
-Route::get('admin/testes/{testes}', ['as'=> 'admin.testes.show', 'uses' => 'Admin\TesteController@show']);
-Route::get('admin/testes/{testes}/edit', ['as'=> 'admin.testes.edit', 'uses' => 'Admin\TesteController@edit']);
-
-
-Route::get('admin/testes', ['as'=> 'admin.testes.index', 'uses' => 'Admin\TesteController@index']);
-Route::post('admin/testes', ['as'=> 'admin.testes.store', 'uses' => 'Admin\TesteController@store']);
-Route::get('admin/testes/create', ['as'=> 'admin.testes.create', 'uses' => 'Admin\TesteController@create']);
-Route::put('admin/testes/{testes}', ['as'=> 'admin.testes.update', 'uses' => 'Admin\TesteController@update']);
-Route::patch('admin/testes/{testes}', ['as'=> 'admin.testes.update', 'uses' => 'Admin\TesteController@update']);
-Route::delete('admin/testes/{testes}', ['as'=> 'admin.testes.destroy', 'uses' => 'Admin\TesteController@destroy']);
-Route::get('admin/testes/{testes}', ['as'=> 'admin.testes.show', 'uses' => 'Admin\TesteController@show']);
-Route::get('admin/testes/{testes}/edit', ['as'=> 'admin.testes.edit', 'uses' => 'Admin\TesteController@edit']);

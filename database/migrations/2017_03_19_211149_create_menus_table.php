@@ -18,6 +18,7 @@ class CreateMenusTable extends Migration
             $table->string('menu');
             $table->string('icon');
             $table->string('active');
+            $table->string('link_to');
             $table->integer('menu_root');
             $table->integer('appears_to');
             $table->integer('order');
