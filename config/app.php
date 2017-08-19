@@ -247,6 +247,10 @@ return [
         Lubusin\Decomposer\DecomposerServiceProvider::class,
 
         Brotzka\DotenvEditor\DotenvEditorServiceProvider::class,
+
+        'Barryvdh\TranslationManager\ManagerServiceProvider',
+
+        Barryvdh\Cors\ServiceProvider::class,
     ],
 
     /*

@@ -8,15 +8,42 @@
     }
     body {
         font-family: Arial;
-        background-color: {{ getenv("COLOR_PRIMARY") }} !important;
+        {{--background-color: {{ getenv("COLOR_PRIMARY") }} !important;--}}
+{{--        background: url('{{ url('assets/site/images/blur.jpg') }}') !important;--}}
+        /*background-repeat: no-repeat;*/
+        /*background-position: center;*/
+        /*background-size: cover;*/
+        /*width: 100%;*/
+        /*height: 100%;*/
         padding: 50px;
     }
+    
+    .main-login-box{
+        position: fixed;
+        width: calc(100% - 100px);
+    }
+
+    .background {
+        /* Set rules to fill background */
+        min-height: 100%;
+        min-width: 1024px;
+
+        /* Set up proportionate scaling */
+        width: 100%;
+        height: auto;
+
+        /* Set up positioning */
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
     .login {
         margin: 20px auto;
         width: 300px;
     }
     .login-screen {
-        background-color: #FFF;
+        background-color: rgba(255, 255, 255, 0.8);;
         padding: 20px;
         border-radius: 5px
     }

@@ -149,6 +149,16 @@ class DatabaseSeeder extends Seeder
             'order'      => '11',
             'link_to'    => 'holder'
         ]);
+
+        Menu::create([
+            'menu'       => 'Strings',
+            'icon'       => 'fa fa-font',
+            'active'     => 'strings/*',
+            'menu_root'  => null,
+            'appears_to' => User::UserTypeAdmin,
+            'order'      => '12',
+            'link_to'    => 'strings'
+        ]);
     }
 
     /**

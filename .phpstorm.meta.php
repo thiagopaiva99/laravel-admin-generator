@@ -3,7 +3,7 @@ namespace PHPSTORM_META {
 
    /**
     * PhpStorm Meta file, to provide autocomplete information for PhpStorm
-    * Generated on 2017-07-26.
+    * Generated on 2017-08-19.
     *
     * @author Barry vd. Heuvel <barryvdh@gmail.com>
     * @see https://github.com/barryvdh/laravel-ide-helper
@@ -76,6 +76,12 @@ namespace PHPSTORM_META {
             'debugbar' instanceof \Barryvdh\Debugbar\LaravelDebugbar,
             'command.debugbar.clear' instanceof \Barryvdh\Debugbar\Console\ClearCommand,
             'brotzka-dotenveditor' instanceof \Brotzka\DotenvEditor\DotenvEditor,
+            'translation-manager' instanceof \Barryvdh\TranslationManager\Manager,
+            'command.translation-manager.reset' instanceof \Barryvdh\TranslationManager\Console\ResetCommand,
+            'command.translation-manager.import' instanceof \Barryvdh\TranslationManager\Console\ImportCommand,
+            'command.translation-manager.find' instanceof \Barryvdh\TranslationManager\Console\FindCommand,
+            'command.translation-manager.export' instanceof \Barryvdh\TranslationManager\Console\ExportCommand,
+            'command.translation-manager.clean' instanceof \Barryvdh\TranslationManager\Console\CleanCommand,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'translation.loader' instanceof \Illuminate\Translation\FileLoader,
             'translator' instanceof \Illuminate\Translation\Translator,
@@ -228,6 +234,12 @@ namespace PHPSTORM_META {
             'debugbar' instanceof \Barryvdh\Debugbar\LaravelDebugbar,
             'command.debugbar.clear' instanceof \Barryvdh\Debugbar\Console\ClearCommand,
             'brotzka-dotenveditor' instanceof \Brotzka\DotenvEditor\DotenvEditor,
+            'translation-manager' instanceof \Barryvdh\TranslationManager\Manager,
+            'command.translation-manager.reset' instanceof \Barryvdh\TranslationManager\Console\ResetCommand,
+            'command.translation-manager.import' instanceof \Barryvdh\TranslationManager\Console\ImportCommand,
+            'command.translation-manager.find' instanceof \Barryvdh\TranslationManager\Console\FindCommand,
+            'command.translation-manager.export' instanceof \Barryvdh\TranslationManager\Console\ExportCommand,
+            'command.translation-manager.clean' instanceof \Barryvdh\TranslationManager\Console\CleanCommand,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'translation.loader' instanceof \Illuminate\Translation\FileLoader,
             'translator' instanceof \Illuminate\Translation\Translator,
@@ -380,6 +392,12 @@ namespace PHPSTORM_META {
             'debugbar' instanceof \Barryvdh\Debugbar\LaravelDebugbar,
             'command.debugbar.clear' instanceof \Barryvdh\Debugbar\Console\ClearCommand,
             'brotzka-dotenveditor' instanceof \Brotzka\DotenvEditor\DotenvEditor,
+            'translation-manager' instanceof \Barryvdh\TranslationManager\Manager,
+            'command.translation-manager.reset' instanceof \Barryvdh\TranslationManager\Console\ResetCommand,
+            'command.translation-manager.import' instanceof \Barryvdh\TranslationManager\Console\ImportCommand,
+            'command.translation-manager.find' instanceof \Barryvdh\TranslationManager\Console\FindCommand,
+            'command.translation-manager.export' instanceof \Barryvdh\TranslationManager\Console\ExportCommand,
+            'command.translation-manager.clean' instanceof \Barryvdh\TranslationManager\Console\CleanCommand,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'translation.loader' instanceof \Illuminate\Translation\FileLoader,
             'translator' instanceof \Illuminate\Translation\Translator,
@@ -532,6 +550,12 @@ namespace PHPSTORM_META {
             'debugbar' instanceof \Barryvdh\Debugbar\LaravelDebugbar,
             'command.debugbar.clear' instanceof \Barryvdh\Debugbar\Console\ClearCommand,
             'brotzka-dotenveditor' instanceof \Brotzka\DotenvEditor\DotenvEditor,
+            'translation-manager' instanceof \Barryvdh\TranslationManager\Manager,
+            'command.translation-manager.reset' instanceof \Barryvdh\TranslationManager\Console\ResetCommand,
+            'command.translation-manager.import' instanceof \Barryvdh\TranslationManager\Console\ImportCommand,
+            'command.translation-manager.find' instanceof \Barryvdh\TranslationManager\Console\FindCommand,
+            'command.translation-manager.export' instanceof \Barryvdh\TranslationManager\Console\ExportCommand,
+            'command.translation-manager.clean' instanceof \Barryvdh\TranslationManager\Console\CleanCommand,
             'blade.compiler' instanceof \Illuminate\View\Compilers\BladeCompiler,
             'translation.loader' instanceof \Illuminate\Translation\FileLoader,
             'translator' instanceof \Illuminate\Translation\Translator,

@@ -36,6 +36,17 @@
     @include("layouts.styles")
     @include("auth.styles")
 
+    <style>
+        /*.main-login-box{*/
+            {{--background: url('{{ url('assets/site/images/blur.jpg') }}') !important;--}}
+            /*background-repeat: no-repeat;*/
+            /*background-position: center;*/
+            /*background-size: cover;*/
+            /*width: 100%;*/
+            /*height: 100%;*/
+        /*}*/
+    </style>
+
 </head>
 <body class="hold-transition login-page" style="background: #FAFAFA;">
 {{--<div class="login-box">--}}
@@ -92,34 +103,38 @@
 {{--</div>--}}
 <!-- /.login-box -->
 
-<form action="{{ url('/login') }}" method="post">
-    {!! csrf_field() !!}
+<img src="{{ url('assets/site/images/blur.jpg') }}" class="background" alt="">
 
-    {{--{{ dump($errors) }}--}}
+<div class="main-login-box">
+    <form action="{{ url('/login') }}" method="post">
+        {!! csrf_field() !!}
 
-    <div class="login">
-        <div class="login-screen">
-            <div class="app-title">
-                <h1>{{ getenv("TITLE") }}</h1>
-            </div>
+        {{--{{ dump($errors) }}--}}
 
-            <div class="login-form">
-                <div class="control-group">
-                    <input type="text" class="login-field" name="email" value="" placeholder="username" id="login-name">
-                    <label class="login-field-icon fui-user" for="login-name"></label>
+        <div class="login">
+            <div class="login-screen">
+                <div class="app-title">
+                    <h1>{{ getenv("TITLE") }}</h1>
                 </div>
 
-                <div class="control-group">
-                    <input type="password" name="password" class="login-field" value="" placeholder="password" id="login-pass">
-                    <label class="login-field-icon fui-lock" for="login-pass"></label>
-                </div>
+                <div class="login-form">
+                    <div class="control-group">
+                        <input autocomplete="false" type="text" class="login-field" name="email" value="" placeholder="username" id="login-name">
+                        <label class="login-field-icon fui-user" for="login-name"></label>
+                    </div>
 
-                <button type="submit" class="btn btn-primary btn-large btn-block">LOGIN</button>
-                <a class="login-link" href="#">Esqueceu sua senha?</a>
+                    <div class="control-group">
+                        <input autocomplete="false" type="password" name="password" class="login-field" value="" placeholder="password" id="login-pass">
+                        <label class="login-field-icon fui-lock" for="login-pass"></label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large btn-block">LOGIN</button>
+                    <a class="login-link" href="#">Esqueceu sua senha?</a>
+                </div>
             </div>
         </div>
-    </div>
-</form>
+    </form>
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>

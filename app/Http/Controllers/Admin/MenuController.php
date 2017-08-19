@@ -62,13 +62,9 @@ class MenuController extends AppBaseController
     {
         $input = $request->all();
 
-        if($input['menu_root'] == ""){
-            unset($input['menu_root']);
-        }
+        if( !isset($input['menu_root']) || $input['menu_root'] == "" ){ unset($input['menu_root']); }
 
-        if($input['order'] == ""){
-            unset($input['order']);
-        }
+        if( !isset($input['order']) || $input['order'] == "" ){ unset($input['order']); }
 
         $menu = $this->menuRepository->create($input);
 
